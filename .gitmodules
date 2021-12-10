@@ -9,14 +9,14 @@
 	url = https://github.com/sed-inf-u-szeged/pmd.git
 [submodule "3rdparty/python2"]
 	path = 3rdparty/python2
-	url = ../cpython
+	url = https://github.com/sed-inf-u-szeged/cpython
 [submodule "3rdparty/python3"]
 	path = 3rdparty/python3
-	url = ../cpython
+	url = https://github.com/sed-inf-u-szeged/cpython
 [submodule "cl/LIM2Patterns/pybind11"]
 	path = cl/LIM2Patterns/pybind11
 	url = https://github.com/pybind/pybind11
 [submodule "java/lib/openjdk"]
 	path = java/lib/openjdk
-	url = ../openjdk
+	url = https://github.com/sed-inf-u-szeged/openjdk
 	ignore = dirty
