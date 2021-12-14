@@ -46,5 +46,10 @@ public interface WildcardType extends Type {
 	 */
 	public void setBound(Type node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.type.WildcardType#edgeBound bound} edge.
+	 */
+	public void removeBound();
+
 }
 

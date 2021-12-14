@@ -50,6 +50,11 @@ public interface Exports extends ModuleDirective {
 	public void setPackageName(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.module.Exports#edgeHasPackageName hasPackageName} edge.
+	 */
+	public void removePackageName();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.module.Exports#edgeHasModuleNames hasModuleNames} edges.
 	 * @return Returns an iterator for the hasModuleNames edges.
 	 */
@@ -78,6 +83,32 @@ public interface Exports extends ModuleDirective {
 	 * @param node The end point of the new hasModuleNames edge.
 	 */
 	public void addModuleNames(Expression node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.module.Exports#edgeHasModuleNames hasModuleNames} edge to the node.
+	 * @param node The end point of the new hasModuleNames edge.
+	 * @param index The index of end point of the new hasModuleNames edge.
+	 */
+	public void addModuleNames(Expression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.module.Exports#edgeHasModuleNames hasModuleNames} edge to the node.
+	 * @param node The end point of the new hasModuleNames edge.
+	 * @param index The index of end point of the new hasModuleNames edge.
+	 */
+	public void setModuleNames(Expression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.module.Exports#edgeHasModuleNames hasModuleNames} edge by id from the node.
+	 * @param id The new end point of the hasModuleNames edge.
+	 */
+	public void removeModuleNames(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.module.Exports#edgeHasModuleNames hasModuleNames} edge from the node.
+	 * @param node The new end point of the hasModuleNames edge.
+	 */
+	public void removeModuleNames(Expression node);
 
 }
 

@@ -154,6 +154,36 @@ public class PackageImpl extends BaseImpl implements Package {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Annotation> getAnnotationsIterator() {
 		if (_hasAnnotations == null)
 			return EdgeList.<Annotation>emptyList().iterator();
@@ -202,6 +232,40 @@ public class PackageImpl extends BaseImpl implements Package {
 	}
 
 	@Override
+	public void addAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(Annotation _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasAnnotations.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(int _id) {
+		int tmp=_hasAnnotations.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Member> getMembersIterator() {
 		if (_hasMembers == null)
 			return EdgeList.<Member>emptyList().iterator();
@@ -247,6 +311,40 @@ public class PackageImpl extends BaseImpl implements Package {
 			_hasMembers = new EdgeList<Member>(factory);
 		_hasMembers.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addMembers(Member _node, int index) {
+		if (_hasMembers == null)
+			_hasMembers = new EdgeList<Member>(factory);
+		_hasMembers.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setMembers(Member _node, int index) {
+		if (_hasMembers == null)
+			_hasMembers = new EdgeList<Member>(factory);
+		_hasMembers.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeMembers(Member _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasMembers.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeMembers(int _id) {
+		int tmp=_hasMembers.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 	@Override
@@ -322,6 +420,22 @@ public class PackageImpl extends BaseImpl implements Package {
 	}
 
 	@Override
+	public void addCompilationUnits(CompilationUnit _node, int index) {
+		if (_hasCompilationUnits == null)
+			_hasCompilationUnits = new EdgeList<CompilationUnit>(factory);
+		_hasCompilationUnits.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setCompilationUnits(CompilationUnit _node, int index) {
+		if (_hasCompilationUnits == null)
+			_hasCompilationUnits = new EdgeList<CompilationUnit>(factory);
+		_hasCompilationUnits.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
 	public void addIsInModule(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
@@ -341,6 +455,54 @@ public class PackageImpl extends BaseImpl implements Package {
 		if (_isInModule == null)
 			_isInModule = new EdgeList<Module>(factory);
 		_isInModule.add(_node);
+	}
+
+	@Override
+	public void addIsInModule(Module _node, int index) {
+		if (_isInModule == null)
+			_isInModule = new EdgeList<Module>(factory);
+		_isInModule.add(_node, index);
+	}
+
+	@Override
+	public void setIsInModule(Module _node, int index) {
+		if (_isInModule == null)
+			_isInModule = new EdgeList<Module>(factory);
+		_isInModule.set(_node, index);
+	}
+
+	@Override
+	public void removeCompilationUnits(CompilationUnit _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasCompilationUnits.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeCompilationUnits(int _id) {
+		int tmp=_hasCompilationUnits.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeIsInModule(Module _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_isInModule.remove(_node);
+	}
+
+	@Override
+	public void removeIsInModule(int _id) {
+		int tmp=_isInModule.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

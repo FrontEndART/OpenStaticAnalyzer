@@ -420,6 +420,36 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Annotation> getAnnotationsIterator() {
 		if (_hasAnnotations == null)
 			return EdgeList.<Annotation>emptyList().iterator();
@@ -468,6 +498,40 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 	}
 
 	@Override
+	public void addAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(Annotation _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasAnnotations.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(int _id) {
+		int tmp=_hasAnnotations.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Member> getMembersIterator() {
 		if (_hasMembers == null)
 			return EdgeList.<Member>emptyList().iterator();
@@ -513,6 +577,40 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 			_hasMembers = new EdgeList<Member>(factory);
 		_hasMembers.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addMembers(Member _node, int index) {
+		if (_hasMembers == null)
+			_hasMembers = new EdgeList<Member>(factory);
+		_hasMembers.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setMembers(Member _node, int index) {
+		if (_hasMembers == null)
+			_hasMembers = new EdgeList<Member>(factory);
+		_hasMembers.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeMembers(Member _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasMembers.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeMembers(int _id) {
+		int tmp=_hasMembers.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 	@Override
@@ -592,14 +690,14 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 
 	@Override
 	public void setSuperClass(int _id) {
-		if (_hasSuperClass != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSuperClass" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasSuperClass != 0) {
+				removeParentEdge(_hasSuperClass);
+			}
 			_hasSuperClass = _id;
 			setParentEdge(_hasSuperClass);
 		} else {
@@ -609,9 +707,9 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 
 	@Override
 	public void setSuperClass(TypeExpression _node) {
-		if (_hasSuperClass != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSuperClass" ));
-
+		if (_hasSuperClass != 0) {
+			removeParentEdge(_hasSuperClass);
+		}
 		_hasSuperClass = _node.getId();
 		setParentEdge(_hasSuperClass);
 	}
@@ -641,6 +739,22 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 	}
 
 	@Override
+	public void addSuperInterfaces(TypeExpression _node, int index) {
+		if (_hasSuperInterfaces == null)
+			_hasSuperInterfaces = new EdgeList<TypeExpression>(factory);
+		_hasSuperInterfaces.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setSuperInterfaces(TypeExpression _node, int index) {
+		if (_hasSuperInterfaces == null)
+			_hasSuperInterfaces = new EdgeList<TypeExpression>(factory);
+		_hasSuperInterfaces.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
 	public void addOthers(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
@@ -665,10 +779,23 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 	}
 
 	@Override
-	public void setIsInCompilationUnit(int _id) {
-		if (_isInCompilationUnit != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","isInCompilationUnit" ));
+	public void addOthers(Positioned _node, int index) {
+		if (_hasOthers == null)
+			_hasOthers = new EdgeList<Positioned>(factory);
+		_hasOthers.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setOthers(Positioned _node, int index) {
+		if (_hasOthers == null)
+			_hasOthers = new EdgeList<Positioned>(factory);
+		_hasOthers.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setIsInCompilationUnit(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -682,17 +809,11 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 
 	@Override
 	public void setIsInCompilationUnit(CompilationUnit _node) {
-		if (_isInCompilationUnit != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","isInCompilationUnit" ));
-
 		_isInCompilationUnit = _node.getId();
 	}
 
 	@Override
 	public void setIsInModule(int _id) {
-		if (_isInModule != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","isInModule" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -706,10 +827,61 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 
 	@Override
 	public void setIsInModule(Module _node) {
-		if (_isInModule != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","isInModule" ));
-
 		_isInModule = _node.getId();
+	}
+
+	@Override
+	public void removeSuperClass() {
+		if (_hasSuperClass != 0) {
+			removeParentEdge(_hasSuperClass);
+		}
+		_hasSuperClass = 0;
+	}
+
+	@Override
+	public void removeSuperInterfaces(TypeExpression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasSuperInterfaces.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeSuperInterfaces(int _id) {
+		int tmp=_hasSuperInterfaces.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeOthers(Positioned _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasOthers.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeOthers(int _id) {
+		int tmp=_hasOthers.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeIsInCompilationUnit() {
+		_isInCompilationUnit = 0;
+	}
+
+	@Override
+	public void removeIsInModule() {
+		_isInModule = 0;
 	}
 
 	@Override
@@ -758,6 +930,40 @@ public class InterfaceGenericImpl extends BaseImpl implements InterfaceGeneric {
 			_hasTypeParameters = new EdgeList<TypeParameter>(factory);
 		_hasTypeParameters.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addTypeParameters(TypeParameter _node, int index) {
+		if (_hasTypeParameters == null)
+			_hasTypeParameters = new EdgeList<TypeParameter>(factory);
+		_hasTypeParameters.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setTypeParameters(TypeParameter _node, int index) {
+		if (_hasTypeParameters == null)
+			_hasTypeParameters = new EdgeList<TypeParameter>(factory);
+		_hasTypeParameters.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeTypeParameters(TypeParameter _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasTypeParameters.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeTypeParameters(int _id) {
+		int tmp=_hasTypeParameters.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

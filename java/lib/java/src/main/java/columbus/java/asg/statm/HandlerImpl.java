@@ -172,6 +172,36 @@ public class HandlerImpl extends BaseImpl implements Handler {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Parameter getParameter() {
 		if (_hasParameter == 0)
 			return null;
@@ -191,14 +221,14 @@ public class HandlerImpl extends BaseImpl implements Handler {
 
 	@Override
 	public void setParameter(int _id) {
-		if (_hasParameter != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasParameter" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkParameter) {
+			if (_hasParameter != 0) {
+				removeParentEdge(_hasParameter);
+			}
 			_hasParameter = _id;
 			setParentEdge(_hasParameter);
 		} else {
@@ -208,23 +238,23 @@ public class HandlerImpl extends BaseImpl implements Handler {
 
 	@Override
 	public void setParameter(Parameter _node) {
-		if (_hasParameter != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasParameter" ));
-
+		if (_hasParameter != 0) {
+			removeParentEdge(_hasParameter);
+		}
 		_hasParameter = _node.getId();
 		setParentEdge(_hasParameter);
 	}
 
 	@Override
 	public void setBlock(int _id) {
-		if (_hasBlock != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBlock" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkBlock) {
+			if (_hasBlock != 0) {
+				removeParentEdge(_hasBlock);
+			}
 			_hasBlock = _id;
 			setParentEdge(_hasBlock);
 		} else {
@@ -234,11 +264,27 @@ public class HandlerImpl extends BaseImpl implements Handler {
 
 	@Override
 	public void setBlock(Block _node) {
-		if (_hasBlock != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBlock" ));
-
+		if (_hasBlock != 0) {
+			removeParentEdge(_hasBlock);
+		}
 		_hasBlock = _node.getId();
 		setParentEdge(_hasBlock);
+	}
+
+	@Override
+	public void removeParameter() {
+		if (_hasParameter != 0) {
+			removeParentEdge(_hasParameter);
+		}
+		_hasParameter = 0;
+	}
+
+	@Override
+	public void removeBlock() {
+		if (_hasBlock != 0) {
+			removeParentEdge(_hasBlock);
+		}
+		_hasBlock = 0;
 	}
 
 

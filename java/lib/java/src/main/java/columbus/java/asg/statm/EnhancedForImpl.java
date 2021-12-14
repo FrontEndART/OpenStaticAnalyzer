@@ -191,6 +191,36 @@ public class EnhancedForImpl extends BaseImpl implements EnhancedFor {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Statement getSubstatement() {
 		if (_hasSubstatement == 0)
 			return null;
@@ -201,14 +231,14 @@ public class EnhancedForImpl extends BaseImpl implements EnhancedFor {
 
 	@Override
 	public void setSubstatement(int _id) {
-		if (_hasSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSubstatement" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkStatement)) {
+			if (_hasSubstatement != 0) {
+				removeParentEdge(_hasSubstatement);
+			}
 			_hasSubstatement = _id;
 			setParentEdge(_hasSubstatement);
 		} else {
@@ -218,11 +248,19 @@ public class EnhancedForImpl extends BaseImpl implements EnhancedFor {
 
 	@Override
 	public void setSubstatement(Statement _node) {
-		if (_hasSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSubstatement" ));
-
+		if (_hasSubstatement != 0) {
+			removeParentEdge(_hasSubstatement);
+		}
 		_hasSubstatement = _node.getId();
 		setParentEdge(_hasSubstatement);
+	}
+
+	@Override
+	public void removeSubstatement() {
+		if (_hasSubstatement != 0) {
+			removeParentEdge(_hasSubstatement);
+		}
+		_hasSubstatement = 0;
 	}
 
 	@Override
@@ -245,14 +283,14 @@ public class EnhancedForImpl extends BaseImpl implements EnhancedFor {
 
 	@Override
 	public void setParameter(int _id) {
-		if (_hasParameter != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasParameter" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkParameter) {
+			if (_hasParameter != 0) {
+				removeParentEdge(_hasParameter);
+			}
 			_hasParameter = _id;
 			setParentEdge(_hasParameter);
 		} else {
@@ -262,23 +300,23 @@ public class EnhancedForImpl extends BaseImpl implements EnhancedFor {
 
 	@Override
 	public void setParameter(Parameter _node) {
-		if (_hasParameter != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasParameter" ));
-
+		if (_hasParameter != 0) {
+			removeParentEdge(_hasParameter);
+		}
 		_hasParameter = _node.getId();
 		setParentEdge(_hasParameter);
 	}
 
 	@Override
 	public void setExpression(int _id) {
-		if (_hasExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasExpression" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasExpression != 0) {
+				removeParentEdge(_hasExpression);
+			}
 			_hasExpression = _id;
 			setParentEdge(_hasExpression);
 		} else {
@@ -288,11 +326,27 @@ public class EnhancedForImpl extends BaseImpl implements EnhancedFor {
 
 	@Override
 	public void setExpression(Expression _node) {
-		if (_hasExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasExpression" ));
-
+		if (_hasExpression != 0) {
+			removeParentEdge(_hasExpression);
+		}
 		_hasExpression = _node.getId();
 		setParentEdge(_hasExpression);
+	}
+
+	@Override
+	public void removeParameter() {
+		if (_hasParameter != 0) {
+			removeParentEdge(_hasParameter);
+		}
+		_hasParameter = 0;
+	}
+
+	@Override
+	public void removeExpression() {
+		if (_hasExpression != 0) {
+			removeParentEdge(_hasExpression);
+		}
+		_hasExpression = 0;
 	}
 
 

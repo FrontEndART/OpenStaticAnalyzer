@@ -142,6 +142,36 @@ public class QualifiedTypeExpressionImpl extends BaseImpl implements QualifiedTy
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -152,9 +182,6 @@ public class QualifiedTypeExpressionImpl extends BaseImpl implements QualifiedTy
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -168,10 +195,12 @@ public class QualifiedTypeExpressionImpl extends BaseImpl implements QualifiedTy
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -194,14 +223,14 @@ public class QualifiedTypeExpressionImpl extends BaseImpl implements QualifiedTy
 
 	@Override
 	public void setQualifierType(int _id) {
-		if (_hasQualifierType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasQualifierType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasQualifierType != 0) {
+				removeParentEdge(_hasQualifierType);
+			}
 			_hasQualifierType = _id;
 			setParentEdge(_hasQualifierType);
 		} else {
@@ -211,23 +240,23 @@ public class QualifiedTypeExpressionImpl extends BaseImpl implements QualifiedTy
 
 	@Override
 	public void setQualifierType(TypeExpression _node) {
-		if (_hasQualifierType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasQualifierType" ));
-
+		if (_hasQualifierType != 0) {
+			removeParentEdge(_hasQualifierType);
+		}
 		_hasQualifierType = _node.getId();
 		setParentEdge(_hasQualifierType);
 	}
 
 	@Override
 	public void setSimpleType(int _id) {
-		if (_hasSimpleType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSimpleType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkSimpleTypeExpression) {
+			if (_hasSimpleType != 0) {
+				removeParentEdge(_hasSimpleType);
+			}
 			_hasSimpleType = _id;
 			setParentEdge(_hasSimpleType);
 		} else {
@@ -237,11 +266,27 @@ public class QualifiedTypeExpressionImpl extends BaseImpl implements QualifiedTy
 
 	@Override
 	public void setSimpleType(SimpleTypeExpression _node) {
-		if (_hasSimpleType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSimpleType" ));
-
+		if (_hasSimpleType != 0) {
+			removeParentEdge(_hasSimpleType);
+		}
 		_hasSimpleType = _node.getId();
 		setParentEdge(_hasSimpleType);
+	}
+
+	@Override
+	public void removeQualifierType() {
+		if (_hasQualifierType != 0) {
+			removeParentEdge(_hasQualifierType);
+		}
+		_hasQualifierType = 0;
+	}
+
+	@Override
+	public void removeSimpleType() {
+		if (_hasSimpleType != 0) {
+			removeParentEdge(_hasSimpleType);
+		}
+		_hasSimpleType = 0;
 	}
 
 

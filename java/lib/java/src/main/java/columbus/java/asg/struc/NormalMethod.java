@@ -156,6 +156,32 @@ public interface NormalMethod extends MethodDeclaration {
 	public void addParameters(Parameter node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.struc.NormalMethod#edgeHasParameters hasParameters} edge to the node.
+	 * @param node The end point of the new hasParameters edge.
+	 * @param index The index of end point of the new hasParameters edge.
+	 */
+	public void addParameters(Parameter node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.NormalMethod#edgeHasParameters hasParameters} edge to the node.
+	 * @param node The end point of the new hasParameters edge.
+	 * @param index The index of end point of the new hasParameters edge.
+	 */
+	public void setParameters(Parameter node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.NormalMethod#edgeHasParameters hasParameters} edge by id from the node.
+	 * @param id The new end point of the hasParameters edge.
+	 */
+	public void removeParameters(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.NormalMethod#edgeHasParameters hasParameters} edge from the node.
+	 * @param node The new end point of the hasParameters edge.
+	 */
+	public void removeParameters(Parameter node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.NormalMethod#edgeHasBody hasBody} edge points to.
 	 * @return Returns the end point of the hasBody edge.
 	 */
@@ -172,6 +198,11 @@ public interface NormalMethod extends MethodDeclaration {
 	 * @param node The new end point of the hasBody edge.
 	 */
 	public void setBody(Block node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.NormalMethod#edgeHasBody hasBody} edge.
+	 */
+	public void removeBody();
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.NormalMethod#edgeHasThrownExceptions hasThrownExceptions} edges.
@@ -202,6 +233,32 @@ public interface NormalMethod extends MethodDeclaration {
 	 * @param node The end point of the new hasThrownExceptions edge.
 	 */
 	public void addThrownExceptions(TypeExpression node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.NormalMethod#edgeHasThrownExceptions hasThrownExceptions} edge to the node.
+	 * @param node The end point of the new hasThrownExceptions edge.
+	 * @param index The index of end point of the new hasThrownExceptions edge.
+	 */
+	public void addThrownExceptions(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.NormalMethod#edgeHasThrownExceptions hasThrownExceptions} edge to the node.
+	 * @param node The end point of the new hasThrownExceptions edge.
+	 * @param index The index of end point of the new hasThrownExceptions edge.
+	 */
+	public void setThrownExceptions(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.NormalMethod#edgeHasThrownExceptions hasThrownExceptions} edge by id from the node.
+	 * @param id The new end point of the hasThrownExceptions edge.
+	 */
+	public void removeThrownExceptions(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.NormalMethod#edgeHasThrownExceptions hasThrownExceptions} edge from the node.
+	 * @param node The new end point of the hasThrownExceptions edge.
+	 */
+	public void removeThrownExceptions(TypeExpression node);
 
 }
 

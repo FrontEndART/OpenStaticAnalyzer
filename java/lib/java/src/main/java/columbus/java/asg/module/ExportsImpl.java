@@ -140,6 +140,36 @@ public class ExportsImpl extends BaseImpl implements Exports {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getPackageName() {
 		if (_hasPackageName == 0)
 			return null;
@@ -174,14 +204,14 @@ public class ExportsImpl extends BaseImpl implements Exports {
 
 	@Override
 	public void setPackageName(int _id) {
-		if (_hasPackageName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasPackageName" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasPackageName != 0) {
+				removeParentEdge(_hasPackageName);
+			}
 			_hasPackageName = _id;
 			setParentEdge(_hasPackageName);
 		} else {
@@ -191,9 +221,9 @@ public class ExportsImpl extends BaseImpl implements Exports {
 
 	@Override
 	public void setPackageName(Expression _node) {
-		if (_hasPackageName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasPackageName" ));
-
+		if (_hasPackageName != 0) {
+			removeParentEdge(_hasPackageName);
+		}
 		_hasPackageName = _node.getId();
 		setParentEdge(_hasPackageName);
 	}
@@ -220,6 +250,48 @@ public class ExportsImpl extends BaseImpl implements Exports {
 			_hasModuleNames = new EdgeList<Expression>(factory);
 		_hasModuleNames.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addModuleNames(Expression _node, int index) {
+		if (_hasModuleNames == null)
+			_hasModuleNames = new EdgeList<Expression>(factory);
+		_hasModuleNames.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setModuleNames(Expression _node, int index) {
+		if (_hasModuleNames == null)
+			_hasModuleNames = new EdgeList<Expression>(factory);
+		_hasModuleNames.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removePackageName() {
+		if (_hasPackageName != 0) {
+			removeParentEdge(_hasPackageName);
+		}
+		_hasPackageName = 0;
+	}
+
+	@Override
+	public void removeModuleNames(Expression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasModuleNames.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeModuleNames(int _id) {
+		int tmp=_hasModuleNames.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

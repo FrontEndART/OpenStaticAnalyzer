@@ -81,6 +81,32 @@ public interface Package extends Named, Scope {
 	public void addCompilationUnits(CompilationUnit node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.struc.Package#edgeHasCompilationUnits hasCompilationUnits} edge to the node.
+	 * @param node The end point of the new hasCompilationUnits edge.
+	 * @param index The index of end point of the new hasCompilationUnits edge.
+	 */
+	public void addCompilationUnits(CompilationUnit node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.Package#edgeHasCompilationUnits hasCompilationUnits} edge to the node.
+	 * @param node The end point of the new hasCompilationUnits edge.
+	 * @param index The index of end point of the new hasCompilationUnits edge.
+	 */
+	public void setCompilationUnits(CompilationUnit node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Package#edgeHasCompilationUnits hasCompilationUnits} edge by id from the node.
+	 * @param id The new end point of the hasCompilationUnits edge.
+	 */
+	public void removeCompilationUnits(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Package#edgeHasCompilationUnits hasCompilationUnits} edge from the node.
+	 * @param node The new end point of the hasCompilationUnits edge.
+	 */
+	public void removeCompilationUnits(CompilationUnit node);
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.Package#edgeIsInModule isInModule} edges.
 	 * @return Returns an iterator for the isInModule edges.
 	 */
@@ -109,6 +135,32 @@ public interface Package extends Named, Scope {
 	 * @param node The end point of the new isInModule edge.
 	 */
 	public void addIsInModule(Module node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.Package#edgeIsInModule isInModule} edge to the node.
+	 * @param node The end point of the new isInModule edge.
+	 * @param index The index of end point of the new isInModule edge.
+	 */
+	public void addIsInModule(Module node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.Package#edgeIsInModule isInModule} edge to the node.
+	 * @param node The end point of the new isInModule edge.
+	 * @param index The index of end point of the new isInModule edge.
+	 */
+	public void setIsInModule(Module node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Package#edgeIsInModule isInModule} edge by id from the node.
+	 * @param id The new end point of the isInModule edge.
+	 */
+	public void removeIsInModule(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Package#edgeIsInModule isInModule} edge from the node.
+	 * @param node The new end point of the isInModule edge.
+	 */
+	public void removeIsInModule(Module node);
 
 }
 

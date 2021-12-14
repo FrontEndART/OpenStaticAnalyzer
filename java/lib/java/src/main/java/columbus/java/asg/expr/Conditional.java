@@ -63,6 +63,11 @@ public interface Conditional extends Expression {
 	public void setCondition(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.Conditional#edgeHasCondition hasCondition} edge.
+	 */
+	public void removeCondition();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.Conditional#edgeHasTrueExpression hasTrueExpression} edge points to.
 	 * @return Returns the end point of the hasTrueExpression edge.
 	 */
@@ -81,6 +86,11 @@ public interface Conditional extends Expression {
 	public void setTrueExpression(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.Conditional#edgeHasTrueExpression hasTrueExpression} edge.
+	 */
+	public void removeTrueExpression();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.Conditional#edgeHasFalseExpression hasFalseExpression} edge points to.
 	 * @return Returns the end point of the hasFalseExpression edge.
 	 */
@@ -97,6 +107,11 @@ public interface Conditional extends Expression {
 	 * @param node The new end point of the hasFalseExpression edge.
 	 */
 	public void setFalseExpression(Expression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.Conditional#edgeHasFalseExpression hasFalseExpression} edge.
+	 */
+	public void removeFalseExpression();
 
 }
 

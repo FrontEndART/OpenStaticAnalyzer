@@ -59,5 +59,31 @@ public interface Block extends Statement {
 	 */
 	public void addStatements(Statement node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.Block#edgeHasStatements hasStatements} edge to the node.
+	 * @param node The end point of the new hasStatements edge.
+	 * @param index The index of end point of the new hasStatements edge.
+	 */
+	public void addStatements(Statement node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.Block#edgeHasStatements hasStatements} edge to the node.
+	 * @param node The end point of the new hasStatements edge.
+	 * @param index The index of end point of the new hasStatements edge.
+	 */
+	public void setStatements(Statement node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Block#edgeHasStatements hasStatements} edge by id from the node.
+	 * @param id The new end point of the hasStatements edge.
+	 */
+	public void removeStatements(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Block#edgeHasStatements hasStatements} edge from the node.
+	 * @param node The new end point of the hasStatements edge.
+	 */
+	public void removeStatements(Statement node);
+
 }
 

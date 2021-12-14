@@ -191,6 +191,36 @@ public class TryImpl extends BaseImpl implements Try {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Base> getResourcesIterator() {
 		if (_hasResources == null)
 			return EdgeList.<Base>emptyList().iterator();
@@ -285,15 +315,39 @@ public class TryImpl extends BaseImpl implements Try {
 	}
 
 	@Override
-	public void setBlock(int _id) {
-		if (_hasBlock != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBlock" ));
+	public void addResources(Base _node, int index) {
+		if (_node.getNodeKind() == NodeKind.ndkVariable || Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasResources == null)
+				_hasResources = new EdgeList<Base>(factory);
+			_hasResources.add(_node, index);
+		} else {
+			throw new JavaException(logger.formatMessage("ex.java.Node.Invalid","NodeKind", _node.getNodeKind() ));
+		}
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setResources(Base _node, int index) {
+		if (_node.getNodeKind() == NodeKind.ndkVariable || Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasResources == null)
+				_hasResources = new EdgeList<Base>(factory);
+			_hasResources.set(_node, index);
+		} else {
+			throw new JavaException(logger.formatMessage("ex.java.Node.Invalid","NodeKind", _node.getNodeKind() ));
+		}
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setBlock(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkBlock) {
+			if (_hasBlock != 0) {
+				removeParentEdge(_hasBlock);
+			}
 			_hasBlock = _id;
 			setParentEdge(_hasBlock);
 		} else {
@@ -303,9 +357,9 @@ public class TryImpl extends BaseImpl implements Try {
 
 	@Override
 	public void setBlock(Block _node) {
-		if (_hasBlock != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBlock" ));
-
+		if (_hasBlock != 0) {
+			removeParentEdge(_hasBlock);
+		}
 		_hasBlock = _node.getId();
 		setParentEdge(_hasBlock);
 	}
@@ -335,15 +389,31 @@ public class TryImpl extends BaseImpl implements Try {
 	}
 
 	@Override
-	public void setFinallyBlock(int _id) {
-		if (_hasFinallyBlock != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasFinallyBlock" ));
+	public void addHandlers(Handler _node, int index) {
+		if (_hasHandlers == null)
+			_hasHandlers = new EdgeList<Handler>(factory);
+		_hasHandlers.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setHandlers(Handler _node, int index) {
+		if (_hasHandlers == null)
+			_hasHandlers = new EdgeList<Handler>(factory);
+		_hasHandlers.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setFinallyBlock(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkBlock) {
+			if (_hasFinallyBlock != 0) {
+				removeParentEdge(_hasFinallyBlock);
+			}
 			_hasFinallyBlock = _id;
 			setParentEdge(_hasFinallyBlock);
 		} else {
@@ -353,11 +423,63 @@ public class TryImpl extends BaseImpl implements Try {
 
 	@Override
 	public void setFinallyBlock(Block _node) {
-		if (_hasFinallyBlock != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasFinallyBlock" ));
-
+		if (_hasFinallyBlock != 0) {
+			removeParentEdge(_hasFinallyBlock);
+		}
 		_hasFinallyBlock = _node.getId();
 		setParentEdge(_hasFinallyBlock);
+	}
+
+	@Override
+	public void removeResources(Base _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasResources.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeResources(int _id) {
+		int tmp=_hasResources.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeBlock() {
+		if (_hasBlock != 0) {
+			removeParentEdge(_hasBlock);
+		}
+		_hasBlock = 0;
+	}
+
+	@Override
+	public void removeHandlers(Handler _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasHandlers.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeHandlers(int _id) {
+		int tmp=_hasHandlers.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeFinallyBlock() {
+		if (_hasFinallyBlock != 0) {
+			removeParentEdge(_hasFinallyBlock);
+		}
+		_hasFinallyBlock = 0;
 	}
 
 

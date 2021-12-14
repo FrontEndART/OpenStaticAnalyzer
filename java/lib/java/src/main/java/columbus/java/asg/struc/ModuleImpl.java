@@ -126,6 +126,36 @@ public class ModuleImpl extends BaseImpl implements Module {
 		_packages.add(_node);
 	}
 
+	@Override
+	public void addPackages(Package _node, int index) {
+		if (_packages == null)
+			_packages = new EdgeList<Package>(factory);
+		_packages.add(_node, index);
+	}
+
+	@Override
+	public void setPackages(Package _node, int index) {
+		if (_packages == null)
+			_packages = new EdgeList<Package>(factory);
+		_packages.set(_node, index);
+	}
+
+	@Override
+	public void removePackages(Package _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_packages.remove(_node);
+	}
+
+	@Override
+	public void removePackages(int _id) {
+		int tmp=_packages.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
 
 	// ---------- Accept methods for Visitor ----------
 

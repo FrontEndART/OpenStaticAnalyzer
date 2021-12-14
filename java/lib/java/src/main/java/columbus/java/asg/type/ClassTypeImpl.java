@@ -61,9 +61,6 @@ public class ClassTypeImpl extends BaseImpl implements ClassType {
 
 	@Override
 	public void setOwner(int _id) {
-		if (_owner != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","owner" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -77,10 +74,12 @@ public class ClassTypeImpl extends BaseImpl implements ClassType {
 
 	@Override
 	public void setOwner(Type _node) {
-		if (_owner != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","owner" ));
-
 		_owner = _node.getId();
+	}
+
+	@Override
+	public void removeOwner() {
+		_owner = 0;
 	}
 
 	@Override
@@ -94,9 +93,6 @@ public class ClassTypeImpl extends BaseImpl implements ClassType {
 
 	@Override
 	public void setRefersTo(int _id) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -110,10 +106,12 @@ public class ClassTypeImpl extends BaseImpl implements ClassType {
 
 	@Override
 	public void setRefersTo(TypeDeclaration _node) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		_refersTo = _node.getId();
+	}
+
+	@Override
+	public void removeRefersTo() {
+		_refersTo = 0;
 	}
 
 

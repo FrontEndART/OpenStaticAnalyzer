@@ -59,5 +59,31 @@ public interface TypeIntersectionExpression extends TypeExpression {
 	 */
 	public void addBounds(TypeExpression node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.TypeIntersectionExpression#edgeHasBounds hasBounds} edge to the node.
+	 * @param node The end point of the new hasBounds edge.
+	 * @param index The index of end point of the new hasBounds edge.
+	 */
+	public void addBounds(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.TypeIntersectionExpression#edgeHasBounds hasBounds} edge to the node.
+	 * @param node The end point of the new hasBounds edge.
+	 * @param index The index of end point of the new hasBounds edge.
+	 */
+	public void setBounds(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.TypeIntersectionExpression#edgeHasBounds hasBounds} edge by id from the node.
+	 * @param id The new end point of the hasBounds edge.
+	 */
+	public void removeBounds(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.TypeIntersectionExpression#edgeHasBounds hasBounds} edge from the node.
+	 * @param node The new end point of the hasBounds edge.
+	 */
+	public void removeBounds(TypeExpression node);
+
 }
 

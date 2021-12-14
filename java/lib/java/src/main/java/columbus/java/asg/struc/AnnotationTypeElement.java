@@ -61,5 +61,10 @@ public interface AnnotationTypeElement extends MethodDeclaration {
 	 */
 	public void setDefaultValue(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.struc.AnnotationTypeElement#edgeHasDefaultValue hasDefaultValue} edge.
+	 */
+	public void removeDefaultValue();
+
 }
 

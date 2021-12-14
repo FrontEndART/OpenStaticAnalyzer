@@ -137,6 +137,36 @@ public class BlockImpl extends BaseImpl implements Block {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Statement> getStatementsIterator() {
 		if (_hasStatements == null)
 			return EdgeList.<Statement>emptyList().iterator();
@@ -182,6 +212,40 @@ public class BlockImpl extends BaseImpl implements Block {
 			_hasStatements = new EdgeList<Statement>(factory);
 		_hasStatements.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addStatements(Statement _node, int index) {
+		if (_hasStatements == null)
+			_hasStatements = new EdgeList<Statement>(factory);
+		_hasStatements.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setStatements(Statement _node, int index) {
+		if (_hasStatements == null)
+			_hasStatements = new EdgeList<Statement>(factory);
+		_hasStatements.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeStatements(Statement _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasStatements.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeStatements(int _id) {
+		int tmp=_hasStatements.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

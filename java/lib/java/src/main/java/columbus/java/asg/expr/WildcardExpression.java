@@ -60,5 +60,10 @@ public interface WildcardExpression extends TypeExpression {
 	 */
 	public void setBound(TypeExpression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.WildcardExpression#edgeHasBound hasBound} edge.
+	 */
+	public void removeBound();
+
 }
 

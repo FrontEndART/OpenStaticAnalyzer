@@ -143,6 +143,11 @@ public interface MethodDeclaration extends NamedDeclaration {
 	public void setReturnType(TypeExpression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.struc.MethodDeclaration#edgeHasReturnType hasReturnType} edge.
+	 */
+	public void removeReturnType();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.MethodDeclaration#edgeMethodType methodType} edge points to.
 	 * @return Returns the end point of the methodType edge.
 	 */
@@ -159,6 +164,11 @@ public interface MethodDeclaration extends NamedDeclaration {
 	 * @param node The new end point of the methodType edge.
 	 */
 	public void setMethodType(MethodType node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.MethodDeclaration#edgeMethodType methodType} edge.
+	 */
+	public void removeMethodType();
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.MethodDeclaration#edgeOverrides overrides} edges.
@@ -189,6 +199,32 @@ public interface MethodDeclaration extends NamedDeclaration {
 	 * @param node The end point of the new overrides edge.
 	 */
 	public void addOverrides(MethodDeclaration node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.MethodDeclaration#edgeOverrides overrides} edge to the node.
+	 * @param node The end point of the new overrides edge.
+	 * @param index The index of end point of the new overrides edge.
+	 */
+	public void addOverrides(MethodDeclaration node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.MethodDeclaration#edgeOverrides overrides} edge to the node.
+	 * @param node The end point of the new overrides edge.
+	 * @param index The index of end point of the new overrides edge.
+	 */
+	public void setOverrides(MethodDeclaration node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.MethodDeclaration#edgeOverrides overrides} edge by id from the node.
+	 * @param id The new end point of the overrides edge.
+	 */
+	public void removeOverrides(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.MethodDeclaration#edgeOverrides overrides} edge from the node.
+	 * @param node The new end point of the overrides edge.
+	 */
+	public void removeOverrides(MethodDeclaration node);
 
 }
 

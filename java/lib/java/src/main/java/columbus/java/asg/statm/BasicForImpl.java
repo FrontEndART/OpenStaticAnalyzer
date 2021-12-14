@@ -208,6 +208,36 @@ public class BasicForImpl extends BaseImpl implements BasicFor {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Statement getSubstatement() {
 		if (_hasSubstatement == 0)
 			return null;
@@ -218,14 +248,14 @@ public class BasicForImpl extends BaseImpl implements BasicFor {
 
 	@Override
 	public void setSubstatement(int _id) {
-		if (_hasSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSubstatement" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkStatement)) {
+			if (_hasSubstatement != 0) {
+				removeParentEdge(_hasSubstatement);
+			}
 			_hasSubstatement = _id;
 			setParentEdge(_hasSubstatement);
 		} else {
@@ -235,11 +265,19 @@ public class BasicForImpl extends BaseImpl implements BasicFor {
 
 	@Override
 	public void setSubstatement(Statement _node) {
-		if (_hasSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSubstatement" ));
-
+		if (_hasSubstatement != 0) {
+			removeParentEdge(_hasSubstatement);
+		}
 		_hasSubstatement = _node.getId();
 		setParentEdge(_hasSubstatement);
+	}
+
+	@Override
+	public void removeSubstatement() {
+		if (_hasSubstatement != 0) {
+			removeParentEdge(_hasSubstatement);
+		}
+		_hasSubstatement = 0;
 	}
 
 	@Override
@@ -324,15 +362,31 @@ public class BasicForImpl extends BaseImpl implements BasicFor {
 	}
 
 	@Override
-	public void setCondition(int _id) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
+	public void addInitializers(Statement _node, int index) {
+		if (_hasInitializers == null)
+			_hasInitializers = new EdgeList<Statement>(factory);
+		_hasInitializers.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setInitializers(Statement _node, int index) {
+		if (_hasInitializers == null)
+			_hasInitializers = new EdgeList<Statement>(factory);
+		_hasInitializers.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setCondition(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasCondition != 0) {
+				removeParentEdge(_hasCondition);
+			}
 			_hasCondition = _id;
 			setParentEdge(_hasCondition);
 		} else {
@@ -342,9 +396,9 @@ public class BasicForImpl extends BaseImpl implements BasicFor {
 
 	@Override
 	public void setCondition(Expression _node) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
 		_hasCondition = _node.getId();
 		setParentEdge(_hasCondition);
 	}
@@ -371,6 +425,66 @@ public class BasicForImpl extends BaseImpl implements BasicFor {
 			_hasUpdates = new EdgeList<Statement>(factory);
 		_hasUpdates.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addUpdates(Statement _node, int index) {
+		if (_hasUpdates == null)
+			_hasUpdates = new EdgeList<Statement>(factory);
+		_hasUpdates.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setUpdates(Statement _node, int index) {
+		if (_hasUpdates == null)
+			_hasUpdates = new EdgeList<Statement>(factory);
+		_hasUpdates.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeInitializers(Statement _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasInitializers.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeInitializers(int _id) {
+		int tmp=_hasInitializers.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeCondition() {
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
+		_hasCondition = 0;
+	}
+
+	@Override
+	public void removeUpdates(Statement _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasUpdates.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeUpdates(int _id) {
+		int tmp=_hasUpdates.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

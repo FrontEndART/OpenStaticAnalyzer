@@ -47,5 +47,10 @@ public interface VariableDeclaration extends NamedDeclaration {
 	 */
 	public void setType(TypeExpression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.struc.VariableDeclaration#edgeHasType hasType} edge.
+	 */
+	public void removeType();
+
 }
 

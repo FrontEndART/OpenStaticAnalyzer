@@ -156,6 +156,36 @@ public class SwitchImpl extends BaseImpl implements Switch {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getCondition() {
 		if (_hasCondition == 0)
 			return null;
@@ -166,14 +196,14 @@ public class SwitchImpl extends BaseImpl implements Switch {
 
 	@Override
 	public void setCondition(int _id) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasCondition != 0) {
+				removeParentEdge(_hasCondition);
+			}
 			_hasCondition = _id;
 			setParentEdge(_hasCondition);
 		} else {
@@ -183,11 +213,19 @@ public class SwitchImpl extends BaseImpl implements Switch {
 
 	@Override
 	public void setCondition(Expression _node) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
 		_hasCondition = _node.getId();
 		setParentEdge(_hasCondition);
+	}
+
+	@Override
+	public void removeCondition() {
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
+		_hasCondition = 0;
 	}
 
 	@Override
@@ -236,6 +274,40 @@ public class SwitchImpl extends BaseImpl implements Switch {
 			_hasCases = new EdgeList<SwitchLabel>(factory);
 		_hasCases.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addCases(SwitchLabel _node, int index) {
+		if (_hasCases == null)
+			_hasCases = new EdgeList<SwitchLabel>(factory);
+		_hasCases.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setCases(SwitchLabel _node, int index) {
+		if (_hasCases == null)
+			_hasCases = new EdgeList<SwitchLabel>(factory);
+		_hasCases.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeCases(SwitchLabel _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasCases.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeCases(int _id) {
+		int tmp=_hasCases.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

@@ -166,6 +166,36 @@ public class ImportImpl extends BaseImpl implements Import {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getTarget() {
 		if (_hasTarget == 0)
 			return null;
@@ -176,14 +206,14 @@ public class ImportImpl extends BaseImpl implements Import {
 
 	@Override
 	public void setTarget(int _id) {
-		if (_hasTarget != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasTarget" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasTarget != 0) {
+				removeParentEdge(_hasTarget);
+			}
 			_hasTarget = _id;
 			setParentEdge(_hasTarget);
 		} else {
@@ -193,11 +223,19 @@ public class ImportImpl extends BaseImpl implements Import {
 
 	@Override
 	public void setTarget(Expression _node) {
-		if (_hasTarget != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasTarget" ));
-
+		if (_hasTarget != 0) {
+			removeParentEdge(_hasTarget);
+		}
 		_hasTarget = _node.getId();
 		setParentEdge(_hasTarget);
+	}
+
+	@Override
+	public void removeTarget() {
+		if (_hasTarget != 0) {
+			removeParentEdge(_hasTarget);
+		}
+		_hasTarget = 0;
 	}
 
 

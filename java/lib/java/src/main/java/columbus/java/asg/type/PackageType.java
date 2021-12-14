@@ -47,5 +47,10 @@ public interface PackageType extends Type {
 	 */
 	public void setRefersTo(Package node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.type.PackageType#edgeRefersTo refersTo} edge.
+	 */
+	public void removeRefersTo();
+
 }
 

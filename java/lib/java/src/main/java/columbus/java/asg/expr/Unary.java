@@ -46,5 +46,10 @@ public interface Unary extends Expression {
 	 */
 	public void setOperand(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.Unary#edgeHasOperand hasOperand} edge.
+	 */
+	public void removeOperand();
+
 }
 

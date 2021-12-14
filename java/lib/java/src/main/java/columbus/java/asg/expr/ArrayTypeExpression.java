@@ -46,5 +46,10 @@ public interface ArrayTypeExpression extends TypeExpression {
 	 */
 	public void setComponentType(TypeExpression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.ArrayTypeExpression#edgeHasComponentType hasComponentType} edge.
+	 */
+	public void removeComponentType();
+
 }
 

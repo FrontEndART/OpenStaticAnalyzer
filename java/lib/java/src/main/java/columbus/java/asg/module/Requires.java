@@ -73,5 +73,10 @@ public interface Requires extends ModuleDirective {
 	 */
 	public void setModuleName(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.module.Requires#edgeHasModuleName hasModuleName} edge.
+	 */
+	public void removeModuleName();
+
 }
 

@@ -158,6 +158,36 @@ public class IfImpl extends BaseImpl implements If {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getCondition() {
 		if (_hasCondition == 0)
 			return null;
@@ -168,14 +198,14 @@ public class IfImpl extends BaseImpl implements If {
 
 	@Override
 	public void setCondition(int _id) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasCondition != 0) {
+				removeParentEdge(_hasCondition);
+			}
 			_hasCondition = _id;
 			setParentEdge(_hasCondition);
 		} else {
@@ -185,11 +215,19 @@ public class IfImpl extends BaseImpl implements If {
 
 	@Override
 	public void setCondition(Expression _node) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
 		_hasCondition = _node.getId();
 		setParentEdge(_hasCondition);
+	}
+
+	@Override
+	public void removeCondition() {
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
+		_hasCondition = 0;
 	}
 
 	@Override
@@ -212,14 +250,14 @@ public class IfImpl extends BaseImpl implements If {
 
 	@Override
 	public void setSubstatement(int _id) {
-		if (_hasSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSubstatement" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkStatement)) {
+			if (_hasSubstatement != 0) {
+				removeParentEdge(_hasSubstatement);
+			}
 			_hasSubstatement = _id;
 			setParentEdge(_hasSubstatement);
 		} else {
@@ -229,23 +267,23 @@ public class IfImpl extends BaseImpl implements If {
 
 	@Override
 	public void setSubstatement(Statement _node) {
-		if (_hasSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasSubstatement" ));
-
+		if (_hasSubstatement != 0) {
+			removeParentEdge(_hasSubstatement);
+		}
 		_hasSubstatement = _node.getId();
 		setParentEdge(_hasSubstatement);
 	}
 
 	@Override
 	public void setFalseSubstatement(int _id) {
-		if (_hasFalseSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasFalseSubstatement" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkStatement)) {
+			if (_hasFalseSubstatement != 0) {
+				removeParentEdge(_hasFalseSubstatement);
+			}
 			_hasFalseSubstatement = _id;
 			setParentEdge(_hasFalseSubstatement);
 		} else {
@@ -255,11 +293,27 @@ public class IfImpl extends BaseImpl implements If {
 
 	@Override
 	public void setFalseSubstatement(Statement _node) {
-		if (_hasFalseSubstatement != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasFalseSubstatement" ));
-
+		if (_hasFalseSubstatement != 0) {
+			removeParentEdge(_hasFalseSubstatement);
+		}
 		_hasFalseSubstatement = _node.getId();
 		setParentEdge(_hasFalseSubstatement);
+	}
+
+	@Override
+	public void removeSubstatement() {
+		if (_hasSubstatement != 0) {
+			removeParentEdge(_hasSubstatement);
+		}
+		_hasSubstatement = 0;
+	}
+
+	@Override
+	public void removeFalseSubstatement() {
+		if (_hasFalseSubstatement != 0) {
+			removeParentEdge(_hasFalseSubstatement);
+		}
+		_hasFalseSubstatement = 0;
 	}
 
 

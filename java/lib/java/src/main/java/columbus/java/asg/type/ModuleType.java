@@ -47,5 +47,10 @@ public interface ModuleType extends Type {
 	 */
 	public void setRefersTo(Module node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.type.ModuleType#edgeRefersTo refersTo} edge.
+	 */
+	public void removeRefersTo();
+
 }
 

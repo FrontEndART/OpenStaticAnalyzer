@@ -60,5 +60,31 @@ public interface ErroneousTypeExpression extends TypeExpression {
 	 */
 	public void addErrors(Positioned node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.ErroneousTypeExpression#edgeHasErrors hasErrors} edge to the node.
+	 * @param node The end point of the new hasErrors edge.
+	 * @param index The index of end point of the new hasErrors edge.
+	 */
+	public void addErrors(Positioned node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.ErroneousTypeExpression#edgeHasErrors hasErrors} edge to the node.
+	 * @param node The end point of the new hasErrors edge.
+	 * @param index The index of end point of the new hasErrors edge.
+	 */
+	public void setErrors(Positioned node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.ErroneousTypeExpression#edgeHasErrors hasErrors} edge by id from the node.
+	 * @param id The new end point of the hasErrors edge.
+	 */
+	public void removeErrors(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.ErroneousTypeExpression#edgeHasErrors hasErrors} edge from the node.
+	 * @param node The new end point of the hasErrors edge.
+	 */
+	public void removeErrors(Positioned node);
+
 }
 

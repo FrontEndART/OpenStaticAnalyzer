@@ -158,6 +158,36 @@ public class ModuleDeclarationImpl extends BaseImpl implements ModuleDeclaration
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getName() {
 		if (_hasName == 0)
 			return null;
@@ -210,14 +240,14 @@ public class ModuleDeclarationImpl extends BaseImpl implements ModuleDeclaration
 
 	@Override
 	public void setName(int _id) {
-		if (_hasName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasName" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasName != 0) {
+				removeParentEdge(_hasName);
+			}
 			_hasName = _id;
 			setParentEdge(_hasName);
 		} else {
@@ -227,9 +257,9 @@ public class ModuleDeclarationImpl extends BaseImpl implements ModuleDeclaration
 
 	@Override
 	public void setName(Expression _node) {
-		if (_hasName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasName" ));
-
+		if (_hasName != 0) {
+			removeParentEdge(_hasName);
+		}
 		_hasName = _node.getId();
 		setParentEdge(_hasName);
 	}
@@ -259,10 +289,23 @@ public class ModuleDeclarationImpl extends BaseImpl implements ModuleDeclaration
 	}
 
 	@Override
-	public void setModuleType(int _id) {
-		if (_moduleType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","moduleType" ));
+	public void addDirectives(ModuleDirective _node, int index) {
+		if (_hasDirectives == null)
+			_hasDirectives = new EdgeList<ModuleDirective>(factory);
+		_hasDirectives.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setDirectives(ModuleDirective _node, int index) {
+		if (_hasDirectives == null)
+			_hasDirectives = new EdgeList<ModuleDirective>(factory);
+		_hasDirectives.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setModuleType(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -276,17 +319,11 @@ public class ModuleDeclarationImpl extends BaseImpl implements ModuleDeclaration
 
 	@Override
 	public void setModuleType(ModuleType _node) {
-		if (_moduleType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","moduleType" ));
-
 		_moduleType = _node.getId();
 	}
 
 	@Override
 	public void setRefersTo(int _id) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -300,10 +337,43 @@ public class ModuleDeclarationImpl extends BaseImpl implements ModuleDeclaration
 
 	@Override
 	public void setRefersTo(Module _node) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		_refersTo = _node.getId();
+	}
+
+	@Override
+	public void removeName() {
+		if (_hasName != 0) {
+			removeParentEdge(_hasName);
+		}
+		_hasName = 0;
+	}
+
+	@Override
+	public void removeDirectives(ModuleDirective _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasDirectives.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeDirectives(int _id) {
+		int tmp=_hasDirectives.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeModuleType() {
+		_moduleType = 0;
+	}
+
+	@Override
+	public void removeRefersTo() {
+		_refersTo = 0;
 	}
 
 

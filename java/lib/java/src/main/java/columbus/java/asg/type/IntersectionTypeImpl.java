@@ -93,6 +93,36 @@ public class IntersectionTypeImpl extends BaseImpl implements IntersectionType {
 		_bounds.add(_node);
 	}
 
+	@Override
+	public void addBounds(Type _node, int index) {
+		if (_bounds == null)
+			_bounds = new EdgeList<Type>(factory);
+		_bounds.add(_node, index);
+	}
+
+	@Override
+	public void setBounds(Type _node, int index) {
+		if (_bounds == null)
+			_bounds = new EdgeList<Type>(factory);
+		_bounds.set(_node, index);
+	}
+
+	@Override
+	public void removeBounds(Type _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_bounds.remove(_node);
+	}
+
+	@Override
+	public void removeBounds(int _id) {
+		int tmp=_bounds.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
 
 	// ---------- Accept methods for Visitor ----------
 

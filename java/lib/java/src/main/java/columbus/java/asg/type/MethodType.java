@@ -50,6 +50,11 @@ public interface MethodType extends Type {
 	public void setReturnType(Type node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.type.MethodType#edgeReturnType returnType} edge.
+	 */
+	public void removeReturnType();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.type.MethodType#edgeParameterTypes parameterTypes} edges.
 	 * @return Returns an iterator for the parameterTypes edges.
 	 */
@@ -80,6 +85,32 @@ public interface MethodType extends Type {
 	public void addParameterTypes(Type node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.type.MethodType#edgeParameterTypes parameterTypes} edge to the node.
+	 * @param node The end point of the new parameterTypes edge.
+	 * @param index The index of end point of the new parameterTypes edge.
+	 */
+	public void addParameterTypes(Type node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.type.MethodType#edgeParameterTypes parameterTypes} edge to the node.
+	 * @param node The end point of the new parameterTypes edge.
+	 * @param index The index of end point of the new parameterTypes edge.
+	 */
+	public void setParameterTypes(Type node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.MethodType#edgeParameterTypes parameterTypes} edge by id from the node.
+	 * @param id The new end point of the parameterTypes edge.
+	 */
+	public void removeParameterTypes(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.MethodType#edgeParameterTypes parameterTypes} edge from the node.
+	 * @param node The new end point of the parameterTypes edge.
+	 */
+	public void removeParameterTypes(Type node);
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.type.MethodType#edgeThrownTypes thrownTypes} edges.
 	 * @return Returns an iterator for the thrownTypes edges.
 	 */
@@ -108,6 +139,32 @@ public interface MethodType extends Type {
 	 * @param node The end point of the new thrownTypes edge.
 	 */
 	public void addThrownTypes(Type node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.type.MethodType#edgeThrownTypes thrownTypes} edge to the node.
+	 * @param node The end point of the new thrownTypes edge.
+	 * @param index The index of end point of the new thrownTypes edge.
+	 */
+	public void addThrownTypes(Type node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.type.MethodType#edgeThrownTypes thrownTypes} edge to the node.
+	 * @param node The end point of the new thrownTypes edge.
+	 * @param index The index of end point of the new thrownTypes edge.
+	 */
+	public void setThrownTypes(Type node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.MethodType#edgeThrownTypes thrownTypes} edge by id from the node.
+	 * @param id The new end point of the thrownTypes edge.
+	 */
+	public void removeThrownTypes(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.MethodType#edgeThrownTypes thrownTypes} edge from the node.
+	 * @param node The new end point of the thrownTypes edge.
+	 */
+	public void removeThrownTypes(Type node);
 
 }
 

@@ -47,5 +47,10 @@ public interface Uses extends ModuleDirective {
 	 */
 	public void setServiceName(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.module.Uses#edgeHasServiceName hasServiceName} edge.
+	 */
+	public void removeServiceName();
+
 }
 

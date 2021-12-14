@@ -48,5 +48,10 @@ public interface Expression extends Positioned {
 	 */
 	public void setType(Type node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.Expression#edgeType type} edge.
+	 */
+	public void removeType();
+
 }
 

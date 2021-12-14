@@ -58,9 +58,6 @@ public class UpperBoundedWildcardTypeImpl extends BaseImpl implements UpperBound
 
 	@Override
 	public void setBound(int _id) {
-		if (_bound != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","bound" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -74,10 +71,12 @@ public class UpperBoundedWildcardTypeImpl extends BaseImpl implements UpperBound
 
 	@Override
 	public void setBound(Type _node) {
-		if (_bound != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","bound" ));
-
 		_bound = _node.getId();
+	}
+
+	@Override
+	public void removeBound() {
+		_bound = 0;
 	}
 
 

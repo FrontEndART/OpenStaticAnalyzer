@@ -59,5 +59,10 @@ public interface ArrayType extends Type {
 	 */
 	public void setComponentType(Type node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.type.ArrayType#edgeComponentType componentType} edge.
+	 */
+	public void removeComponentType();
+
 }
 

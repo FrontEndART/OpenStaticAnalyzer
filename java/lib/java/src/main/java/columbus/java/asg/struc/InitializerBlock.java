@@ -60,5 +60,10 @@ public interface InitializerBlock extends Declaration {
 	 */
 	public void setBody(Block node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.struc.InitializerBlock#edgeHasBody hasBody} edge.
+	 */
+	public void removeBody();
+
 }
 

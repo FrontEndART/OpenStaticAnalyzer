@@ -75,5 +75,10 @@ public interface Import extends Positioned {
 	 */
 	public void setTarget(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Import#edgeHasTarget hasTarget} edge.
+	 */
+	public void removeTarget();
+
 }
 

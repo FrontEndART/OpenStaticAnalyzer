@@ -63,6 +63,11 @@ public interface Assert extends Statement {
 	public void setCondition(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.statm.Assert#edgeHasCondition hasCondition} edge.
+	 */
+	public void removeCondition();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.Assert#edgeHasDetail hasDetail} edge points to.
 	 * @return Returns the end point of the hasDetail edge.
 	 */
@@ -79,6 +84,11 @@ public interface Assert extends Statement {
 	 * @param node The new end point of the hasDetail edge.
 	 */
 	public void setDetail(Expression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Assert#edgeHasDetail hasDetail} edge.
+	 */
+	public void removeDetail();
 
 }
 

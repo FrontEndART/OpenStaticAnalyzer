@@ -75,6 +75,11 @@ public interface CompilationUnit extends PositionedWithoutComment, Commentable {
 	public void setPackageDeclaration(PackageDeclaration node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeHasPackageDeclaration hasPackageDeclaration} edge.
+	 */
+	public void removePackageDeclaration();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.CompilationUnit#edgeHasImports hasImports} edges.
 	 * @return Returns an iterator for the hasImports edges.
 	 */
@@ -103,6 +108,32 @@ public interface CompilationUnit extends PositionedWithoutComment, Commentable {
 	 * @param node The end point of the new hasImports edge.
 	 */
 	public void addImports(Import node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.CompilationUnit#edgeHasImports hasImports} edge to the node.
+	 * @param node The end point of the new hasImports edge.
+	 * @param index The index of end point of the new hasImports edge.
+	 */
+	public void addImports(Import node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.CompilationUnit#edgeHasImports hasImports} edge to the node.
+	 * @param node The end point of the new hasImports edge.
+	 * @param index The index of end point of the new hasImports edge.
+	 */
+	public void setImports(Import node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeHasImports hasImports} edge by id from the node.
+	 * @param id The new end point of the hasImports edge.
+	 */
+	public void removeImports(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeHasImports hasImports} edge from the node.
+	 * @param node The new end point of the hasImports edge.
+	 */
+	public void removeImports(Import node);
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.CompilationUnit#edgeHasOthers hasOthers} edges.
@@ -135,6 +166,32 @@ public interface CompilationUnit extends PositionedWithoutComment, Commentable {
 	public void addOthers(Positioned node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.struc.CompilationUnit#edgeHasOthers hasOthers} edge to the node.
+	 * @param node The end point of the new hasOthers edge.
+	 * @param index The index of end point of the new hasOthers edge.
+	 */
+	public void addOthers(Positioned node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.CompilationUnit#edgeHasOthers hasOthers} edge to the node.
+	 * @param node The end point of the new hasOthers edge.
+	 * @param index The index of end point of the new hasOthers edge.
+	 */
+	public void setOthers(Positioned node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeHasOthers hasOthers} edge by id from the node.
+	 * @param id The new end point of the hasOthers edge.
+	 */
+	public void removeOthers(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeHasOthers hasOthers} edge from the node.
+	 * @param node The new end point of the hasOthers edge.
+	 */
+	public void removeOthers(Positioned node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.CompilationUnit#edgeHasModuleDeclaration hasModuleDeclaration} edge points to.
 	 * @return Returns the end point of the hasModuleDeclaration edge.
 	 */
@@ -151,6 +208,11 @@ public interface CompilationUnit extends PositionedWithoutComment, Commentable {
 	 * @param node The new end point of the hasModuleDeclaration edge.
 	 */
 	public void setModuleDeclaration(ModuleDeclaration node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeHasModuleDeclaration hasModuleDeclaration} edge.
+	 */
+	public void removeModuleDeclaration();
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.CompilationUnit#edgeTypeDeclarations typeDeclarations} edges.
@@ -183,6 +245,32 @@ public interface CompilationUnit extends PositionedWithoutComment, Commentable {
 	public void addTypeDeclarations(TypeDeclaration node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.struc.CompilationUnit#edgeTypeDeclarations typeDeclarations} edge to the node.
+	 * @param node The end point of the new typeDeclarations edge.
+	 * @param index The index of end point of the new typeDeclarations edge.
+	 */
+	public void addTypeDeclarations(TypeDeclaration node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.CompilationUnit#edgeTypeDeclarations typeDeclarations} edge to the node.
+	 * @param node The end point of the new typeDeclarations edge.
+	 * @param index The index of end point of the new typeDeclarations edge.
+	 */
+	public void setTypeDeclarations(TypeDeclaration node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeTypeDeclarations typeDeclarations} edge by id from the node.
+	 * @param id The new end point of the typeDeclarations edge.
+	 */
+	public void removeTypeDeclarations(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeTypeDeclarations typeDeclarations} edge from the node.
+	 * @param node The new end point of the typeDeclarations edge.
+	 */
+	public void removeTypeDeclarations(TypeDeclaration node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.CompilationUnit#edgeIsInModule isInModule} edge points to.
 	 * @return Returns the end point of the isInModule edge.
 	 */
@@ -199,6 +287,11 @@ public interface CompilationUnit extends PositionedWithoutComment, Commentable {
 	 * @param node The new end point of the isInModule edge.
 	 */
 	public void setIsInModule(Module node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.CompilationUnit#edgeIsInModule isInModule} edge.
+	 */
+	public void removeIsInModule();
 
 }
 

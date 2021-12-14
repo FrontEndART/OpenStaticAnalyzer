@@ -156,6 +156,36 @@ public class AssertImpl extends BaseImpl implements Assert {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getCondition() {
 		if (_hasCondition == 0)
 			return null;
@@ -175,14 +205,14 @@ public class AssertImpl extends BaseImpl implements Assert {
 
 	@Override
 	public void setCondition(int _id) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasCondition != 0) {
+				removeParentEdge(_hasCondition);
+			}
 			_hasCondition = _id;
 			setParentEdge(_hasCondition);
 		} else {
@@ -192,23 +222,23 @@ public class AssertImpl extends BaseImpl implements Assert {
 
 	@Override
 	public void setCondition(Expression _node) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
 		_hasCondition = _node.getId();
 		setParentEdge(_hasCondition);
 	}
 
 	@Override
 	public void setDetail(int _id) {
-		if (_hasDetail != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasDetail" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasDetail != 0) {
+				removeParentEdge(_hasDetail);
+			}
 			_hasDetail = _id;
 			setParentEdge(_hasDetail);
 		} else {
@@ -218,11 +248,27 @@ public class AssertImpl extends BaseImpl implements Assert {
 
 	@Override
 	public void setDetail(Expression _node) {
-		if (_hasDetail != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasDetail" ));
-
+		if (_hasDetail != 0) {
+			removeParentEdge(_hasDetail);
+		}
 		_hasDetail = _node.getId();
 		setParentEdge(_hasDetail);
+	}
+
+	@Override
+	public void removeCondition() {
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
+		_hasCondition = 0;
+	}
+
+	@Override
+	public void removeDetail() {
+		if (_hasDetail != 0) {
+			removeParentEdge(_hasDetail);
+		}
+		_hasDetail = 0;
 	}
 
 

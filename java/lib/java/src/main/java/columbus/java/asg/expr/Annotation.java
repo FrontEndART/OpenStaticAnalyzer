@@ -46,5 +46,10 @@ public interface Annotation extends Expression {
 	 */
 	public void setAnnotationName(TypeExpression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.Annotation#edgeHasAnnotationName hasAnnotationName} edge.
+	 */
+	public void removeAnnotationName();
+
 }
 

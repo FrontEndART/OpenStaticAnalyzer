@@ -49,6 +49,11 @@ public interface TypeApplyExpression extends TypeExpression {
 	public void setRawType(TypeExpression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.TypeApplyExpression#edgeHasRawType hasRawType} edge.
+	 */
+	public void removeRawType();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.expr.TypeApplyExpression#edgeHasTypeArguments hasTypeArguments} edges.
 	 * @return Returns an iterator for the hasTypeArguments edges.
 	 */
@@ -77,6 +82,32 @@ public interface TypeApplyExpression extends TypeExpression {
 	 * @param node The end point of the new hasTypeArguments edge.
 	 */
 	public void addTypeArguments(TypeExpression node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.TypeApplyExpression#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void addTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.TypeApplyExpression#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void setTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.TypeApplyExpression#edgeHasTypeArguments hasTypeArguments} edge by id from the node.
+	 * @param id The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.TypeApplyExpression#edgeHasTypeArguments hasTypeArguments} edge from the node.
+	 * @param node The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(TypeExpression node);
 
 }
 

@@ -59,5 +59,31 @@ public interface UnionType extends Type {
 	 */
 	public void addAlternatives(Type node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.type.UnionType#edgeAlternatives alternatives} edge to the node.
+	 * @param node The end point of the new alternatives edge.
+	 * @param index The index of end point of the new alternatives edge.
+	 */
+	public void addAlternatives(Type node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.type.UnionType#edgeAlternatives alternatives} edge to the node.
+	 * @param node The end point of the new alternatives edge.
+	 * @param index The index of end point of the new alternatives edge.
+	 */
+	public void setAlternatives(Type node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.UnionType#edgeAlternatives alternatives} edge by id from the node.
+	 * @param id The new end point of the alternatives edge.
+	 */
+	public void removeAlternatives(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.UnionType#edgeAlternatives alternatives} edge from the node.
+	 * @param node The new end point of the alternatives edge.
+	 */
+	public void removeAlternatives(Type node);
+
 }
 

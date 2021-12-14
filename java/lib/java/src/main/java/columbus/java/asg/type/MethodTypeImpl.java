@@ -110,9 +110,6 @@ public class MethodTypeImpl extends BaseImpl implements MethodType {
 
 	@Override
 	public void setReturnType(int _id) {
-		if (_returnType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","returnType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -126,9 +123,6 @@ public class MethodTypeImpl extends BaseImpl implements MethodType {
 
 	@Override
 	public void setReturnType(Type _node) {
-		if (_returnType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","returnType" ));
-
 		_returnType = _node.getId();
 	}
 
@@ -155,6 +149,20 @@ public class MethodTypeImpl extends BaseImpl implements MethodType {
 	}
 
 	@Override
+	public void addParameterTypes(Type _node, int index) {
+		if (_parameterTypes == null)
+			_parameterTypes = new EdgeList<Type>(factory);
+		_parameterTypes.add(_node, index);
+	}
+
+	@Override
+	public void setParameterTypes(Type _node, int index) {
+		if (_parameterTypes == null)
+			_parameterTypes = new EdgeList<Type>(factory);
+		_parameterTypes.set(_node, index);
+	}
+
+	@Override
 	public void addThrownTypes(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
@@ -174,6 +182,57 @@ public class MethodTypeImpl extends BaseImpl implements MethodType {
 		if (_thrownTypes == null)
 			_thrownTypes = new EdgeList<Type>(factory);
 		_thrownTypes.add(_node);
+	}
+
+	@Override
+	public void addThrownTypes(Type _node, int index) {
+		if (_thrownTypes == null)
+			_thrownTypes = new EdgeList<Type>(factory);
+		_thrownTypes.add(_node, index);
+	}
+
+	@Override
+	public void setThrownTypes(Type _node, int index) {
+		if (_thrownTypes == null)
+			_thrownTypes = new EdgeList<Type>(factory);
+		_thrownTypes.set(_node, index);
+	}
+
+	@Override
+	public void removeReturnType() {
+		_returnType = 0;
+	}
+
+	@Override
+	public void removeParameterTypes(Type _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_parameterTypes.remove(_node);
+	}
+
+	@Override
+	public void removeParameterTypes(int _id) {
+		int tmp=_parameterTypes.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeThrownTypes(Type _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_thrownTypes.remove(_node);
+	}
+
+	@Override
+	public void removeThrownTypes(int _id) {
+		int tmp=_thrownTypes.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

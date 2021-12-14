@@ -47,5 +47,10 @@ public interface While extends Iteration {
 	 */
 	public void setCondition(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.While#edgeHasCondition hasCondition} edge.
+	 */
+	public void removeCondition();
+
 }
 

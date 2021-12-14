@@ -48,6 +48,11 @@ public interface QualifiedTypeExpression extends TypeExpression {
 	public void setQualifierType(TypeExpression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.QualifiedTypeExpression#edgeHasQualifierType hasQualifierType} edge.
+	 */
+	public void removeQualifierType();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.QualifiedTypeExpression#edgeHasSimpleType hasSimpleType} edge points to.
 	 * @return Returns the end point of the hasSimpleType edge.
 	 */
@@ -64,6 +69,11 @@ public interface QualifiedTypeExpression extends TypeExpression {
 	 * @param node The new end point of the hasSimpleType edge.
 	 */
 	public void setSimpleType(SimpleTypeExpression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.QualifiedTypeExpression#edgeHasSimpleType hasSimpleType} edge.
+	 */
+	public void removeSimpleType();
 
 }
 

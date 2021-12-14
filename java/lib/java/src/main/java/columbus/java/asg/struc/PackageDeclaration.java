@@ -50,6 +50,11 @@ public interface PackageDeclaration extends Positioned {
 	public void setPackageName(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.struc.PackageDeclaration#edgeHasPackageName hasPackageName} edge.
+	 */
+	public void removePackageName();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.PackageDeclaration#edgeRefersTo refersTo} edge points to.
 	 * @return Returns the end point of the refersTo edge.
 	 */
@@ -66,6 +71,11 @@ public interface PackageDeclaration extends Positioned {
 	 * @param node The new end point of the refersTo edge.
 	 */
 	public void setRefersTo(Package node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.PackageDeclaration#edgeRefersTo refersTo} edge.
+	 */
+	public void removeRefersTo();
 
 }
 

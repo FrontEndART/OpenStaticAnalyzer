@@ -59,5 +59,31 @@ public interface Commentable extends Base {
 	 */
 	public void addComments(Comment node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.base.Commentable#edgeComments comments} edge to the node.
+	 * @param node The end point of the new comments edge.
+	 * @param index The index of end point of the new comments edge.
+	 */
+	public void addComments(Comment node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.base.Commentable#edgeComments comments} edge to the node.
+	 * @param node The end point of the new comments edge.
+	 * @param index The index of end point of the new comments edge.
+	 */
+	public void setComments(Comment node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.base.Commentable#edgeComments comments} edge by id from the node.
+	 * @param id The new end point of the comments edge.
+	 */
+	public void removeComments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.base.Commentable#edgeComments comments} edge from the node.
+	 * @param node The new end point of the comments edge.
+	 */
+	public void removeComments(Comment node);
+
 }
 

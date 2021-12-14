@@ -70,9 +70,6 @@ public class ArrayTypeImpl extends BaseImpl implements ArrayType {
 
 	@Override
 	public void setComponentType(int _id) {
-		if (_componentType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","componentType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -86,10 +83,12 @@ public class ArrayTypeImpl extends BaseImpl implements ArrayType {
 
 	@Override
 	public void setComponentType(Type _node) {
-		if (_componentType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","componentType" ));
-
 		_componentType = _node.getId();
+	}
+
+	@Override
+	public void removeComponentType() {
+		_componentType = 0;
 	}
 
 

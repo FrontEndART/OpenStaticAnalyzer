@@ -53,19 +53,72 @@ public class EdgeList<T extends Base> {
 		add(node.getId());
 	}
 
-	public void add(int value) {
-		if (array == null)
-			array = new int[2];
-		if (array.length > realSize) {
-			array[realSize] = value;
-			realSize++;
-		} else {
-			resize();
-			array[realSize] = value;
-			realSize++;
-		}
+	public void add(T node, int index) {
+		add(node.getId(), index);
 	}
 
+	public void add(int value) {
+		add(value, realSize);
+	}
+
+	public void add(int value, int index) {
+		if (array == null)
+			array = new int[2];
+		if (index > realSize) {
+			throw new ArrayIndexOutOfBoundsException(realSize);
+		} else if (array.length <= realSize) {
+			resize();
+		}
+		realSize++;
+		System.arraycopy(array, index, array, index + 1, realSize - index - 1);
+		array[index] = value;
+	}
+
+	public int remove(int index) {
+			if (array == null) {
+				throw new NullPointerException("EdgeList not initialized");
+			}
+			else if (index < 0 || index >=realSize){
+				throw new ArrayIndexOutOfBoundsException(index);
+			}
+			int tmp = array[index];
+			System.arraycopy(array, index + 1, array, index, realSize - index - 1);
+			realSize--;
+			return tmp;
+	}
+
+	public boolean remove(T node) {
+		if (array == null) {
+			return false;
+		}
+		int id = node.getId();
+		int index = 0;
+		while (index <realSize && array[index] != id) {
+				index++;
+		}
+		if (index < realSize) {
+			remove(index);
+			return true;
+		}
+		return false;
+	}
+
+	public int set(T node, int index) {
+		return set(node.getId(), index);
+	}
+	public int set(int value, int index) {
+		if (array == null) {
+			throw new NullPointerException("EdgeList not initialized!");
+		}
+		else if (index < 0 || index >= realSize) {
+			throw new ArrayIndexOutOfBoundsException(index);
+		}
+		else {
+			int tmp = array[index];
+			array[index] = value;
+			return tmp;
+		}
+	}
 	private void resize() {
 		int oldCapacity = array.length;
 		int newCapacity = (oldCapacity * 3) / 2 + 1;
@@ -121,6 +174,15 @@ public class EdgeList<T extends Base> {
 				throw new JavaException(logger.formatMessage("ex.java.xxx.Next_element_does_not_exist"));
 			return (T)factory.getRef(array[i++]);
 		}
+	public void add(T value) {
+		EdgeList.this.add(value, i);
+	}
+	public void set(T value) {
+		EdgeList.this.set(value, i - 1);
+	}
+	public void remove() {
+		// don't need to remove anything because of the getExist method.
+	}
 	}
 
 }

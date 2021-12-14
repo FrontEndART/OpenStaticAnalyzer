@@ -113,5 +113,10 @@ public interface Variable extends VariableDeclaration {
 	 */
 	public void setInitialValue(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Variable#edgeHasInitialValue hasInitialValue} edge.
+	 */
+	public void removeInitialValue();
+
 }
 

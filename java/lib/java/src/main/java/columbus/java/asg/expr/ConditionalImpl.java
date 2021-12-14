@@ -160,6 +160,36 @@ public class ConditionalImpl extends BaseImpl implements Conditional {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -170,9 +200,6 @@ public class ConditionalImpl extends BaseImpl implements Conditional {
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -186,10 +213,12 @@ public class ConditionalImpl extends BaseImpl implements Conditional {
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -221,14 +250,14 @@ public class ConditionalImpl extends BaseImpl implements Conditional {
 
 	@Override
 	public void setCondition(int _id) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasCondition != 0) {
+				removeParentEdge(_hasCondition);
+			}
 			_hasCondition = _id;
 			setParentEdge(_hasCondition);
 		} else {
@@ -238,23 +267,23 @@ public class ConditionalImpl extends BaseImpl implements Conditional {
 
 	@Override
 	public void setCondition(Expression _node) {
-		if (_hasCondition != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasCondition" ));
-
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
 		_hasCondition = _node.getId();
 		setParentEdge(_hasCondition);
 	}
 
 	@Override
 	public void setTrueExpression(int _id) {
-		if (_hasTrueExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasTrueExpression" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasTrueExpression != 0) {
+				removeParentEdge(_hasTrueExpression);
+			}
 			_hasTrueExpression = _id;
 			setParentEdge(_hasTrueExpression);
 		} else {
@@ -264,23 +293,23 @@ public class ConditionalImpl extends BaseImpl implements Conditional {
 
 	@Override
 	public void setTrueExpression(Expression _node) {
-		if (_hasTrueExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasTrueExpression" ));
-
+		if (_hasTrueExpression != 0) {
+			removeParentEdge(_hasTrueExpression);
+		}
 		_hasTrueExpression = _node.getId();
 		setParentEdge(_hasTrueExpression);
 	}
 
 	@Override
 	public void setFalseExpression(int _id) {
-		if (_hasFalseExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasFalseExpression" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasFalseExpression != 0) {
+				removeParentEdge(_hasFalseExpression);
+			}
 			_hasFalseExpression = _id;
 			setParentEdge(_hasFalseExpression);
 		} else {
@@ -290,11 +319,35 @@ public class ConditionalImpl extends BaseImpl implements Conditional {
 
 	@Override
 	public void setFalseExpression(Expression _node) {
-		if (_hasFalseExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasFalseExpression" ));
-
+		if (_hasFalseExpression != 0) {
+			removeParentEdge(_hasFalseExpression);
+		}
 		_hasFalseExpression = _node.getId();
 		setParentEdge(_hasFalseExpression);
+	}
+
+	@Override
+	public void removeCondition() {
+		if (_hasCondition != 0) {
+			removeParentEdge(_hasCondition);
+		}
+		_hasCondition = 0;
+	}
+
+	@Override
+	public void removeTrueExpression() {
+		if (_hasTrueExpression != 0) {
+			removeParentEdge(_hasTrueExpression);
+		}
+		_hasTrueExpression = 0;
+	}
+
+	@Override
+	public void removeFalseExpression() {
+		if (_hasFalseExpression != 0) {
+			removeParentEdge(_hasFalseExpression);
+		}
+		_hasFalseExpression = 0;
 	}
 
 

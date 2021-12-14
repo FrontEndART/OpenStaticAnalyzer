@@ -59,5 +59,31 @@ public interface TypeUnionExpression extends TypeExpression {
 	 */
 	public void addAlternatives(TypeExpression node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.TypeUnionExpression#edgeHasAlternatives hasAlternatives} edge to the node.
+	 * @param node The end point of the new hasAlternatives edge.
+	 * @param index The index of end point of the new hasAlternatives edge.
+	 */
+	public void addAlternatives(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.TypeUnionExpression#edgeHasAlternatives hasAlternatives} edge to the node.
+	 * @param node The end point of the new hasAlternatives edge.
+	 * @param index The index of end point of the new hasAlternatives edge.
+	 */
+	public void setAlternatives(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.TypeUnionExpression#edgeHasAlternatives hasAlternatives} edge by id from the node.
+	 * @param id The new end point of the hasAlternatives edge.
+	 */
+	public void removeAlternatives(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.TypeUnionExpression#edgeHasAlternatives hasAlternatives} edge from the node.
+	 * @param node The new end point of the hasAlternatives edge.
+	 */
+	public void removeAlternatives(TypeExpression node);
+
 }
 

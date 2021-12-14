@@ -46,5 +46,10 @@ public interface SingleElementAnnotation extends Annotation {
 	 */
 	public void setArgument(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.SingleElementAnnotation#edgeHasArgument hasArgument} edge.
+	 */
+	public void removeArgument();
+
 }
 

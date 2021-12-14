@@ -46,5 +46,10 @@ public interface ScopedType extends Type {
 	 */
 	public void setOwner(Type node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.type.ScopedType#edgeOwner owner} edge.
+	 */
+	public void removeOwner();
+
 }
 

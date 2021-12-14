@@ -50,6 +50,11 @@ public interface Provides extends ModuleDirective {
 	public void setServiceName(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.module.Provides#edgeHasServiceName hasServiceName} edge.
+	 */
+	public void removeServiceName();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.module.Provides#edgeHasImplementationNames hasImplementationNames} edges.
 	 * @return Returns an iterator for the hasImplementationNames edges.
 	 */
@@ -78,6 +83,32 @@ public interface Provides extends ModuleDirective {
 	 * @param node The end point of the new hasImplementationNames edge.
 	 */
 	public void addImplementationNames(Expression node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.module.Provides#edgeHasImplementationNames hasImplementationNames} edge to the node.
+	 * @param node The end point of the new hasImplementationNames edge.
+	 * @param index The index of end point of the new hasImplementationNames edge.
+	 */
+	public void addImplementationNames(Expression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.module.Provides#edgeHasImplementationNames hasImplementationNames} edge to the node.
+	 * @param node The end point of the new hasImplementationNames edge.
+	 * @param index The index of end point of the new hasImplementationNames edge.
+	 */
+	public void setImplementationNames(Expression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.module.Provides#edgeHasImplementationNames hasImplementationNames} edge by id from the node.
+	 * @param id The new end point of the hasImplementationNames edge.
+	 */
+	public void removeImplementationNames(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.module.Provides#edgeHasImplementationNames hasImplementationNames} edge from the node.
+	 * @param node The new end point of the hasImplementationNames edge.
+	 */
+	public void removeImplementationNames(Expression node);
 
 }
 

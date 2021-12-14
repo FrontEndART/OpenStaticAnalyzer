@@ -47,5 +47,10 @@ public interface Case extends SwitchLabel {
 	 */
 	public void setExpression(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Case#edgeHasExpression hasExpression} edge.
+	 */
+	public void removeExpression();
+
 }
 

@@ -47,5 +47,10 @@ public interface FunctionalExpression extends PolyExpression {
 	 */
 	public void setTarget(Type node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.FunctionalExpression#edgeTarget target} edge.
+	 */
+	public void removeTarget();
+
 }
 

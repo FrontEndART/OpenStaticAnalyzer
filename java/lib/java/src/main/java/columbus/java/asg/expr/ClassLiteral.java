@@ -46,5 +46,10 @@ public interface ClassLiteral extends Literal {
 	 */
 	public void setComponentType(TypeExpression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.ClassLiteral#edgeHasComponentType hasComponentType} edge.
+	 */
+	public void removeComponentType();
+
 }
 

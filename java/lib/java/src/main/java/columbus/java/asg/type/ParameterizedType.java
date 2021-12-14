@@ -49,6 +49,11 @@ public interface ParameterizedType extends ScopedType {
 	public void setRawType(Type node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.type.ParameterizedType#edgeRawType rawType} edge.
+	 */
+	public void removeRawType();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.type.ParameterizedType#edgeArgumentTypes argumentTypes} edges.
 	 * @return Returns an iterator for the argumentTypes edges.
 	 */
@@ -77,6 +82,32 @@ public interface ParameterizedType extends ScopedType {
 	 * @param node The end point of the new argumentTypes edge.
 	 */
 	public void addArgumentTypes(Type node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.type.ParameterizedType#edgeArgumentTypes argumentTypes} edge to the node.
+	 * @param node The end point of the new argumentTypes edge.
+	 * @param index The index of end point of the new argumentTypes edge.
+	 */
+	public void addArgumentTypes(Type node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.type.ParameterizedType#edgeArgumentTypes argumentTypes} edge to the node.
+	 * @param node The end point of the new argumentTypes edge.
+	 * @param index The index of end point of the new argumentTypes edge.
+	 */
+	public void setArgumentTypes(Type node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.ParameterizedType#edgeArgumentTypes argumentTypes} edge by id from the node.
+	 * @param id The new end point of the argumentTypes edge.
+	 */
+	public void removeArgumentTypes(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.ParameterizedType#edgeArgumentTypes argumentTypes} edge from the node.
+	 * @param node The new end point of the argumentTypes edge.
+	 */
+	public void removeArgumentTypes(Type node);
 
 }
 

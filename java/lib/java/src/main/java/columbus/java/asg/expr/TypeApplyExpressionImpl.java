@@ -142,6 +142,36 @@ public class TypeApplyExpressionImpl extends BaseImpl implements TypeApplyExpres
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -152,9 +182,6 @@ public class TypeApplyExpressionImpl extends BaseImpl implements TypeApplyExpres
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -168,10 +195,12 @@ public class TypeApplyExpressionImpl extends BaseImpl implements TypeApplyExpres
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -209,14 +238,14 @@ public class TypeApplyExpressionImpl extends BaseImpl implements TypeApplyExpres
 
 	@Override
 	public void setRawType(int _id) {
-		if (_hasRawType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasRawType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasRawType != 0) {
+				removeParentEdge(_hasRawType);
+			}
 			_hasRawType = _id;
 			setParentEdge(_hasRawType);
 		} else {
@@ -226,9 +255,9 @@ public class TypeApplyExpressionImpl extends BaseImpl implements TypeApplyExpres
 
 	@Override
 	public void setRawType(TypeExpression _node) {
-		if (_hasRawType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasRawType" ));
-
+		if (_hasRawType != 0) {
+			removeParentEdge(_hasRawType);
+		}
 		_hasRawType = _node.getId();
 		setParentEdge(_hasRawType);
 	}
@@ -255,6 +284,48 @@ public class TypeApplyExpressionImpl extends BaseImpl implements TypeApplyExpres
 			_hasTypeArguments = new EdgeList<TypeExpression>(factory);
 		_hasTypeArguments.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addTypeArguments(TypeExpression _node, int index) {
+		if (_hasTypeArguments == null)
+			_hasTypeArguments = new EdgeList<TypeExpression>(factory);
+		_hasTypeArguments.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setTypeArguments(TypeExpression _node, int index) {
+		if (_hasTypeArguments == null)
+			_hasTypeArguments = new EdgeList<TypeExpression>(factory);
+		_hasTypeArguments.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeRawType() {
+		if (_hasRawType != 0) {
+			removeParentEdge(_hasRawType);
+		}
+		_hasRawType = 0;
+	}
+
+	@Override
+	public void removeTypeArguments(TypeExpression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasTypeArguments.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeTypeArguments(int _id) {
+		int tmp=_hasTypeArguments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

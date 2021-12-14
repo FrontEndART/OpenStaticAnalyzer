@@ -47,5 +47,10 @@ public interface TypeVariable extends Type {
 	 */
 	public void setRefersTo(TypeParameter node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.type.TypeVariable#edgeRefersTo refersTo} edge.
+	 */
+	public void removeRefersTo();
+
 }
 

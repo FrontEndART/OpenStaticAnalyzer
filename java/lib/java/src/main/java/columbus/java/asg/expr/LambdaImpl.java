@@ -194,6 +194,36 @@ public class LambdaImpl extends BaseImpl implements Lambda {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -204,9 +234,6 @@ public class LambdaImpl extends BaseImpl implements Lambda {
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -220,10 +247,12 @@ public class LambdaImpl extends BaseImpl implements Lambda {
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -237,9 +266,6 @@ public class LambdaImpl extends BaseImpl implements Lambda {
 
 	@Override
 	public void setTarget(int _id) {
-		if (_target != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","target" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -253,10 +279,12 @@ public class LambdaImpl extends BaseImpl implements Lambda {
 
 	@Override
 	public void setTarget(Type _node) {
-		if (_target != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","target" ));
-
 		_target = _node.getId();
+	}
+
+	@Override
+	public void removeTarget() {
+		_target = 0;
 	}
 
 	@Override
@@ -317,15 +345,31 @@ public class LambdaImpl extends BaseImpl implements Lambda {
 	}
 
 	@Override
-	public void setBody(int _id) {
-		if (_hasBody != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBody" ));
+	public void addParameters(Parameter _node, int index) {
+		if (_hasParameters == null)
+			_hasParameters = new EdgeList<Parameter>(factory);
+		_hasParameters.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setParameters(Parameter _node, int index) {
+		if (_hasParameters == null)
+			_hasParameters = new EdgeList<Parameter>(factory);
+		_hasParameters.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setBody(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression) || Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkStatement)) {
+			if (_hasBody != 0) {
+				removeParentEdge(_hasBody);
+			}
 			_hasBody = _id;
 			setParentEdge(_hasBody);
 		} else {
@@ -335,15 +379,41 @@ public class LambdaImpl extends BaseImpl implements Lambda {
 
 	@Override
 	public void setBody(Positioned _node) {
-		if (_hasBody != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBody" ));
-
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression) || Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkStatement)) {
+			if (_hasBody != 0) {
+				removeParentEdge(_hasBody);
+			}
 			_hasBody = _node.getId();
 			setParentEdge(_hasBody);
 		} else {
 			throw new JavaException(logger.formatMessage("ex.java.Node.Invalid","NodeKind", _node.getNodeKind() ));
 		}
+	}
+
+	@Override
+	public void removeParameters(Parameter _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasParameters.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeParameters(int _id) {
+		int tmp=_hasParameters.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeBody() {
+		if (_hasBody != 0) {
+			removeParentEdge(_hasBody);
+		}
+		_hasBody = 0;
 	}
 
 

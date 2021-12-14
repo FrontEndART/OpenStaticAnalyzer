@@ -60,5 +60,31 @@ public interface Module extends Named {
 	 */
 	public void addPackages(Package node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.Module#edgePackages packages} edge to the node.
+	 * @param node The end point of the new packages edge.
+	 * @param index The index of end point of the new packages edge.
+	 */
+	public void addPackages(Package node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.Module#edgePackages packages} edge to the node.
+	 * @param node The end point of the new packages edge.
+	 * @param index The index of end point of the new packages edge.
+	 */
+	public void setPackages(Package node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Module#edgePackages packages} edge by id from the node.
+	 * @param id The new end point of the packages edge.
+	 */
+	public void removePackages(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Module#edgePackages packages} edge from the node.
+	 * @param node The new end point of the packages edge.
+	 */
+	public void removePackages(Package node);
+
 }
 

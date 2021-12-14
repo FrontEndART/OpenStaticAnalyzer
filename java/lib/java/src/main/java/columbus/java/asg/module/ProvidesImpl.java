@@ -140,6 +140,36 @@ public class ProvidesImpl extends BaseImpl implements Provides {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getServiceName() {
 		if (_hasServiceName == 0)
 			return null;
@@ -174,14 +204,14 @@ public class ProvidesImpl extends BaseImpl implements Provides {
 
 	@Override
 	public void setServiceName(int _id) {
-		if (_hasServiceName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasServiceName" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasServiceName != 0) {
+				removeParentEdge(_hasServiceName);
+			}
 			_hasServiceName = _id;
 			setParentEdge(_hasServiceName);
 		} else {
@@ -191,9 +221,9 @@ public class ProvidesImpl extends BaseImpl implements Provides {
 
 	@Override
 	public void setServiceName(Expression _node) {
-		if (_hasServiceName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasServiceName" ));
-
+		if (_hasServiceName != 0) {
+			removeParentEdge(_hasServiceName);
+		}
 		_hasServiceName = _node.getId();
 		setParentEdge(_hasServiceName);
 	}
@@ -220,6 +250,48 @@ public class ProvidesImpl extends BaseImpl implements Provides {
 			_hasImplementationNames = new EdgeList<Expression>(factory);
 		_hasImplementationNames.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addImplementationNames(Expression _node, int index) {
+		if (_hasImplementationNames == null)
+			_hasImplementationNames = new EdgeList<Expression>(factory);
+		_hasImplementationNames.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setImplementationNames(Expression _node, int index) {
+		if (_hasImplementationNames == null)
+			_hasImplementationNames = new EdgeList<Expression>(factory);
+		_hasImplementationNames.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeServiceName() {
+		if (_hasServiceName != 0) {
+			removeParentEdge(_hasServiceName);
+		}
+		_hasServiceName = 0;
+	}
+
+	@Override
+	public void removeImplementationNames(Expression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasImplementationNames.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeImplementationNames(int _id) {
+		int tmp=_hasImplementationNames.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

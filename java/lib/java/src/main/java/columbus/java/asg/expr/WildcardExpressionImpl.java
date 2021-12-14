@@ -152,6 +152,36 @@ public class WildcardExpressionImpl extends BaseImpl implements WildcardExpressi
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -162,9 +192,6 @@ public class WildcardExpressionImpl extends BaseImpl implements WildcardExpressi
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -178,10 +205,12 @@ public class WildcardExpressionImpl extends BaseImpl implements WildcardExpressi
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -195,14 +224,14 @@ public class WildcardExpressionImpl extends BaseImpl implements WildcardExpressi
 
 	@Override
 	public void setBound(int _id) {
-		if (_hasBound != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBound" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasBound != 0) {
+				removeParentEdge(_hasBound);
+			}
 			_hasBound = _id;
 			setParentEdge(_hasBound);
 		} else {
@@ -212,11 +241,19 @@ public class WildcardExpressionImpl extends BaseImpl implements WildcardExpressi
 
 	@Override
 	public void setBound(TypeExpression _node) {
-		if (_hasBound != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBound" ));
-
+		if (_hasBound != 0) {
+			removeParentEdge(_hasBound);
+		}
 		_hasBound = _node.getId();
 		setParentEdge(_hasBound);
+	}
+
+	@Override
+	public void removeBound() {
+		if (_hasBound != 0) {
+			removeParentEdge(_hasBound);
+		}
+		_hasBound = 0;
 	}
 
 

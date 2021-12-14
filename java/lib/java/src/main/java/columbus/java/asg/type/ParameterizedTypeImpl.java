@@ -62,9 +62,6 @@ public class ParameterizedTypeImpl extends BaseImpl implements ParameterizedType
 
 	@Override
 	public void setOwner(int _id) {
-		if (_owner != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","owner" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -78,10 +75,12 @@ public class ParameterizedTypeImpl extends BaseImpl implements ParameterizedType
 
 	@Override
 	public void setOwner(Type _node) {
-		if (_owner != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","owner" ));
-
 		_owner = _node.getId();
+	}
+
+	@Override
+	public void removeOwner() {
+		_owner = 0;
 	}
 
 	@Override
@@ -119,9 +118,6 @@ public class ParameterizedTypeImpl extends BaseImpl implements ParameterizedType
 
 	@Override
 	public void setRawType(int _id) {
-		if (_rawType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","rawType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -135,9 +131,6 @@ public class ParameterizedTypeImpl extends BaseImpl implements ParameterizedType
 
 	@Override
 	public void setRawType(Type _node) {
-		if (_rawType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","rawType" ));
-
 		_rawType = _node.getId();
 	}
 
@@ -161,6 +154,41 @@ public class ParameterizedTypeImpl extends BaseImpl implements ParameterizedType
 		if (_argumentTypes == null)
 			_argumentTypes = new EdgeList<Type>(factory);
 		_argumentTypes.add(_node);
+	}
+
+	@Override
+	public void addArgumentTypes(Type _node, int index) {
+		if (_argumentTypes == null)
+			_argumentTypes = new EdgeList<Type>(factory);
+		_argumentTypes.add(_node, index);
+	}
+
+	@Override
+	public void setArgumentTypes(Type _node, int index) {
+		if (_argumentTypes == null)
+			_argumentTypes = new EdgeList<Type>(factory);
+		_argumentTypes.set(_node, index);
+	}
+
+	@Override
+	public void removeRawType() {
+		_rawType = 0;
+	}
+
+	@Override
+	public void removeArgumentTypes(Type _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_argumentTypes.remove(_node);
+	}
+
+	@Override
+	public void removeArgumentTypes(int _id) {
+		int tmp=_argumentTypes.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

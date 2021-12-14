@@ -59,9 +59,6 @@ public class ModuleTypeImpl extends BaseImpl implements ModuleType {
 
 	@Override
 	public void setRefersTo(int _id) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -75,10 +72,12 @@ public class ModuleTypeImpl extends BaseImpl implements ModuleType {
 
 	@Override
 	public void setRefersTo(Module _node) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		_refersTo = _node.getId();
+	}
+
+	@Override
+	public void removeRefersTo() {
+		_refersTo = 0;
 	}
 
 

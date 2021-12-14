@@ -142,6 +142,36 @@ public class AnnotatedTypeExpressionImpl extends BaseImpl implements AnnotatedTy
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -152,9 +182,6 @@ public class AnnotatedTypeExpressionImpl extends BaseImpl implements AnnotatedTy
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -168,10 +195,12 @@ public class AnnotatedTypeExpressionImpl extends BaseImpl implements AnnotatedTy
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -232,15 +261,31 @@ public class AnnotatedTypeExpressionImpl extends BaseImpl implements AnnotatedTy
 	}
 
 	@Override
-	public void setUnderlyingType(int _id) {
-		if (_hasUnderlyingType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasUnderlyingType" ));
+	public void addAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setUnderlyingType(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasUnderlyingType != 0) {
+				removeParentEdge(_hasUnderlyingType);
+			}
 			_hasUnderlyingType = _id;
 			setParentEdge(_hasUnderlyingType);
 		} else {
@@ -250,11 +295,37 @@ public class AnnotatedTypeExpressionImpl extends BaseImpl implements AnnotatedTy
 
 	@Override
 	public void setUnderlyingType(TypeExpression _node) {
-		if (_hasUnderlyingType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasUnderlyingType" ));
-
+		if (_hasUnderlyingType != 0) {
+			removeParentEdge(_hasUnderlyingType);
+		}
 		_hasUnderlyingType = _node.getId();
 		setParentEdge(_hasUnderlyingType);
+	}
+
+	@Override
+	public void removeAnnotations(Annotation _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasAnnotations.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(int _id) {
+		int tmp=_hasAnnotations.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeUnderlyingType() {
+		if (_hasUnderlyingType != 0) {
+			removeParentEdge(_hasUnderlyingType);
+		}
+		_hasUnderlyingType = 0;
 	}
 
 

@@ -156,6 +156,36 @@ public class CaseImpl extends BaseImpl implements Case {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Statement> getStatementsIterator() {
 		if (_hasStatements == null)
 			return EdgeList.<Statement>emptyList().iterator();
@@ -204,6 +234,40 @@ public class CaseImpl extends BaseImpl implements Case {
 	}
 
 	@Override
+	public void addStatements(Statement _node, int index) {
+		if (_hasStatements == null)
+			_hasStatements = new EdgeList<Statement>(factory);
+		_hasStatements.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setStatements(Statement _node, int index) {
+		if (_hasStatements == null)
+			_hasStatements = new EdgeList<Statement>(factory);
+		_hasStatements.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeStatements(Statement _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasStatements.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeStatements(int _id) {
+		int tmp=_hasStatements.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getExpression() {
 		if (_hasExpression == 0)
 			return null;
@@ -214,14 +278,14 @@ public class CaseImpl extends BaseImpl implements Case {
 
 	@Override
 	public void setExpression(int _id) {
-		if (_hasExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasExpression" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasExpression != 0) {
+				removeParentEdge(_hasExpression);
+			}
 			_hasExpression = _id;
 			setParentEdge(_hasExpression);
 		} else {
@@ -231,11 +295,19 @@ public class CaseImpl extends BaseImpl implements Case {
 
 	@Override
 	public void setExpression(Expression _node) {
-		if (_hasExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasExpression" ));
-
+		if (_hasExpression != 0) {
+			removeParentEdge(_hasExpression);
+		}
 		_hasExpression = _node.getId();
 		setParentEdge(_hasExpression);
+	}
+
+	@Override
+	public void removeExpression() {
+		if (_hasExpression != 0) {
+			removeParentEdge(_hasExpression);
+		}
+		_hasExpression = 0;
 	}
 
 

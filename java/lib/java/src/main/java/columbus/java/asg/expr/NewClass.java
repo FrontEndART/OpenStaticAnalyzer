@@ -55,6 +55,11 @@ public interface NewClass extends Expression {
 	public void setEnclosingExpression(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeHasEnclosingExpression hasEnclosingExpression} edge.
+	 */
+	public void removeEnclosingExpression();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.expr.NewClass#edgeHasTypeArguments hasTypeArguments} edges.
 	 * @return Returns an iterator for the hasTypeArguments edges.
 	 */
@@ -85,6 +90,32 @@ public interface NewClass extends Expression {
 	public void addTypeArguments(TypeExpression node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewClass#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void addTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewClass#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void setTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeHasTypeArguments hasTypeArguments} edge by id from the node.
+	 * @param id The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeHasTypeArguments hasTypeArguments} edge from the node.
+	 * @param node The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(TypeExpression node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.NewClass#edgeHasTypeName hasTypeName} edge points to.
 	 * @return Returns the end point of the hasTypeName edge.
 	 */
@@ -101,6 +132,11 @@ public interface NewClass extends Expression {
 	 * @param node The new end point of the hasTypeName edge.
 	 */
 	public void setTypeName(TypeExpression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeHasTypeName hasTypeName} edge.
+	 */
+	public void removeTypeName();
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.expr.NewClass#edgeHasArguments hasArguments} edges.
@@ -133,6 +169,32 @@ public interface NewClass extends Expression {
 	public void addArguments(Expression node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewClass#edgeHasArguments hasArguments} edge to the node.
+	 * @param node The end point of the new hasArguments edge.
+	 * @param index The index of end point of the new hasArguments edge.
+	 */
+	public void addArguments(Expression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewClass#edgeHasArguments hasArguments} edge to the node.
+	 * @param node The end point of the new hasArguments edge.
+	 * @param index The index of end point of the new hasArguments edge.
+	 */
+	public void setArguments(Expression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeHasArguments hasArguments} edge by id from the node.
+	 * @param id The new end point of the hasArguments edge.
+	 */
+	public void removeArguments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeHasArguments hasArguments} edge from the node.
+	 * @param node The new end point of the hasArguments edge.
+	 */
+	public void removeArguments(Expression node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.NewClass#edgeHasAnonymousClass hasAnonymousClass} edge points to.
 	 * @return Returns the end point of the hasAnonymousClass edge.
 	 */
@@ -151,6 +213,11 @@ public interface NewClass extends Expression {
 	public void setAnonymousClass(AnonymousClass node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeHasAnonymousClass hasAnonymousClass} edge.
+	 */
+	public void removeAnonymousClass();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.NewClass#edgeConstructor constructor} edge points to.
 	 * @return Returns the end point of the constructor edge.
 	 */
@@ -167,6 +234,11 @@ public interface NewClass extends Expression {
 	 * @param node The new end point of the constructor edge.
 	 */
 	public void setConstructor(NormalMethod node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewClass#edgeConstructor constructor} edge.
+	 */
+	public void removeConstructor();
 
 }
 

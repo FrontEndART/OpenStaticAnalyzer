@@ -61,6 +61,32 @@ public interface AnnotatedTypeExpression extends TypeExpression {
 	public void addAnnotations(Annotation node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.expr.AnnotatedTypeExpression#edgeHasAnnotations hasAnnotations} edge to the node.
+	 * @param node The end point of the new hasAnnotations edge.
+	 * @param index The index of end point of the new hasAnnotations edge.
+	 */
+	public void addAnnotations(Annotation node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.AnnotatedTypeExpression#edgeHasAnnotations hasAnnotations} edge to the node.
+	 * @param node The end point of the new hasAnnotations edge.
+	 * @param index The index of end point of the new hasAnnotations edge.
+	 */
+	public void setAnnotations(Annotation node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.AnnotatedTypeExpression#edgeHasAnnotations hasAnnotations} edge by id from the node.
+	 * @param id The new end point of the hasAnnotations edge.
+	 */
+	public void removeAnnotations(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.AnnotatedTypeExpression#edgeHasAnnotations hasAnnotations} edge from the node.
+	 * @param node The new end point of the hasAnnotations edge.
+	 */
+	public void removeAnnotations(Annotation node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.AnnotatedTypeExpression#edgeHasUnderlyingType hasUnderlyingType} edge points to.
 	 * @return Returns the end point of the hasUnderlyingType edge.
 	 */
@@ -77,6 +103,11 @@ public interface AnnotatedTypeExpression extends TypeExpression {
 	 * @param node The new end point of the hasUnderlyingType edge.
 	 */
 	public void setUnderlyingType(TypeExpression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.AnnotatedTypeExpression#edgeHasUnderlyingType hasUnderlyingType} edge.
+	 */
+	public void removeUnderlyingType();
 
 }
 

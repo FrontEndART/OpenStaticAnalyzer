@@ -110,6 +110,11 @@ public interface MemberReference extends FunctionalExpression {
 	public void setQualifierExpression(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.MemberReference#edgeHasQualifierExpression hasQualifierExpression} edge.
+	 */
+	public void removeQualifierExpression();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.expr.MemberReference#edgeHasTypeArguments hasTypeArguments} edges.
 	 * @return Returns an iterator for the hasTypeArguments edges.
 	 */
@@ -140,6 +145,32 @@ public interface MemberReference extends FunctionalExpression {
 	public void addTypeArguments(TypeExpression node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.expr.MemberReference#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void addTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.MemberReference#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void setTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MemberReference#edgeHasTypeArguments hasTypeArguments} edge by id from the node.
+	 * @param id The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MemberReference#edgeHasTypeArguments hasTypeArguments} edge from the node.
+	 * @param node The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(TypeExpression node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.MemberReference#edgeReferredMethod referredMethod} edge points to.
 	 * @return Returns the end point of the referredMethod edge.
 	 */
@@ -156,6 +187,11 @@ public interface MemberReference extends FunctionalExpression {
 	 * @param node The new end point of the referredMethod edge.
 	 */
 	public void setReferredMethod(MethodDeclaration node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MemberReference#edgeReferredMethod referredMethod} edge.
+	 */
+	public void removeReferredMethod();
 
 }
 

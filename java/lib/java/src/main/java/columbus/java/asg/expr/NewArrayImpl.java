@@ -160,6 +160,36 @@ public class NewArrayImpl extends BaseImpl implements NewArray {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -170,9 +200,6 @@ public class NewArrayImpl extends BaseImpl implements NewArray {
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -186,10 +213,12 @@ public class NewArrayImpl extends BaseImpl implements NewArray {
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -251,14 +280,14 @@ public class NewArrayImpl extends BaseImpl implements NewArray {
 
 	@Override
 	public void setComponentType(int _id) {
-		if (_hasComponentType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasComponentType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasComponentType != 0) {
+				removeParentEdge(_hasComponentType);
+			}
 			_hasComponentType = _id;
 			setParentEdge(_hasComponentType);
 		} else {
@@ -268,9 +297,9 @@ public class NewArrayImpl extends BaseImpl implements NewArray {
 
 	@Override
 	public void setComponentType(TypeExpression _node) {
-		if (_hasComponentType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasComponentType" ));
-
+		if (_hasComponentType != 0) {
+			removeParentEdge(_hasComponentType);
+		}
 		_hasComponentType = _node.getId();
 		setParentEdge(_hasComponentType);
 	}
@@ -300,6 +329,22 @@ public class NewArrayImpl extends BaseImpl implements NewArray {
 	}
 
 	@Override
+	public void addDimensions(Expression _node, int index) {
+		if (_hasDimensions == null)
+			_hasDimensions = new EdgeList<Expression>(factory);
+		_hasDimensions.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setDimensions(Expression _node, int index) {
+		if (_hasDimensions == null)
+			_hasDimensions = new EdgeList<Expression>(factory);
+		_hasDimensions.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
 	public void addInitializers(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
@@ -321,6 +366,66 @@ public class NewArrayImpl extends BaseImpl implements NewArray {
 			_hasInitializers = new EdgeList<Expression>(factory);
 		_hasInitializers.add(_node);
 		setParentEdge(_node);
+	}
+
+	@Override
+	public void addInitializers(Expression _node, int index) {
+		if (_hasInitializers == null)
+			_hasInitializers = new EdgeList<Expression>(factory);
+		_hasInitializers.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setInitializers(Expression _node, int index) {
+		if (_hasInitializers == null)
+			_hasInitializers = new EdgeList<Expression>(factory);
+		_hasInitializers.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeComponentType() {
+		if (_hasComponentType != 0) {
+			removeParentEdge(_hasComponentType);
+		}
+		_hasComponentType = 0;
+	}
+
+	@Override
+	public void removeDimensions(Expression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasDimensions.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeDimensions(int _id) {
+		int tmp=_hasDimensions.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeInitializers(Expression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasInitializers.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeInitializers(int _id) {
+		int tmp=_hasInitializers.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
 	}
 
 

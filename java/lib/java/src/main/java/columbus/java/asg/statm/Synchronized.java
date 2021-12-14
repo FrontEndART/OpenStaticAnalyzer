@@ -49,6 +49,11 @@ public interface Synchronized extends Statement {
 	public void setLock(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.statm.Synchronized#edgeHasLock hasLock} edge.
+	 */
+	public void removeLock();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.Synchronized#edgeHasBlock hasBlock} edge points to.
 	 * @return Returns the end point of the hasBlock edge.
 	 */
@@ -65,6 +70,11 @@ public interface Synchronized extends Statement {
 	 * @param node The new end point of the hasBlock edge.
 	 */
 	public void setBlock(Block node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Synchronized#edgeHasBlock hasBlock} edge.
+	 */
+	public void removeBlock();
 
 }
 

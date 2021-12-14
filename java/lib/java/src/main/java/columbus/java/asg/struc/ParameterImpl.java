@@ -286,6 +286,36 @@ public class ParameterImpl extends BaseImpl implements Parameter {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Annotation> getAnnotationsIterator() {
 		if (_hasAnnotations == null)
 			return EdgeList.<Annotation>emptyList().iterator();
@@ -334,6 +364,40 @@ public class ParameterImpl extends BaseImpl implements Parameter {
 	}
 
 	@Override
+	public void addAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(Annotation _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasAnnotations.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(int _id) {
+		int tmp=_hasAnnotations.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public TypeExpression getType() {
 		if (_hasType == 0)
 			return null;
@@ -344,14 +408,14 @@ public class ParameterImpl extends BaseImpl implements Parameter {
 
 	@Override
 	public void setType(int _id) {
-		if (_hasType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasType != 0) {
+				removeParentEdge(_hasType);
+			}
 			_hasType = _id;
 			setParentEdge(_hasType);
 		} else {
@@ -361,11 +425,19 @@ public class ParameterImpl extends BaseImpl implements Parameter {
 
 	@Override
 	public void setType(TypeExpression _node) {
-		if (_hasType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasType" ));
-
+		if (_hasType != 0) {
+			removeParentEdge(_hasType);
+		}
 		_hasType = _node.getId();
 		setParentEdge(_hasType);
+	}
+
+	@Override
+	public void removeType() {
+		if (_hasType != 0) {
+			removeParentEdge(_hasType);
+		}
+		_hasType = 0;
 	}
 
 

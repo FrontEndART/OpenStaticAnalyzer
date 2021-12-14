@@ -47,5 +47,10 @@ public interface Return extends Statement {
 	 */
 	public void setExpression(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Return#edgeHasExpression hasExpression} edge.
+	 */
+	public void removeExpression();
+
 }
 

@@ -162,6 +162,36 @@ public class RequiresImpl extends BaseImpl implements Requires {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getModuleName() {
 		if (_hasModuleName == 0)
 			return null;
@@ -172,14 +202,14 @@ public class RequiresImpl extends BaseImpl implements Requires {
 
 	@Override
 	public void setModuleName(int _id) {
-		if (_hasModuleName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasModuleName" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasModuleName != 0) {
+				removeParentEdge(_hasModuleName);
+			}
 			_hasModuleName = _id;
 			setParentEdge(_hasModuleName);
 		} else {
@@ -189,11 +219,19 @@ public class RequiresImpl extends BaseImpl implements Requires {
 
 	@Override
 	public void setModuleName(Expression _node) {
-		if (_hasModuleName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasModuleName" ));
-
+		if (_hasModuleName != 0) {
+			removeParentEdge(_hasModuleName);
+		}
 		_hasModuleName = _node.getId();
 		setParentEdge(_hasModuleName);
+	}
+
+	@Override
+	public void removeModuleName() {
+		if (_hasModuleName != 0) {
+			removeParentEdge(_hasModuleName);
+		}
+		_hasModuleName = 0;
 	}
 
 

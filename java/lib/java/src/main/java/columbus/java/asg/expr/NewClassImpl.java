@@ -152,6 +152,36 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Type getType() {
 		if (_type == 0)
 			return null;
@@ -162,9 +192,6 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 
 	@Override
 	public void setType(int _id) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -178,10 +205,12 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 
 	@Override
 	public void setType(Type _node) {
-		if (_type != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","type" ));
-
 		_type = _node.getId();
+	}
+
+	@Override
+	public void removeType() {
+		_type = 0;
 	}
 
 	@Override
@@ -270,14 +299,14 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 
 	@Override
 	public void setEnclosingExpression(int _id) {
-		if (_hasEnclosingExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasEnclosingExpression" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasEnclosingExpression != 0) {
+				removeParentEdge(_hasEnclosingExpression);
+			}
 			_hasEnclosingExpression = _id;
 			setParentEdge(_hasEnclosingExpression);
 		} else {
@@ -287,9 +316,9 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 
 	@Override
 	public void setEnclosingExpression(Expression _node) {
-		if (_hasEnclosingExpression != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasEnclosingExpression" ));
-
+		if (_hasEnclosingExpression != 0) {
+			removeParentEdge(_hasEnclosingExpression);
+		}
 		_hasEnclosingExpression = _node.getId();
 		setParentEdge(_hasEnclosingExpression);
 	}
@@ -319,15 +348,31 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 	}
 
 	@Override
-	public void setTypeName(int _id) {
-		if (_hasTypeName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasTypeName" ));
+	public void addTypeArguments(TypeExpression _node, int index) {
+		if (_hasTypeArguments == null)
+			_hasTypeArguments = new EdgeList<TypeExpression>(factory);
+		_hasTypeArguments.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setTypeArguments(TypeExpression _node, int index) {
+		if (_hasTypeArguments == null)
+			_hasTypeArguments = new EdgeList<TypeExpression>(factory);
+		_hasTypeArguments.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setTypeName(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasTypeName != 0) {
+				removeParentEdge(_hasTypeName);
+			}
 			_hasTypeName = _id;
 			setParentEdge(_hasTypeName);
 		} else {
@@ -337,9 +382,9 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 
 	@Override
 	public void setTypeName(TypeExpression _node) {
-		if (_hasTypeName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasTypeName" ));
-
+		if (_hasTypeName != 0) {
+			removeParentEdge(_hasTypeName);
+		}
 		_hasTypeName = _node.getId();
 		setParentEdge(_hasTypeName);
 	}
@@ -369,15 +414,31 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 	}
 
 	@Override
-	public void setAnonymousClass(int _id) {
-		if (_hasAnonymousClass != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasAnonymousClass" ));
+	public void addArguments(Expression _node, int index) {
+		if (_hasArguments == null)
+			_hasArguments = new EdgeList<Expression>(factory);
+		_hasArguments.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setArguments(Expression _node, int index) {
+		if (_hasArguments == null)
+			_hasArguments = new EdgeList<Expression>(factory);
+		_hasArguments.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setAnonymousClass(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkAnonymousClass) {
+			if (_hasAnonymousClass != 0) {
+				removeParentEdge(_hasAnonymousClass);
+			}
 			_hasAnonymousClass = _id;
 			setParentEdge(_hasAnonymousClass);
 		} else {
@@ -387,18 +448,15 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 
 	@Override
 	public void setAnonymousClass(AnonymousClass _node) {
-		if (_hasAnonymousClass != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasAnonymousClass" ));
-
+		if (_hasAnonymousClass != 0) {
+			removeParentEdge(_hasAnonymousClass);
+		}
 		_hasAnonymousClass = _node.getId();
 		setParentEdge(_hasAnonymousClass);
 	}
 
 	@Override
 	public void setConstructor(int _id) {
-		if (_constructor != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","constructor" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -412,10 +470,72 @@ public class NewClassImpl extends BaseImpl implements NewClass {
 
 	@Override
 	public void setConstructor(NormalMethod _node) {
-		if (_constructor != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","constructor" ));
-
 		_constructor = _node.getId();
+	}
+
+	@Override
+	public void removeEnclosingExpression() {
+		if (_hasEnclosingExpression != 0) {
+			removeParentEdge(_hasEnclosingExpression);
+		}
+		_hasEnclosingExpression = 0;
+	}
+
+	@Override
+	public void removeTypeArguments(TypeExpression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasTypeArguments.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeTypeArguments(int _id) {
+		int tmp=_hasTypeArguments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeTypeName() {
+		if (_hasTypeName != 0) {
+			removeParentEdge(_hasTypeName);
+		}
+		_hasTypeName = 0;
+	}
+
+	@Override
+	public void removeArguments(Expression _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasArguments.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeArguments(int _id) {
+		int tmp=_hasArguments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeAnonymousClass() {
+		if (_hasAnonymousClass != 0) {
+			removeParentEdge(_hasAnonymousClass);
+		}
+		_hasAnonymousClass = 0;
+	}
+
+	@Override
+	public void removeConstructor() {
+		_constructor = 0;
 	}
 
 

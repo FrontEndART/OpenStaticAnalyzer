@@ -62,6 +62,11 @@ public interface If extends Selection {
 	public void setSubstatement(Statement node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.statm.If#edgeHasSubstatement hasSubstatement} edge.
+	 */
+	public void removeSubstatement();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.If#edgeHasFalseSubstatement hasFalseSubstatement} edge points to.
 	 * @return Returns the end point of the hasFalseSubstatement edge.
 	 */
@@ -78,6 +83,11 @@ public interface If extends Selection {
 	 * @param node The new end point of the hasFalseSubstatement edge.
 	 */
 	public void setFalseSubstatement(Statement node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.If#edgeHasFalseSubstatement hasFalseSubstatement} edge.
+	 */
+	public void removeFalseSubstatement();
 
 }
 

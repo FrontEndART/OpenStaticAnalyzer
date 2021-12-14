@@ -60,5 +60,31 @@ public interface GenericDeclaration extends Base {
 	 */
 	public void addTypeParameters(TypeParameter node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.GenericDeclaration#edgeHasTypeParameters hasTypeParameters} edge to the node.
+	 * @param node The end point of the new hasTypeParameters edge.
+	 * @param index The index of end point of the new hasTypeParameters edge.
+	 */
+	public void addTypeParameters(TypeParameter node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.GenericDeclaration#edgeHasTypeParameters hasTypeParameters} edge to the node.
+	 * @param node The end point of the new hasTypeParameters edge.
+	 * @param index The index of end point of the new hasTypeParameters edge.
+	 */
+	public void setTypeParameters(TypeParameter node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.GenericDeclaration#edgeHasTypeParameters hasTypeParameters} edge by id from the node.
+	 * @param id The new end point of the hasTypeParameters edge.
+	 */
+	public void removeTypeParameters(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.GenericDeclaration#edgeHasTypeParameters hasTypeParameters} edge from the node.
+	 * @param node The new end point of the hasTypeParameters edge.
+	 */
+	public void removeTypeParameters(TypeParameter node);
+
 }
 

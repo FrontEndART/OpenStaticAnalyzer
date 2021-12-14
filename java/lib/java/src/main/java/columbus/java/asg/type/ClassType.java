@@ -47,5 +47,10 @@ public interface ClassType extends ScopedType {
 	 */
 	public void setRefersTo(TypeDeclaration node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.type.ClassType#edgeRefersTo refersTo} edge.
+	 */
+	public void removeRefersTo();
+
 }
 

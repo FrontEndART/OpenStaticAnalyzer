@@ -190,6 +190,11 @@ public interface TypeDeclaration extends NamedDeclaration, Scope {
 	public void setSuperClass(TypeExpression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.struc.TypeDeclaration#edgeHasSuperClass hasSuperClass} edge.
+	 */
+	public void removeSuperClass();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.TypeDeclaration#edgeHasSuperInterfaces hasSuperInterfaces} edges.
 	 * @return Returns an iterator for the hasSuperInterfaces edges.
 	 */
@@ -218,6 +223,32 @@ public interface TypeDeclaration extends NamedDeclaration, Scope {
 	 * @param node The end point of the new hasSuperInterfaces edge.
 	 */
 	public void addSuperInterfaces(TypeExpression node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.TypeDeclaration#edgeHasSuperInterfaces hasSuperInterfaces} edge to the node.
+	 * @param node The end point of the new hasSuperInterfaces edge.
+	 * @param index The index of end point of the new hasSuperInterfaces edge.
+	 */
+	public void addSuperInterfaces(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.TypeDeclaration#edgeHasSuperInterfaces hasSuperInterfaces} edge to the node.
+	 * @param node The end point of the new hasSuperInterfaces edge.
+	 * @param index The index of end point of the new hasSuperInterfaces edge.
+	 */
+	public void setSuperInterfaces(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.TypeDeclaration#edgeHasSuperInterfaces hasSuperInterfaces} edge by id from the node.
+	 * @param id The new end point of the hasSuperInterfaces edge.
+	 */
+	public void removeSuperInterfaces(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.TypeDeclaration#edgeHasSuperInterfaces hasSuperInterfaces} edge from the node.
+	 * @param node The new end point of the hasSuperInterfaces edge.
+	 */
+	public void removeSuperInterfaces(TypeExpression node);
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.TypeDeclaration#edgeHasOthers hasOthers} edges.
@@ -250,6 +281,32 @@ public interface TypeDeclaration extends NamedDeclaration, Scope {
 	public void addOthers(Positioned node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.struc.TypeDeclaration#edgeHasOthers hasOthers} edge to the node.
+	 * @param node The end point of the new hasOthers edge.
+	 * @param index The index of end point of the new hasOthers edge.
+	 */
+	public void addOthers(Positioned node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.TypeDeclaration#edgeHasOthers hasOthers} edge to the node.
+	 * @param node The end point of the new hasOthers edge.
+	 * @param index The index of end point of the new hasOthers edge.
+	 */
+	public void setOthers(Positioned node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.TypeDeclaration#edgeHasOthers hasOthers} edge by id from the node.
+	 * @param id The new end point of the hasOthers edge.
+	 */
+	public void removeOthers(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.TypeDeclaration#edgeHasOthers hasOthers} edge from the node.
+	 * @param node The new end point of the hasOthers edge.
+	 */
+	public void removeOthers(Positioned node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.TypeDeclaration#edgeIsInCompilationUnit isInCompilationUnit} edge points to.
 	 * @return Returns the end point of the isInCompilationUnit edge.
 	 */
@@ -268,6 +325,11 @@ public interface TypeDeclaration extends NamedDeclaration, Scope {
 	public void setIsInCompilationUnit(CompilationUnit node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.struc.TypeDeclaration#edgeIsInCompilationUnit isInCompilationUnit} edge.
+	 */
+	public void removeIsInCompilationUnit();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.TypeDeclaration#edgeIsInModule isInModule} edge points to.
 	 * @return Returns the end point of the isInModule edge.
 	 */
@@ -284,6 +346,11 @@ public interface TypeDeclaration extends NamedDeclaration, Scope {
 	 * @param node The new end point of the isInModule edge.
 	 */
 	public void setIsInModule(Module node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.TypeDeclaration#edgeIsInModule isInModule} edge.
+	 */
+	public void removeIsInModule();
 
 }
 

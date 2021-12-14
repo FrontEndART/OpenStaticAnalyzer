@@ -140,6 +140,36 @@ public class PackageDeclarationImpl extends BaseImpl implements PackageDeclarati
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getPackageName() {
 		if (_hasPackageName == 0)
 			return null;
@@ -159,14 +189,14 @@ public class PackageDeclarationImpl extends BaseImpl implements PackageDeclarati
 
 	@Override
 	public void setPackageName(int _id) {
-		if (_hasPackageName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasPackageName" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasPackageName != 0) {
+				removeParentEdge(_hasPackageName);
+			}
 			_hasPackageName = _id;
 			setParentEdge(_hasPackageName);
 		} else {
@@ -176,18 +206,15 @@ public class PackageDeclarationImpl extends BaseImpl implements PackageDeclarati
 
 	@Override
 	public void setPackageName(Expression _node) {
-		if (_hasPackageName != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasPackageName" ));
-
+		if (_hasPackageName != 0) {
+			removeParentEdge(_hasPackageName);
+		}
 		_hasPackageName = _node.getId();
 		setParentEdge(_hasPackageName);
 	}
 
 	@Override
 	public void setRefersTo(int _id) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -201,10 +228,20 @@ public class PackageDeclarationImpl extends BaseImpl implements PackageDeclarati
 
 	@Override
 	public void setRefersTo(Package _node) {
-		if (_refersTo != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","refersTo" ));
-
 		_refersTo = _node.getId();
+	}
+
+	@Override
+	public void removePackageName() {
+		if (_hasPackageName != 0) {
+			removeParentEdge(_hasPackageName);
+		}
+		_hasPackageName = 0;
+	}
+
+	@Override
+	public void removeRefersTo() {
+		_refersTo = 0;
 	}
 
 

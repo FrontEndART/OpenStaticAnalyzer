@@ -61,5 +61,31 @@ public interface AnnotatedElement extends Base {
 	 */
 	public void addAnnotations(Annotation node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.AnnotatedElement#edgeHasAnnotations hasAnnotations} edge to the node.
+	 * @param node The end point of the new hasAnnotations edge.
+	 * @param index The index of end point of the new hasAnnotations edge.
+	 */
+	public void addAnnotations(Annotation node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.AnnotatedElement#edgeHasAnnotations hasAnnotations} edge to the node.
+	 * @param node The end point of the new hasAnnotations edge.
+	 * @param index The index of end point of the new hasAnnotations edge.
+	 */
+	public void setAnnotations(Annotation node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.AnnotatedElement#edgeHasAnnotations hasAnnotations} edge by id from the node.
+	 * @param id The new end point of the hasAnnotations edge.
+	 */
+	public void removeAnnotations(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.AnnotatedElement#edgeHasAnnotations hasAnnotations} edge from the node.
+	 * @param node The new end point of the hasAnnotations edge.
+	 */
+	public void removeAnnotations(Annotation node);
+
 }
 

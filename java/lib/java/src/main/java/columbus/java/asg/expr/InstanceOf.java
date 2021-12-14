@@ -46,5 +46,10 @@ public interface InstanceOf extends Unary {
 	 */
 	public void setTypeOperand(TypeExpression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.InstanceOf#edgeHasTypeOperand hasTypeOperand} edge.
+	 */
+	public void removeTypeOperand();
+
 }
 

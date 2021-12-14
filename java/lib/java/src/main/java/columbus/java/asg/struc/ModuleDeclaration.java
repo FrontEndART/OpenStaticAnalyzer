@@ -69,6 +69,11 @@ public interface ModuleDeclaration extends Positioned {
 	public void setName(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.struc.ModuleDeclaration#edgeHasName hasName} edge.
+	 */
+	public void removeName();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.struc.ModuleDeclaration#edgeHasDirectives hasDirectives} edges.
 	 * @return Returns an iterator for the hasDirectives edges.
 	 */
@@ -99,6 +104,32 @@ public interface ModuleDeclaration extends Positioned {
 	public void addDirectives(ModuleDirective node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.struc.ModuleDeclaration#edgeHasDirectives hasDirectives} edge to the node.
+	 * @param node The end point of the new hasDirectives edge.
+	 * @param index The index of end point of the new hasDirectives edge.
+	 */
+	public void addDirectives(ModuleDirective node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.ModuleDeclaration#edgeHasDirectives hasDirectives} edge to the node.
+	 * @param node The end point of the new hasDirectives edge.
+	 * @param index The index of end point of the new hasDirectives edge.
+	 */
+	public void setDirectives(ModuleDirective node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.ModuleDeclaration#edgeHasDirectives hasDirectives} edge by id from the node.
+	 * @param id The new end point of the hasDirectives edge.
+	 */
+	public void removeDirectives(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.ModuleDeclaration#edgeHasDirectives hasDirectives} edge from the node.
+	 * @param node The new end point of the hasDirectives edge.
+	 */
+	public void removeDirectives(ModuleDirective node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.ModuleDeclaration#edgeModuleType moduleType} edge points to.
 	 * @return Returns the end point of the moduleType edge.
 	 */
@@ -117,6 +148,11 @@ public interface ModuleDeclaration extends Positioned {
 	public void setModuleType(ModuleType node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.struc.ModuleDeclaration#edgeModuleType moduleType} edge.
+	 */
+	public void removeModuleType();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.struc.ModuleDeclaration#edgeRefersTo refersTo} edge points to.
 	 * @return Returns the end point of the refersTo edge.
 	 */
@@ -133,6 +169,11 @@ public interface ModuleDeclaration extends Positioned {
 	 * @param node The new end point of the refersTo edge.
 	 */
 	public void setRefersTo(Module node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.ModuleDeclaration#edgeRefersTo refersTo} edge.
+	 */
+	public void removeRefersTo();
 
 }
 

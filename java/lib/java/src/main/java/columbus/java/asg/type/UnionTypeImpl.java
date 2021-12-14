@@ -93,6 +93,36 @@ public class UnionTypeImpl extends BaseImpl implements UnionType {
 		_alternatives.add(_node);
 	}
 
+	@Override
+	public void addAlternatives(Type _node, int index) {
+		if (_alternatives == null)
+			_alternatives = new EdgeList<Type>(factory);
+		_alternatives.add(_node, index);
+	}
+
+	@Override
+	public void setAlternatives(Type _node, int index) {
+		if (_alternatives == null)
+			_alternatives = new EdgeList<Type>(factory);
+		_alternatives.set(_node, index);
+	}
+
+	@Override
+	public void removeAlternatives(Type _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_alternatives.remove(_node);
+	}
+
+	@Override
+	public void removeAlternatives(int _id) {
+		int tmp=_alternatives.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
 
 	// ---------- Accept methods for Visitor ----------
 

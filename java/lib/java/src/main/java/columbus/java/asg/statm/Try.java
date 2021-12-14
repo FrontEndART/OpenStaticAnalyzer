@@ -103,6 +103,32 @@ public interface Try extends Statement {
 	public void addResources(Base node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.statm.Try#edgeHasResources hasResources} edge to the node.
+	 * @param node The end point of the new hasResources edge.
+	 * @param index The index of end point of the new hasResources edge.
+	 */
+	public void addResources(Base node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.Try#edgeHasResources hasResources} edge to the node.
+	 * @param node The end point of the new hasResources edge.
+	 * @param index The index of end point of the new hasResources edge.
+	 */
+	public void setResources(Base node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Try#edgeHasResources hasResources} edge by id from the node.
+	 * @param id The new end point of the hasResources edge.
+	 */
+	public void removeResources(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Try#edgeHasResources hasResources} edge from the node.
+	 * @param node The new end point of the hasResources edge.
+	 */
+	public void removeResources(Base node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.Try#edgeHasBlock hasBlock} edge points to.
 	 * @return Returns the end point of the hasBlock edge.
 	 */
@@ -119,6 +145,11 @@ public interface Try extends Statement {
 	 * @param node The new end point of the hasBlock edge.
 	 */
 	public void setBlock(Block node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Try#edgeHasBlock hasBlock} edge.
+	 */
+	public void removeBlock();
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.statm.Try#edgeHasHandlers hasHandlers} edges.
@@ -151,6 +182,32 @@ public interface Try extends Statement {
 	public void addHandlers(Handler node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.statm.Try#edgeHasHandlers hasHandlers} edge to the node.
+	 * @param node The end point of the new hasHandlers edge.
+	 * @param index The index of end point of the new hasHandlers edge.
+	 */
+	public void addHandlers(Handler node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.Try#edgeHasHandlers hasHandlers} edge to the node.
+	 * @param node The end point of the new hasHandlers edge.
+	 * @param index The index of end point of the new hasHandlers edge.
+	 */
+	public void setHandlers(Handler node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Try#edgeHasHandlers hasHandlers} edge by id from the node.
+	 * @param id The new end point of the hasHandlers edge.
+	 */
+	public void removeHandlers(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Try#edgeHasHandlers hasHandlers} edge from the node.
+	 * @param node The new end point of the hasHandlers edge.
+	 */
+	public void removeHandlers(Handler node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.Try#edgeHasFinallyBlock hasFinallyBlock} edge points to.
 	 * @return Returns the end point of the hasFinallyBlock edge.
 	 */
@@ -167,6 +224,11 @@ public interface Try extends Statement {
 	 * @param node The new end point of the hasFinallyBlock edge.
 	 */
 	public void setFinallyBlock(Block node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Try#edgeHasFinallyBlock hasFinallyBlock} edge.
+	 */
+	public void removeFinallyBlock();
 
 }
 

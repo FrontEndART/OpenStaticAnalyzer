@@ -141,6 +141,36 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public PackageDeclaration getPackageDeclaration() {
 		if (_hasPackageDeclaration == 0)
 			return null;
@@ -241,14 +271,14 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 
 	@Override
 	public void setPackageDeclaration(int _id) {
-		if (_hasPackageDeclaration != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasPackageDeclaration" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkPackageDeclaration) {
+			if (_hasPackageDeclaration != 0) {
+				removeParentEdge(_hasPackageDeclaration);
+			}
 			_hasPackageDeclaration = _id;
 			setParentEdge(_hasPackageDeclaration);
 		} else {
@@ -258,9 +288,9 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 
 	@Override
 	public void setPackageDeclaration(PackageDeclaration _node) {
-		if (_hasPackageDeclaration != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasPackageDeclaration" ));
-
+		if (_hasPackageDeclaration != 0) {
+			removeParentEdge(_hasPackageDeclaration);
+		}
 		_hasPackageDeclaration = _node.getId();
 		setParentEdge(_hasPackageDeclaration);
 	}
@@ -290,6 +320,22 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 	}
 
 	@Override
+	public void addImports(Import _node, int index) {
+		if (_hasImports == null)
+			_hasImports = new EdgeList<Import>(factory);
+		_hasImports.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setImports(Import _node, int index) {
+		if (_hasImports == null)
+			_hasImports = new EdgeList<Import>(factory);
+		_hasImports.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
 	public void addOthers(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
@@ -314,15 +360,31 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 	}
 
 	@Override
-	public void setModuleDeclaration(int _id) {
-		if (_hasModuleDeclaration != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasModuleDeclaration" ));
+	public void addOthers(Positioned _node, int index) {
+		if (_hasOthers == null)
+			_hasOthers = new EdgeList<Positioned>(factory);
+		_hasOthers.add(_node, index);
+		setParentEdge(_node);
+	}
 
+	@Override
+	public void setOthers(Positioned _node, int index) {
+		if (_hasOthers == null)
+			_hasOthers = new EdgeList<Positioned>(factory);
+		_hasOthers.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setModuleDeclaration(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkModuleDeclaration) {
+			if (_hasModuleDeclaration != 0) {
+				removeParentEdge(_hasModuleDeclaration);
+			}
 			_hasModuleDeclaration = _id;
 			setParentEdge(_hasModuleDeclaration);
 		} else {
@@ -332,9 +394,9 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 
 	@Override
 	public void setModuleDeclaration(ModuleDeclaration _node) {
-		if (_hasModuleDeclaration != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasModuleDeclaration" ));
-
+		if (_hasModuleDeclaration != 0) {
+			removeParentEdge(_hasModuleDeclaration);
+		}
 		_hasModuleDeclaration = _node.getId();
 		setParentEdge(_hasModuleDeclaration);
 	}
@@ -362,10 +424,21 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 	}
 
 	@Override
-	public void setIsInModule(int _id) {
-		if (_isInModule != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","isInModule" ));
+	public void addTypeDeclarations(TypeDeclaration _node, int index) {
+		if (_typeDeclarations == null)
+			_typeDeclarations = new EdgeList<TypeDeclaration>(factory);
+		_typeDeclarations.add(_node, index);
+	}
 
+	@Override
+	public void setTypeDeclarations(TypeDeclaration _node, int index) {
+		if (_typeDeclarations == null)
+			_typeDeclarations = new EdgeList<TypeDeclaration>(factory);
+		_typeDeclarations.set(_node, index);
+	}
+
+	@Override
+	public void setIsInModule(int _id) {
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -379,10 +452,80 @@ public class CompilationUnitImpl extends BaseImpl implements CompilationUnit {
 
 	@Override
 	public void setIsInModule(Module _node) {
-		if (_isInModule != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","isInModule" ));
-
 		_isInModule = _node.getId();
+	}
+
+	@Override
+	public void removePackageDeclaration() {
+		if (_hasPackageDeclaration != 0) {
+			removeParentEdge(_hasPackageDeclaration);
+		}
+		_hasPackageDeclaration = 0;
+	}
+
+	@Override
+	public void removeImports(Import _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasImports.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeImports(int _id) {
+		int tmp=_hasImports.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeOthers(Positioned _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasOthers.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeOthers(int _id) {
+		int tmp=_hasOthers.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeModuleDeclaration() {
+		if (_hasModuleDeclaration != 0) {
+			removeParentEdge(_hasModuleDeclaration);
+		}
+		_hasModuleDeclaration = 0;
+	}
+
+	@Override
+	public void removeTypeDeclarations(TypeDeclaration _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_typeDeclarations.remove(_node);
+	}
+
+	@Override
+	public void removeTypeDeclarations(int _id) {
+		int tmp=_typeDeclarations.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
+	public void removeIsInModule() {
+		_isInModule = 0;
 	}
 
 

@@ -64,6 +64,11 @@ public interface EnhancedFor extends For {
 	public void setParameter(Parameter node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.statm.EnhancedFor#edgeHasParameter hasParameter} edge.
+	 */
+	public void removeParameter();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.EnhancedFor#edgeHasExpression hasExpression} edge points to.
 	 * @return Returns the end point of the hasExpression edge.
 	 */
@@ -80,6 +85,11 @@ public interface EnhancedFor extends For {
 	 * @param node The new end point of the hasExpression edge.
 	 */
 	public void setExpression(Expression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.EnhancedFor#edgeHasExpression hasExpression} edge.
+	 */
+	public void removeExpression();
 
 }
 

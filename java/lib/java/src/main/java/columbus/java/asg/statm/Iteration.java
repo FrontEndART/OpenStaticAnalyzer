@@ -46,5 +46,10 @@ public interface Iteration extends Statement {
 	 */
 	public void setSubstatement(Statement node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Iteration#edgeHasSubstatement hasSubstatement} edge.
+	 */
+	public void removeSubstatement();
+
 }
 

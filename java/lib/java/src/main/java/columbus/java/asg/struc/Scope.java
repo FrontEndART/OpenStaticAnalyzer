@@ -59,5 +59,31 @@ public interface Scope extends Member {
 	 */
 	public void addMembers(Member node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.Scope#edgeHasMembers hasMembers} edge to the node.
+	 * @param node The end point of the new hasMembers edge.
+	 * @param index The index of end point of the new hasMembers edge.
+	 */
+	public void addMembers(Member node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.struc.Scope#edgeHasMembers hasMembers} edge to the node.
+	 * @param node The end point of the new hasMembers edge.
+	 * @param index The index of end point of the new hasMembers edge.
+	 */
+	public void setMembers(Member node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Scope#edgeHasMembers hasMembers} edge by id from the node.
+	 * @param id The new end point of the hasMembers edge.
+	 */
+	public void removeMembers(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.struc.Scope#edgeHasMembers hasMembers} edge from the node.
+	 * @param node The new end point of the hasMembers edge.
+	 */
+	public void removeMembers(Member node);
+
 }
 

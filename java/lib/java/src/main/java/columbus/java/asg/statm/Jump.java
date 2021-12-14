@@ -79,5 +79,10 @@ public interface Jump extends Statement {
 	 */
 	public void setTarget(Statement node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Jump#edgeTarget target} edge.
+	 */
+	public void removeTarget();
+
 }
 

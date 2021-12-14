@@ -59,5 +59,31 @@ public interface IntersectionType extends Type {
 	 */
 	public void addBounds(Type node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.type.IntersectionType#edgeBounds bounds} edge to the node.
+	 * @param node The end point of the new bounds edge.
+	 * @param index The index of end point of the new bounds edge.
+	 */
+	public void addBounds(Type node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.type.IntersectionType#edgeBounds bounds} edge to the node.
+	 * @param node The end point of the new bounds edge.
+	 * @param index The index of end point of the new bounds edge.
+	 */
+	public void setBounds(Type node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.IntersectionType#edgeBounds bounds} edge by id from the node.
+	 * @param id The new end point of the bounds edge.
+	 */
+	public void removeBounds(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.type.IntersectionType#edgeBounds bounds} edge from the node.
+	 * @param node The new end point of the bounds edge.
+	 */
+	public void removeBounds(Type node);
+
 }
 

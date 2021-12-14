@@ -66,5 +66,10 @@ public interface Identifier extends Expression {
 	 */
 	public void setRefersTo(Named node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.expr.Identifier#edgeRefersTo refersTo} edge.
+	 */
+	public void removeRefersTo();
+
 }
 

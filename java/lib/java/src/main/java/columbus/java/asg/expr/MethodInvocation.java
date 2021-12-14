@@ -63,6 +63,32 @@ public interface MethodInvocation extends Unary {
 	public void addTypeArguments(TypeExpression node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.expr.MethodInvocation#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void addTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.MethodInvocation#edgeHasTypeArguments hasTypeArguments} edge to the node.
+	 * @param node The end point of the new hasTypeArguments edge.
+	 * @param index The index of end point of the new hasTypeArguments edge.
+	 */
+	public void setTypeArguments(TypeExpression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MethodInvocation#edgeHasTypeArguments hasTypeArguments} edge by id from the node.
+	 * @param id The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MethodInvocation#edgeHasTypeArguments hasTypeArguments} edge from the node.
+	 * @param node The new end point of the hasTypeArguments edge.
+	 */
+	public void removeTypeArguments(TypeExpression node);
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.expr.MethodInvocation#edgeHasArguments hasArguments} edges.
 	 * @return Returns an iterator for the hasArguments edges.
 	 */
@@ -93,6 +119,32 @@ public interface MethodInvocation extends Unary {
 	public void addArguments(Expression node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.expr.MethodInvocation#edgeHasArguments hasArguments} edge to the node.
+	 * @param node The end point of the new hasArguments edge.
+	 * @param index The index of end point of the new hasArguments edge.
+	 */
+	public void addArguments(Expression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.MethodInvocation#edgeHasArguments hasArguments} edge to the node.
+	 * @param node The end point of the new hasArguments edge.
+	 * @param index The index of end point of the new hasArguments edge.
+	 */
+	public void setArguments(Expression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MethodInvocation#edgeHasArguments hasArguments} edge by id from the node.
+	 * @param id The new end point of the hasArguments edge.
+	 */
+	public void removeArguments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MethodInvocation#edgeHasArguments hasArguments} edge from the node.
+	 * @param node The new end point of the hasArguments edge.
+	 */
+	public void removeArguments(Expression node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.MethodInvocation#edgeInvokes invokes} edge points to.
 	 * @return Returns the end point of the invokes edge.
 	 */
@@ -109,6 +161,11 @@ public interface MethodInvocation extends Unary {
 	 * @param node The new end point of the invokes edge.
 	 */
 	public void setInvokes(MethodDeclaration node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.MethodInvocation#edgeInvokes invokes} edge.
+	 */
+	public void removeInvokes();
 
 }
 

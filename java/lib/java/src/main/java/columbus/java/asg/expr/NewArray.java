@@ -63,6 +63,11 @@ public interface NewArray extends Expression {
 	public void setComponentType(TypeExpression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.NewArray#edgeHasComponentType hasComponentType} edge.
+	 */
+	public void removeComponentType();
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.expr.NewArray#edgeHasDimensions hasDimensions} edges.
 	 * @return Returns an iterator for the hasDimensions edges.
 	 */
@@ -93,6 +98,32 @@ public interface NewArray extends Expression {
 	public void addDimensions(Expression node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewArray#edgeHasDimensions hasDimensions} edge to the node.
+	 * @param node The end point of the new hasDimensions edge.
+	 * @param index The index of end point of the new hasDimensions edge.
+	 */
+	public void addDimensions(Expression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewArray#edgeHasDimensions hasDimensions} edge to the node.
+	 * @param node The end point of the new hasDimensions edge.
+	 * @param index The index of end point of the new hasDimensions edge.
+	 */
+	public void setDimensions(Expression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewArray#edgeHasDimensions hasDimensions} edge by id from the node.
+	 * @param id The new end point of the hasDimensions edge.
+	 */
+	public void removeDimensions(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewArray#edgeHasDimensions hasDimensions} edge from the node.
+	 * @param node The new end point of the hasDimensions edge.
+	 */
+	public void removeDimensions(Expression node);
+
+	/**
 	 * Gives back iterator for the {@link columbus.java.asg.expr.NewArray#edgeHasInitializers hasInitializers} edges.
 	 * @return Returns an iterator for the hasInitializers edges.
 	 */
@@ -121,6 +152,32 @@ public interface NewArray extends Expression {
 	 * @param node The end point of the new hasInitializers edge.
 	 */
 	public void addInitializers(Expression node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewArray#edgeHasInitializers hasInitializers} edge to the node.
+	 * @param node The end point of the new hasInitializers edge.
+	 * @param index The index of end point of the new hasInitializers edge.
+	 */
+	public void addInitializers(Expression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.NewArray#edgeHasInitializers hasInitializers} edge to the node.
+	 * @param node The end point of the new hasInitializers edge.
+	 * @param index The index of end point of the new hasInitializers edge.
+	 */
+	public void setInitializers(Expression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewArray#edgeHasInitializers hasInitializers} edge by id from the node.
+	 * @param id The new end point of the hasInitializers edge.
+	 */
+	public void removeInitializers(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NewArray#edgeHasInitializers hasInitializers} edge from the node.
+	 * @param node The new end point of the hasInitializers edge.
+	 */
+	public void removeInitializers(Expression node);
 
 }
 

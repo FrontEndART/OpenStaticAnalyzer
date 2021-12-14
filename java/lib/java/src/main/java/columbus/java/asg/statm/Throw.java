@@ -47,5 +47,10 @@ public interface Throw extends Statement {
 	 */
 	public void setExpression(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Throw#edgeHasExpression hasExpression} edge.
+	 */
+	public void removeExpression();
+
 }
 

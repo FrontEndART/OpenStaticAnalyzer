@@ -47,5 +47,10 @@ public interface EnumConstant extends VariableDeclaration {
 	 */
 	public void setNewClass(NewClass node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.struc.EnumConstant#edgeHasNewClass hasNewClass} edge.
+	 */
+	public void removeNewClass();
+
 }
 

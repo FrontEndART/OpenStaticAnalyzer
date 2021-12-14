@@ -89,6 +89,32 @@ public interface BasicFor extends For {
 	public void addInitializers(Statement node);
 
 	/**
+	 * Adds a new {@link columbus.java.asg.statm.BasicFor#edgeHasInitializers hasInitializers} edge to the node.
+	 * @param node The end point of the new hasInitializers edge.
+	 * @param index The index of end point of the new hasInitializers edge.
+	 */
+	public void addInitializers(Statement node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.BasicFor#edgeHasInitializers hasInitializers} edge to the node.
+	 * @param node The end point of the new hasInitializers edge.
+	 * @param index The index of end point of the new hasInitializers edge.
+	 */
+	public void setInitializers(Statement node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.BasicFor#edgeHasInitializers hasInitializers} edge by id from the node.
+	 * @param id The new end point of the hasInitializers edge.
+	 */
+	public void removeInitializers(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.BasicFor#edgeHasInitializers hasInitializers} edge from the node.
+	 * @param node The new end point of the hasInitializers edge.
+	 */
+	public void removeInitializers(Statement node);
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.BasicFor#edgeHasCondition hasCondition} edge points to.
 	 * @return Returns the end point of the hasCondition edge.
 	 */
@@ -105,6 +131,11 @@ public interface BasicFor extends For {
 	 * @param node The new end point of the hasCondition edge.
 	 */
 	public void setCondition(Expression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.BasicFor#edgeHasCondition hasCondition} edge.
+	 */
+	public void removeCondition();
 
 	/**
 	 * Gives back iterator for the {@link columbus.java.asg.statm.BasicFor#edgeHasUpdates hasUpdates} edges.
@@ -135,6 +166,32 @@ public interface BasicFor extends For {
 	 * @param node The end point of the new hasUpdates edge.
 	 */
 	public void addUpdates(Statement node);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.BasicFor#edgeHasUpdates hasUpdates} edge to the node.
+	 * @param node The end point of the new hasUpdates edge.
+	 * @param index The index of end point of the new hasUpdates edge.
+	 */
+	public void addUpdates(Statement node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.BasicFor#edgeHasUpdates hasUpdates} edge to the node.
+	 * @param node The end point of the new hasUpdates edge.
+	 * @param index The index of end point of the new hasUpdates edge.
+	 */
+	public void setUpdates(Statement node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.BasicFor#edgeHasUpdates hasUpdates} edge by id from the node.
+	 * @param id The new end point of the hasUpdates edge.
+	 */
+	public void removeUpdates(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.BasicFor#edgeHasUpdates hasUpdates} edge from the node.
+	 * @param node The new end point of the hasUpdates edge.
+	 */
+	public void removeUpdates(Statement node);
 
 }
 

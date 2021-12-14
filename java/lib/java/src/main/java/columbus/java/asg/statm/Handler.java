@@ -77,6 +77,11 @@ public interface Handler extends Positioned {
 	public void setParameter(Parameter node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.statm.Handler#edgeHasParameter hasParameter} edge.
+	 */
+	public void removeParameter();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.statm.Handler#edgeHasBlock hasBlock} edge points to.
 	 * @return Returns the end point of the hasBlock edge.
 	 */
@@ -93,6 +98,11 @@ public interface Handler extends Positioned {
 	 * @param node The new end point of the hasBlock edge.
 	 */
 	public void setBlock(Block node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Handler#edgeHasBlock hasBlock} edge.
+	 */
+	public void removeBlock();
 
 }
 

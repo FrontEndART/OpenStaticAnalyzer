@@ -59,5 +59,31 @@ public interface NormalAnnotation extends Annotation {
 	 */
 	public void addArguments(Expression node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.NormalAnnotation#edgeHasArguments hasArguments} edge to the node.
+	 * @param node The end point of the new hasArguments edge.
+	 * @param index The index of end point of the new hasArguments edge.
+	 */
+	public void addArguments(Expression node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.expr.NormalAnnotation#edgeHasArguments hasArguments} edge to the node.
+	 * @param node The end point of the new hasArguments edge.
+	 * @param index The index of end point of the new hasArguments edge.
+	 */
+	public void setArguments(Expression node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NormalAnnotation#edgeHasArguments hasArguments} edge by id from the node.
+	 * @param id The new end point of the hasArguments edge.
+	 */
+	public void removeArguments(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.NormalAnnotation#edgeHasArguments hasArguments} edge from the node.
+	 * @param node The new end point of the hasArguments edge.
+	 */
+	public void removeArguments(Expression node);
+
 }
 

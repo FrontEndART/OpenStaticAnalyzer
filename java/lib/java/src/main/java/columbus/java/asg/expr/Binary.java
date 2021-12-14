@@ -48,6 +48,11 @@ public interface Binary extends Expression {
 	public void setLeftOperand(Expression node);
 
 	/**
+	 * Remove the {@link columbus.java.asg.expr.Binary#edgeHasLeftOperand hasLeftOperand} edge.
+	 */
+	public void removeLeftOperand();
+
+	/**
 	 * Gives back the reference of the node the {@link columbus.java.asg.expr.Binary#edgeHasRightOperand hasRightOperand} edge points to.
 	 * @return Returns the end point of the hasRightOperand edge.
 	 */
@@ -64,6 +69,11 @@ public interface Binary extends Expression {
 	 * @param node The new end point of the hasRightOperand edge.
 	 */
 	public void setRightOperand(Expression node);
+
+	/**
+	 * Remove the {@link columbus.java.asg.expr.Binary#edgeHasRightOperand hasRightOperand} edge.
+	 */
+	public void removeRightOperand();
 
 }
 

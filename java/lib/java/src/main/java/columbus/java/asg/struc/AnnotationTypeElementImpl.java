@@ -382,6 +382,36 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Annotation> getAnnotationsIterator() {
 		if (_hasAnnotations == null)
 			return EdgeList.<Annotation>emptyList().iterator();
@@ -430,6 +460,40 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 	}
 
 	@Override
+	public void addAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(Annotation _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasAnnotations.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(int _id) {
+		int tmp=_hasAnnotations.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public TypeExpression getReturnType() {
 		if (_hasReturnType == 0)
 			return null;
@@ -473,14 +537,14 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 
 	@Override
 	public void setReturnType(int _id) {
-		if (_hasReturnType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasReturnType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkTypeExpression)) {
+			if (_hasReturnType != 0) {
+				removeParentEdge(_hasReturnType);
+			}
 			_hasReturnType = _id;
 			setParentEdge(_hasReturnType);
 		} else {
@@ -490,18 +554,15 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 
 	@Override
 	public void setReturnType(TypeExpression _node) {
-		if (_hasReturnType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasReturnType" ));
-
+		if (_hasReturnType != 0) {
+			removeParentEdge(_hasReturnType);
+		}
 		_hasReturnType = _node.getId();
 		setParentEdge(_hasReturnType);
 	}
 
 	@Override
 	public void setMethodType(int _id) {
-		if (_methodType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","methodType" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -515,9 +576,6 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 
 	@Override
 	public void setMethodType(MethodType _node) {
-		if (_methodType != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","methodType" ));
-
 		_methodType = _node.getId();
 	}
 
@@ -544,6 +602,49 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 	}
 
 	@Override
+	public void addOverrides(MethodDeclaration _node, int index) {
+		if (_overrides == null)
+			_overrides = new EdgeList<MethodDeclaration>(factory);
+		_overrides.add(_node, index);
+	}
+
+	@Override
+	public void setOverrides(MethodDeclaration _node, int index) {
+		if (_overrides == null)
+			_overrides = new EdgeList<MethodDeclaration>(factory);
+		_overrides.set(_node, index);
+	}
+
+	@Override
+	public void removeReturnType() {
+		if (_hasReturnType != 0) {
+			removeParentEdge(_hasReturnType);
+		}
+		_hasReturnType = 0;
+	}
+
+	@Override
+	public void removeMethodType() {
+		_methodType = 0;
+	}
+
+	@Override
+	public void removeOverrides(MethodDeclaration _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_overrides.remove(_node);
+	}
+
+	@Override
+	public void removeOverrides(int _id) {
+		int tmp=_overrides.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Expression getDefaultValue() {
 		if (_hasDefaultValue == 0)
 			return null;
@@ -554,14 +655,14 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 
 	@Override
 	public void setDefaultValue(int _id) {
-		if (_hasDefaultValue != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasDefaultValue" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (Common.getIsBaseClassKind(_node.getNodeKind(), NodeKind.ndkExpression)) {
+			if (_hasDefaultValue != 0) {
+				removeParentEdge(_hasDefaultValue);
+			}
 			_hasDefaultValue = _id;
 			setParentEdge(_hasDefaultValue);
 		} else {
@@ -571,11 +672,19 @@ public class AnnotationTypeElementImpl extends BaseImpl implements AnnotationTyp
 
 	@Override
 	public void setDefaultValue(Expression _node) {
-		if (_hasDefaultValue != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasDefaultValue" ));
-
+		if (_hasDefaultValue != 0) {
+			removeParentEdge(_hasDefaultValue);
+		}
 		_hasDefaultValue = _node.getId();
 		setParentEdge(_hasDefaultValue);
+	}
+
+	@Override
+	public void removeDefaultValue() {
+		if (_hasDefaultValue != 0) {
+			removeParentEdge(_hasDefaultValue);
+		}
+		_hasDefaultValue = 0;
 	}
 
 

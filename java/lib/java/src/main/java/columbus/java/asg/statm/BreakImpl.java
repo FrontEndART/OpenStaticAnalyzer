@@ -170,6 +170,36 @@ public class BreakImpl extends BaseImpl implements Break {
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Statement getTarget() {
 		if (_target == 0)
 			return null;
@@ -180,9 +210,6 @@ public class BreakImpl extends BaseImpl implements Break {
 
 	@Override
 	public void setTarget(int _id) {
-		if (_target != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","target" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
@@ -196,10 +223,12 @@ public class BreakImpl extends BaseImpl implements Break {
 
 	@Override
 	public void setTarget(Statement _node) {
-		if (_target != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","target" ));
-
 		_target = _node.getId();
+	}
+
+	@Override
+	public void removeTarget() {
+		_target = 0;
 	}
 
 

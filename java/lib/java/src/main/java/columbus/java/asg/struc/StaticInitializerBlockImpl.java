@@ -169,6 +169,36 @@ public class StaticInitializerBlockImpl extends BaseImpl implements StaticInitia
 	}
 
 	@Override
+	public void addComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.add(_node, index);
+	}
+
+	@Override
+	public void setComments(Comment _node, int index) {
+		if (_comments == null)
+			_comments = new EdgeList<Comment>(factory);
+		_comments.set(_node, index);
+	}
+
+	@Override
+	public void removeComments(Comment _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_comments.remove(_node);
+	}
+
+	@Override
+	public void removeComments(int _id) {
+		int tmp=_comments.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public EdgeIterator<Annotation> getAnnotationsIterator() {
 		if (_hasAnnotations == null)
 			return EdgeList.<Annotation>emptyList().iterator();
@@ -217,6 +247,40 @@ public class StaticInitializerBlockImpl extends BaseImpl implements StaticInitia
 	}
 
 	@Override
+	public void addAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.add(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void setAnnotations(Annotation _node, int index) {
+		if (_hasAnnotations == null)
+			_hasAnnotations = new EdgeList<Annotation>(factory);
+		_hasAnnotations.set(_node, index);
+		setParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(Annotation _node) {
+		if (_node == null)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+
+		_hasAnnotations.remove(_node);
+
+		removeParentEdge(_node);
+	}
+
+	@Override
+	public void removeAnnotations(int _id) {
+		int tmp=_hasAnnotations.remove(_id);
+		if (tmp==0)
+			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
+		else removeParentEdge(tmp);
+	}
+
+	@Override
 	public Block getBody() {
 		if (_hasBody == 0)
 			return null;
@@ -227,14 +291,14 @@ public class StaticInitializerBlockImpl extends BaseImpl implements StaticInitia
 
 	@Override
 	public void setBody(int _id) {
-		if (_hasBody != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBody" ));
-
 		if (!factory.getExist(_id))
 			throw new JavaException(logger.formatMessage("ex.java.Node.No_end_point"));
 
 		Base _node = factory.getRef(_id);
 		if (_node.getNodeKind() == NodeKind.ndkBlock) {
+			if (_hasBody != 0) {
+				removeParentEdge(_hasBody);
+			}
 			_hasBody = _id;
 			setParentEdge(_hasBody);
 		} else {
@@ -244,11 +308,19 @@ public class StaticInitializerBlockImpl extends BaseImpl implements StaticInitia
 
 	@Override
 	public void setBody(Block _node) {
-		if (_hasBody != 0)
-			throw new JavaException(logger.formatMessage("ex.java.Node.The_previous_end_point","hasBody" ));
-
+		if (_hasBody != 0) {
+			removeParentEdge(_hasBody);
+		}
 		_hasBody = _node.getId();
 		setParentEdge(_hasBody);
+	}
+
+	@Override
+	public void removeBody() {
+		if (_hasBody != 0) {
+			removeParentEdge(_hasBody);
+		}
+		_hasBody = 0;
 	}
 
 

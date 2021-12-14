@@ -79,5 +79,10 @@ public interface LabeledStatement extends Statement {
 	 */
 	public void setStatement(Statement node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.LabeledStatement#edgeHasStatement hasStatement} edge.
+	 */
+	public void removeStatement();
+
 }
 

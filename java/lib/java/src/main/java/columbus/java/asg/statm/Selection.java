@@ -47,5 +47,10 @@ public interface Selection extends Statement {
 	 */
 	public void setCondition(Expression node);
 
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Selection#edgeHasCondition hasCondition} edge.
+	 */
+	public void removeCondition();
+
 }
 

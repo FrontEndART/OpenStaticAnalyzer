@@ -72,5 +72,31 @@ public interface Switch extends Selection {
 	 */
 	public void addCases(SwitchLabel node);
 
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.Switch#edgeHasCases hasCases} edge to the node.
+	 * @param node The end point of the new hasCases edge.
+	 * @param index The index of end point of the new hasCases edge.
+	 */
+	public void addCases(SwitchLabel node, int index);
+
+	/**
+	 * Adds a new {@link columbus.java.asg.statm.Switch#edgeHasCases hasCases} edge to the node.
+	 * @param node The end point of the new hasCases edge.
+	 * @param index The index of end point of the new hasCases edge.
+	 */
+	public void setCases(SwitchLabel node, int index);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Switch#edgeHasCases hasCases} edge by id from the node.
+	 * @param id The new end point of the hasCases edge.
+	 */
+	public void removeCases(int id);
+
+	/**
+	 * Remove the {@link columbus.java.asg.statm.Switch#edgeHasCases hasCases} edge from the node.
+	 * @param node The new end point of the hasCases edge.
+	 */
+	public void removeCases(SwitchLabel node);
+
 }
 
