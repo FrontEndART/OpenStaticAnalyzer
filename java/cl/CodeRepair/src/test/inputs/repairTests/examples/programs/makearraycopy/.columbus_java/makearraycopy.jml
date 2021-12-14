@@ -1,0 +1,566 @@
+<?xml version='1.0' encoding="utf-8"?>
+<Project name='' xmlns:base='columbus_java_schema/base' xmlns:expr='columbus_java_schema/expr' xmlns:module='columbus_java_schema/module' xmlns:statm='columbus_java_schema/statm' xmlns:struc='columbus_java_schema/struc' xmlns:type='columbus_java_schema/type'>
+<struc:Package id='id100' parent='id0' name='&lt;root_package&gt;' qualifiedName='&lt;root_package&gt;'>
+	<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+	<Scope_HasMembers>
+		<struc:Package id='id106' parent='id100' name='columbus' qualifiedName='columbus'>
+			<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+			<Scope_HasMembers>
+				<struc:Package id='id105' parent='id106' name='refactorings' qualifiedName='columbus.refactorings'>
+					<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<Scope_HasMembers>
+						<struc:Package id='id104' parent='id105' name='model' qualifiedName='columbus.refactorings.model'>
+							<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Scope_HasMembers>
+								<struc:Package id='id103' parent='id104' name='makearraycopy' qualifiedName='columbus.refactorings.model.makearraycopy'>
+									<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<Scope_HasMembers>
+										<struc:Class id='id115' parent='id103' isCompilerGenerated='false' isToolGenerated='false' name='MakeArrayCopyExample' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='13' isAbstract='false' isStrictfp='false' binaryName='columbus.refactorings.model.makearraycopy.MakeArrayCopyExample'>
+											<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='3' col='8' endLine='18' endCol='2' wideLine='3' wideCol='1' wideEndLine='18' wideEndCol='2'/>
+											<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='3' col='14' endLine='3' endCol='34' wideLine='3' wideCol='14' wideEndLine='3' wideEndCol='34'/>
+											<AccessibilityPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='3' col='1' endLine='3' endCol='7' wideLine='3' wideCol='1' wideEndLine='3' wideEndCol='7'/>
+											<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<TypeNamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='3' col='8' endLine='3' endCol='13' wideLine='3' wideCol='8' wideEndLine='3' wideEndCol='13'/>
+											<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<ExtendsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<ImplementsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<BodyStartPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='3' col='35' endLine='3' endCol='36' wideLine='3' wideCol='35' wideEndLine='3' wideEndCol='36'/>
+											<Scope_HasMembers>
+												<struc:Method id='id116' parent='id115' isCompilerGenerated='true' isToolGenerated='false' name='MakeArrayCopyExample' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='0' isAbstract='false' isStrictfp='false' methodKind='mekGeneratedDefaultConstructor' isSynchronized='false' isNative='false' isDefault='false'>
+													<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ParametersStartPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ParametersEndPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<MethodDeclaration_MethodType ref='id1291'/>
+													<NormalMethod_HasBody>
+														<statm:Block id='id117' parent='id116' isCompilerGenerated='true' isToolGenerated='false'>
+															<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<Block_HasStatements>
+																<statm:ExpressionStatement id='id118' parent='id117' isCompilerGenerated='true' isToolGenerated='false'>
+																	<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+																	<ExpressionStatement_HasExpression>
+																		<expr:MethodInvocation id='id119' parent='id118' isCompilerGenerated='true' isToolGenerated='false'>
+																			<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+																			<Expression_Type ref='id10'/>
+																			<Unary_HasOperand>
+																				<expr:Super id='id120' parent='id119' isCompilerGenerated='true' isToolGenerated='false'>
+																					<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+																					<Expression_Type ref='id1291'/>
+																				</expr:Super>
+																			</Unary_HasOperand>
+																		</expr:MethodInvocation>
+																	</ExpressionStatement_HasExpression>
+																</statm:ExpressionStatement>
+															</Block_HasStatements>
+														</statm:Block>
+													</NormalMethod_HasBody>
+												</struc:Method>
+											</Scope_HasMembers>
+											<Scope_HasMembers>
+												<struc:Variable id='id121' parent='id115' isCompilerGenerated='false' isToolGenerated='false' name='array' accessibility='ackPrivate' isStatic='false' isFinal='false' isTransient='false' isVolatile='false'>
+													<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='22' endLine='4' endCol='70' wideLine='4' wideCol='5' wideEndLine='4' wideEndCol='70'/>
+													<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='22' endLine='4' endCol='27' wideLine='4' wideCol='22' wideEndLine='4' wideEndCol='27'/>
+													<AccessibilityPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='5' endLine='4' endCol='12' wideLine='4' wideCol='5' wideEndLine='4' wideEndCol='12'/>
+													<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<EqualSignPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='27' endLine='4' endCol='28' wideLine='4' wideCol='27' wideEndLine='4' wideEndCol='28'/>
+													<VariableDeclaration_HasType>
+														<expr:ArrayTypeExpression id='id129' parent='id121' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='19' endLine='4' endCol='21' wideLine='4' wideCol='13' wideEndLine='4' wideEndCol='21'/>
+															<Expression_Type ref='id1294'/>
+															<ArrayTypeExpression_HasComponentType>
+																<expr:SimpleTypeExpression id='id130' parent='id129' isCompilerGenerated='false' isToolGenerated='false' name='Object'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='13' endLine='4' endCol='19' wideLine='4' wideCol='13' wideEndLine='4' wideEndCol='19'/>
+																	<Expression_Type ref='id1293'/>
+																</expr:SimpleTypeExpression>
+															</ArrayTypeExpression_HasComponentType>
+														</expr:ArrayTypeExpression>
+													</VariableDeclaration_HasType>
+													<Variable_HasInitialValue>
+														<expr:NewArray id='id122' parent='id121' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='29' endLine='4' endCol='69' wideLine='4' wideCol='29' wideEndLine='4' wideEndCol='69'/>
+															<LeftBracePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='29' endLine='4' endCol='30' wideLine='4' wideCol='29' wideEndLine='4' wideEndCol='30'/>
+															<Expression_Type ref='id1294'/>
+															<NewArray_HasInitializers>
+																<expr:NewClass id='id123' parent='id122' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='30' endLine='4' endCol='42' wideLine='4' wideCol='30' wideEndLine='4' wideEndCol='42'/>
+																	<Expression_Type ref='id1293'/>
+																	<NewClass_HasTypeName>
+																		<expr:SimpleTypeExpression id='id124' parent='id123' isCompilerGenerated='false' isToolGenerated='false' name='Object'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='34' endLine='4' endCol='40' wideLine='4' wideCol='34' wideEndLine='4' wideEndCol='40'/>
+																			<Expression_Type ref='id1293'/>
+																		</expr:SimpleTypeExpression>
+																	</NewClass_HasTypeName>
+																</expr:NewClass>
+															</NewArray_HasInitializers>
+															<NewArray_HasInitializers>
+																<expr:NewClass id='id125' parent='id122' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='43' endLine='4' endCol='55' wideLine='4' wideCol='43' wideEndLine='4' wideEndCol='55'/>
+																	<Expression_Type ref='id1293'/>
+																	<NewClass_HasTypeName>
+																		<expr:SimpleTypeExpression id='id126' parent='id125' isCompilerGenerated='false' isToolGenerated='false' name='Object'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='47' endLine='4' endCol='53' wideLine='4' wideCol='47' wideEndLine='4' wideEndCol='53'/>
+																			<Expression_Type ref='id1293'/>
+																		</expr:SimpleTypeExpression>
+																	</NewClass_HasTypeName>
+																</expr:NewClass>
+															</NewArray_HasInitializers>
+															<NewArray_HasInitializers>
+																<expr:NewClass id='id127' parent='id122' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='56' endLine='4' endCol='68' wideLine='4' wideCol='56' wideEndLine='4' wideEndCol='68'/>
+																	<Expression_Type ref='id1293'/>
+																	<NewClass_HasTypeName>
+																		<expr:SimpleTypeExpression id='id128' parent='id127' isCompilerGenerated='false' isToolGenerated='false' name='Object'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='4' col='60' endLine='4' endCol='66' wideLine='4' wideCol='60' wideEndLine='4' wideEndCol='66'/>
+																			<Expression_Type ref='id1293'/>
+																		</expr:SimpleTypeExpression>
+																	</NewClass_HasTypeName>
+																</expr:NewClass>
+															</NewArray_HasInitializers>
+														</expr:NewArray>
+													</Variable_HasInitialValue>
+												</struc:Variable>
+											</Scope_HasMembers>
+											<Scope_HasMembers>
+												<struc:Variable id='id131' parent='id115' isCompilerGenerated='false' isToolGenerated='false' name='arrayInt' accessibility='ackPrivate' isStatic='false' isFinal='false' isTransient='false' isVolatile='false'>
+													<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='19' endLine='5' endCol='38' wideLine='5' wideCol='5' wideEndLine='5' wideEndCol='38'/>
+													<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='19' endLine='5' endCol='27' wideLine='5' wideCol='19' wideEndLine='5' wideEndCol='27'/>
+													<AccessibilityPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='5' endLine='5' endCol='12' wideLine='5' wideCol='5' wideEndLine='5' wideEndCol='12'/>
+													<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<EqualSignPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='28' endLine='5' endCol='29' wideLine='5' wideCol='28' wideEndLine='5' wideEndCol='29'/>
+													<VariableDeclaration_HasType>
+														<expr:ArrayTypeExpression id='id136' parent='id131' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='16' endLine='5' endCol='18' wideLine='5' wideCol='13' wideEndLine='5' wideEndCol='18'/>
+															<Expression_Type ref='id1295'/>
+															<ArrayTypeExpression_HasComponentType>
+																<expr:PrimitiveTypeExpression id='id137' parent='id136' isCompilerGenerated='false' isToolGenerated='false' kind='ptkInt'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='13' endLine='5' endCol='16' wideLine='5' wideCol='13' wideEndLine='5' wideEndCol='16'/>
+																	<Expression_Type ref='id15'/>
+																</expr:PrimitiveTypeExpression>
+															</ArrayTypeExpression_HasComponentType>
+														</expr:ArrayTypeExpression>
+													</VariableDeclaration_HasType>
+													<Variable_HasInitialValue>
+														<expr:NewArray id='id132' parent='id131' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='30' endLine='5' endCol='37' wideLine='5' wideCol='30' wideEndLine='5' wideEndCol='37'/>
+															<LeftBracePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='30' endLine='5' endCol='31' wideLine='5' wideCol='30' wideEndLine='5' wideEndCol='31'/>
+															<Expression_Type ref='id1295'/>
+															<NewArray_HasInitializers>
+																<expr:IntegerLiteral id='id133' parent='id132' isCompilerGenerated='false' isToolGenerated='false' value='1' intValue='1'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='31' endLine='5' endCol='32' wideLine='5' wideCol='31' wideEndLine='5' wideEndCol='32'/>
+																	<Expression_Type ref='id15'/>
+																</expr:IntegerLiteral>
+															</NewArray_HasInitializers>
+															<NewArray_HasInitializers>
+																<expr:IntegerLiteral id='id134' parent='id132' isCompilerGenerated='false' isToolGenerated='false' value='2' intValue='2'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='33' endLine='5' endCol='34' wideLine='5' wideCol='33' wideEndLine='5' wideEndCol='34'/>
+																	<Expression_Type ref='id15'/>
+																</expr:IntegerLiteral>
+															</NewArray_HasInitializers>
+															<NewArray_HasInitializers>
+																<expr:IntegerLiteral id='id135' parent='id132' isCompilerGenerated='false' isToolGenerated='false' value='3' intValue='3'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='5' col='35' endLine='5' endCol='36' wideLine='5' wideCol='35' wideEndLine='5' wideEndCol='36'/>
+																	<Expression_Type ref='id15'/>
+																</expr:IntegerLiteral>
+															</NewArray_HasInitializers>
+														</expr:NewArray>
+													</Variable_HasInitialValue>
+												</struc:Variable>
+											</Scope_HasMembers>
+											<Scope_HasMembers>
+												<struc:Method id='id138' parent='id115' isCompilerGenerated='false' isToolGenerated='false' name='foo' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+													<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='17' endLine='9' endCol='6' wideLine='7' wideCol='5' wideEndLine='9' wideEndCol='6'/>
+													<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='17' endLine='7' endCol='20' wideLine='7' wideCol='17' wideEndLine='7' wideEndCol='20'/>
+													<AccessibilityPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='5' endLine='7' endCol='11' wideLine='7' wideCol='5' wideEndLine='7' wideEndCol='11'/>
+													<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ParametersStartPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='20' endLine='7' endCol='21' wideLine='7' wideCol='20' wideEndLine='7' wideEndCol='21'/>
+													<ParametersEndPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='31' endLine='7' endCol='32' wideLine='7' wideCol='31' wideEndLine='7' wideEndCol='32'/>
+													<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<MethodDeclaration_HasReturnType>
+														<expr:PrimitiveTypeExpression id='id149' parent='id138' isCompilerGenerated='false' isToolGenerated='false' kind='ptkVoid'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='12' endLine='7' endCol='16' wideLine='7' wideCol='12' wideEndLine='7' wideEndCol='16'/>
+															<Expression_Type ref='id10'/>
+														</expr:PrimitiveTypeExpression>
+													</MethodDeclaration_HasReturnType>
+													<MethodDeclaration_MethodType ref='id1412'/>
+													<NormalMethod_HasParameters>
+														<struc:Parameter id='id146' parent='id138' isCompilerGenerated='false' isToolGenerated='false' name='x' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='30' endLine='7' endCol='31' wideLine='7' wideCol='21' wideEndLine='7' wideEndCol='31'/>
+															<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='30' endLine='7' endCol='31' wideLine='7' wideCol='30' wideEndLine='7' wideEndCol='31'/>
+															<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<VariableDeclaration_HasType>
+																<expr:ArrayTypeExpression id='id147' parent='id146' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='27' endLine='7' endCol='29' wideLine='7' wideCol='21' wideEndLine='7' wideEndCol='29'/>
+																	<Expression_Type ref='id1294'/>
+																	<ArrayTypeExpression_HasComponentType>
+																		<expr:SimpleTypeExpression id='id148' parent='id147' isCompilerGenerated='false' isToolGenerated='false' name='Object'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='21' endLine='7' endCol='27' wideLine='7' wideCol='21' wideEndLine='7' wideEndCol='27'/>
+																			<Expression_Type ref='id1293'/>
+																		</expr:SimpleTypeExpression>
+																	</ArrayTypeExpression_HasComponentType>
+																</expr:ArrayTypeExpression>
+															</VariableDeclaration_HasType>
+														</struc:Parameter>
+													</NormalMethod_HasParameters>
+													<NormalMethod_HasBody>
+														<statm:Block id='id139' parent='id138' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='7' col='32' endLine='9' endCol='6' wideLine='7' wideCol='32' wideEndLine='9' wideEndCol='6'/>
+															<Block_HasStatements>
+																<statm:ExpressionStatement id='id140' parent='id139' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='8' col='9' endLine='8' endCol='24' wideLine='8' wideCol='9' wideEndLine='8' wideEndCol='24'/>
+																	<ExpressionStatement_HasExpression>
+																		<expr:Assignment id='id141' parent='id140' isCompilerGenerated='false' isToolGenerated='false' operator='askAssign'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='8' col='20' endLine='8' endCol='23' wideLine='8' wideCol='9' wideEndLine='8' wideEndCol='23'/>
+																			<Expression_Type ref='id1294'/>
+																			<Binary_HasLeftOperand>
+																				<expr:FieldAccess id='id142' parent='id141' isCompilerGenerated='false' isToolGenerated='false'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='8' col='13' endLine='8' endCol='19' wideLine='8' wideCol='9' wideEndLine='8' wideEndCol='19'/>
+																					<Expression_Type ref='id1294'/>
+																					<Binary_HasLeftOperand>
+																						<expr:This id='id143' parent='id142' isCompilerGenerated='false' isToolGenerated='false'>
+																							<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='8' col='9' endLine='8' endCol='13' wideLine='8' wideCol='9' wideEndLine='8' wideEndCol='13'/>
+																							<Expression_Type ref='id1296'/>
+																						</expr:This>
+																					</Binary_HasLeftOperand>
+																					<Binary_HasRightOperand>
+																						<expr:Identifier id='id144' parent='id142' isCompilerGenerated='false' isToolGenerated='false' name='array'>
+																							<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='8' col='14' endLine='8' endCol='19' wideLine='8' wideCol='14' wideEndLine='8' wideEndCol='19'/>
+																							<Expression_Type ref='id1294'/>
+																							<Identifier_RefersTo ref='id121'/>
+																						</expr:Identifier>
+																					</Binary_HasRightOperand>
+																				</expr:FieldAccess>
+																			</Binary_HasLeftOperand>
+																			<Binary_HasRightOperand>
+																				<expr:Identifier id='id145' parent='id141' isCompilerGenerated='false' isToolGenerated='false' name='x'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='8' col='22' endLine='8' endCol='23' wideLine='8' wideCol='22' wideEndLine='8' wideEndCol='23'/>
+																					<Expression_Type ref='id1294'/>
+																					<Identifier_RefersTo ref='id146'/>
+																				</expr:Identifier>
+																			</Binary_HasRightOperand>
+																		</expr:Assignment>
+																	</ExpressionStatement_HasExpression>
+																</statm:ExpressionStatement>
+															</Block_HasStatements>
+														</statm:Block>
+													</NormalMethod_HasBody>
+												</struc:Method>
+											</Scope_HasMembers>
+											<Scope_HasMembers>
+												<struc:Method id='id150' parent='id115' isCompilerGenerated='false' isToolGenerated='false' name='boo' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+													<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='17' endLine='13' endCol='6' wideLine='11' wideCol='5' wideEndLine='13' wideEndCol='6'/>
+													<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='17' endLine='11' endCol='20' wideLine='11' wideCol='17' wideEndLine='11' wideEndCol='20'/>
+													<AccessibilityPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='5' endLine='11' endCol='11' wideLine='11' wideCol='5' wideEndLine='11' wideEndCol='11'/>
+													<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ParametersStartPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='20' endLine='11' endCol='21' wideLine='11' wideCol='20' wideEndLine='11' wideEndCol='21'/>
+													<ParametersEndPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='28' endLine='11' endCol='29' wideLine='11' wideCol='28' wideEndLine='11' wideEndCol='29'/>
+													<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<MethodDeclaration_HasReturnType>
+														<expr:PrimitiveTypeExpression id='id161' parent='id150' isCompilerGenerated='false' isToolGenerated='false' kind='ptkVoid'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='12' endLine='11' endCol='16' wideLine='11' wideCol='12' wideEndLine='11' wideEndCol='16'/>
+															<Expression_Type ref='id10'/>
+														</expr:PrimitiveTypeExpression>
+													</MethodDeclaration_HasReturnType>
+													<MethodDeclaration_MethodType ref='id1413'/>
+													<NormalMethod_HasParameters>
+														<struc:Parameter id='id158' parent='id150' isCompilerGenerated='false' isToolGenerated='false' name='y' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='27' endLine='11' endCol='28' wideLine='11' wideCol='21' wideEndLine='11' wideEndCol='28'/>
+															<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='27' endLine='11' endCol='28' wideLine='11' wideCol='27' wideEndLine='11' wideEndCol='28'/>
+															<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<VariableDeclaration_HasType>
+																<expr:ArrayTypeExpression id='id159' parent='id158' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='24' endLine='11' endCol='26' wideLine='11' wideCol='21' wideEndLine='11' wideEndCol='26'/>
+																	<Expression_Type ref='id1295'/>
+																	<ArrayTypeExpression_HasComponentType>
+																		<expr:PrimitiveTypeExpression id='id160' parent='id159' isCompilerGenerated='false' isToolGenerated='false' kind='ptkInt'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='21' endLine='11' endCol='24' wideLine='11' wideCol='21' wideEndLine='11' wideEndCol='24'/>
+																			<Expression_Type ref='id15'/>
+																		</expr:PrimitiveTypeExpression>
+																	</ArrayTypeExpression_HasComponentType>
+																</expr:ArrayTypeExpression>
+															</VariableDeclaration_HasType>
+														</struc:Parameter>
+													</NormalMethod_HasParameters>
+													<NormalMethod_HasBody>
+														<statm:Block id='id151' parent='id150' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='11' col='29' endLine='13' endCol='6' wideLine='11' wideCol='29' wideEndLine='13' wideEndCol='6'/>
+															<Block_HasStatements>
+																<statm:ExpressionStatement id='id152' parent='id151' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='12' col='9' endLine='12' endCol='27' wideLine='12' wideCol='9' wideEndLine='12' wideEndCol='27'/>
+																	<ExpressionStatement_HasExpression>
+																		<expr:Assignment id='id153' parent='id152' isCompilerGenerated='false' isToolGenerated='false' operator='askAssign'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='12' col='23' endLine='12' endCol='26' wideLine='12' wideCol='9' wideEndLine='12' wideEndCol='26'/>
+																			<Expression_Type ref='id1295'/>
+																			<Binary_HasLeftOperand>
+																				<expr:FieldAccess id='id154' parent='id153' isCompilerGenerated='false' isToolGenerated='false'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='12' col='13' endLine='12' endCol='22' wideLine='12' wideCol='9' wideEndLine='12' wideEndCol='22'/>
+																					<Expression_Type ref='id1295'/>
+																					<Binary_HasLeftOperand>
+																						<expr:This id='id155' parent='id154' isCompilerGenerated='false' isToolGenerated='false'>
+																							<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='12' col='9' endLine='12' endCol='13' wideLine='12' wideCol='9' wideEndLine='12' wideEndCol='13'/>
+																							<Expression_Type ref='id1296'/>
+																						</expr:This>
+																					</Binary_HasLeftOperand>
+																					<Binary_HasRightOperand>
+																						<expr:Identifier id='id156' parent='id154' isCompilerGenerated='false' isToolGenerated='false' name='arrayInt'>
+																							<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='12' col='14' endLine='12' endCol='22' wideLine='12' wideCol='14' wideEndLine='12' wideEndCol='22'/>
+																							<Expression_Type ref='id1295'/>
+																							<Identifier_RefersTo ref='id131'/>
+																						</expr:Identifier>
+																					</Binary_HasRightOperand>
+																				</expr:FieldAccess>
+																			</Binary_HasLeftOperand>
+																			<Binary_HasRightOperand>
+																				<expr:Identifier id='id157' parent='id153' isCompilerGenerated='false' isToolGenerated='false' name='y'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='12' col='25' endLine='12' endCol='26' wideLine='12' wideCol='25' wideEndLine='12' wideEndCol='26'/>
+																					<Expression_Type ref='id1295'/>
+																					<Identifier_RefersTo ref='id158'/>
+																				</expr:Identifier>
+																			</Binary_HasRightOperand>
+																		</expr:Assignment>
+																	</ExpressionStatement_HasExpression>
+																</statm:ExpressionStatement>
+															</Block_HasStatements>
+														</statm:Block>
+													</NormalMethod_HasBody>
+												</struc:Method>
+											</Scope_HasMembers>
+											<Scope_HasMembers>
+												<struc:Method id='id162' parent='id115' isCompilerGenerated='false' isToolGenerated='false' name='print' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+													<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='15' col='17' endLine='17' endCol='6' wideLine='15' wideCol='5' wideEndLine='17' wideEndCol='6'/>
+													<NamePosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='15' col='17' endLine='15' endCol='22' wideLine='15' wideCol='17' wideEndLine='15' wideEndCol='22'/>
+													<AccessibilityPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='15' col='5' endLine='15' endCol='11' wideLine='15' wideCol='5' wideEndLine='15' wideEndCol='11'/>
+													<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ParametersStartPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='15' col='22' endLine='15' endCol='23' wideLine='15' wideCol='22' wideEndLine='15' wideEndCol='23'/>
+													<ParametersEndPosition path='programs\makearraycopy\MakeArrayCopyExample.java' line='15' col='23' endLine='15' endCol='24' wideLine='15' wideCol='23' wideEndLine='15' wideEndCol='24'/>
+													<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<MethodDeclaration_HasReturnType>
+														<expr:PrimitiveTypeExpression id='id172' parent='id162' isCompilerGenerated='false' isToolGenerated='false' kind='ptkVoid'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='15' col='12' endLine='15' endCol='16' wideLine='15' wideCol='12' wideEndLine='15' wideEndCol='16'/>
+															<Expression_Type ref='id10'/>
+														</expr:PrimitiveTypeExpression>
+													</MethodDeclaration_HasReturnType>
+													<MethodDeclaration_MethodType ref='id1291'/>
+													<NormalMethod_HasBody>
+														<statm:Block id='id163' parent='id162' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='15' col='24' endLine='17' endCol='6' wideLine='15' wideCol='24' wideEndLine='17' wideEndCol='6'/>
+															<Block_HasStatements>
+																<statm:ExpressionStatement id='id164' parent='id163' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='8' endLine='16' endCol='31' wideLine='16' wideCol='8' wideEndLine='16' wideEndCol='31'/>
+																	<ExpressionStatement_HasExpression>
+																		<expr:MethodInvocation id='id165' parent='id164' isCompilerGenerated='false' isToolGenerated='false'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='26' endLine='16' endCol='30' wideLine='16' wideCol='8' wideEndLine='16' wideEndCol='30'/>
+																			<Expression_Type ref='id10'/>
+																			<Unary_HasOperand>
+																				<expr:FieldAccess id='id167' parent='id165' isCompilerGenerated='false' isToolGenerated='false'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='18' endLine='16' endCol='26' wideLine='16' wideCol='8' wideEndLine='16' wideEndCol='26'/>
+																					<Expression_Type ref='id1301'/>
+																					<Binary_HasLeftOperand>
+																						<expr:FieldAccess id='id168' parent='id167' isCompilerGenerated='false' isToolGenerated='false'>
+																							<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='14' endLine='16' endCol='18' wideLine='16' wideCol='8' wideEndLine='16' wideEndCol='18'/>
+																							<Expression_Type ref='id1300'/>
+																							<Binary_HasLeftOperand>
+																								<expr:Identifier id='id169' parent='id168' isCompilerGenerated='false' isToolGenerated='false' name='System'>
+																									<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='8' endLine='16' endCol='14' wideLine='16' wideCol='8' wideEndLine='16' wideEndCol='14'/>
+																									<Expression_Type ref='id1298'/>
+																								</expr:Identifier>
+																							</Binary_HasLeftOperand>
+																							<Binary_HasRightOperand>
+																								<expr:Identifier id='id170' parent='id168' isCompilerGenerated='false' isToolGenerated='false' name='out'>
+																									<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='15' endLine='16' endCol='18' wideLine='16' wideCol='15' wideEndLine='16' wideEndCol='18'/>
+																									<Expression_Type ref='id1300'/>
+																								</expr:Identifier>
+																							</Binary_HasRightOperand>
+																						</expr:FieldAccess>
+																					</Binary_HasLeftOperand>
+																					<Binary_HasRightOperand>
+																						<expr:Identifier id='id171' parent='id167' isCompilerGenerated='false' isToolGenerated='false' name='println'>
+																							<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='19' endLine='16' endCol='26' wideLine='16' wideCol='19' wideEndLine='16' wideEndCol='26'/>
+																							<Expression_Type ref='id1301'/>
+																						</expr:Identifier>
+																					</Binary_HasRightOperand>
+																				</expr:FieldAccess>
+																			</Unary_HasOperand>
+																			<MethodInvocation_HasArguments>
+																				<expr:StringLiteral id='id166' parent='id165' isCompilerGenerated='false' isToolGenerated='false' value='&quot;&quot;' formatString='&quot;&quot;'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='16' col='27' endLine='16' endCol='29' wideLine='16' wideCol='27' wideEndLine='16' wideEndCol='29'/>
+																					<Expression_Type ref='id1297'/>
+																				</expr:StringLiteral>
+																			</MethodInvocation_HasArguments>
+																		</expr:MethodInvocation>
+																	</ExpressionStatement_HasExpression>
+																</statm:ExpressionStatement>
+															</Block_HasStatements>
+														</statm:Block>
+													</NormalMethod_HasBody>
+												</struc:Method>
+											</Scope_HasMembers>
+											<TypeDeclaration_HasSuperClass>
+												<expr:SimpleTypeExpression id='id173' parent='id115' isCompilerGenerated='true' isToolGenerated='false' name='Object'>
+													<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<Expression_Type ref='id1293'/>
+												</expr:SimpleTypeExpression>
+											</TypeDeclaration_HasSuperClass>
+											<TypeDeclaration_IsInCompilationUnit ref='id101'/>
+										</struc:Class>
+									</Scope_HasMembers>
+									<Package_HasCompilationUnits>
+										<struc:CompilationUnit id='id101' parent='id103' fileEncoding=''>
+											<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='1' endLine='19' endCol='1' wideLine='1' wideCol='1' wideEndLine='19' wideEndCol='1'/>
+											<CompilationUnit_HasPackageDeclaration>
+												<struc:PackageDeclaration id='id107' parent='id101' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='1' endLine='1' endCol='51' wideLine='1' wideCol='1' wideEndLine='1' wideEndCol='51'/>
+													<PackageDeclaration_HasPackageName>
+														<expr:FieldAccess id='id109' parent='id107' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='36' endLine='1' endCol='50' wideLine='1' wideCol='9' wideEndLine='1' wideEndCol='50'/>
+															<Expression_Type ref='id1288'/>
+															<Binary_HasLeftOperand>
+																<expr:FieldAccess id='id111' parent='id109' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='30' endLine='1' endCol='36' wideLine='1' wideCol='9' wideEndLine='1' wideEndCol='36'/>
+																	<Expression_Type ref='id1289'/>
+																	<Binary_HasLeftOperand>
+																		<expr:FieldAccess id='id113' parent='id111' isCompilerGenerated='false' isToolGenerated='false'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='17' endLine='1' endCol='30' wideLine='1' wideCol='9' wideEndLine='1' wideEndCol='30'/>
+																			<Expression_Type ref='id1290'/>
+																			<Binary_HasLeftOperand>
+																				<expr:Identifier id='id114' parent='id113' isCompilerGenerated='false' isToolGenerated='false' name='columbus'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='9' endLine='1' endCol='17' wideLine='1' wideCol='9' wideEndLine='1' wideEndCol='17'/>
+																					<Expression_Type ref='id1290'/>
+																					<Identifier_RefersTo ref='id106'/>
+																				</expr:Identifier>
+																			</Binary_HasLeftOperand>
+																			<Binary_HasRightOperand>
+																				<expr:Identifier id='id112' parent='id113' isCompilerGenerated='false' isToolGenerated='false' name='refactorings'>
+																					<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='17' endLine='1' endCol='30' wideLine='1' wideCol='9' wideEndLine='1' wideEndCol='30'/>
+																					<Expression_Type ref='id1289'/>
+																					<Identifier_RefersTo ref='id105'/>
+																				</expr:Identifier>
+																			</Binary_HasRightOperand>
+																		</expr:FieldAccess>
+																	</Binary_HasLeftOperand>
+																	<Binary_HasRightOperand>
+																		<expr:Identifier id='id110' parent='id111' isCompilerGenerated='false' isToolGenerated='false' name='model'>
+																			<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='30' endLine='1' endCol='36' wideLine='1' wideCol='9' wideEndLine='1' wideEndCol='36'/>
+																			<Expression_Type ref='id1288'/>
+																			<Identifier_RefersTo ref='id104'/>
+																		</expr:Identifier>
+																	</Binary_HasRightOperand>
+																</expr:FieldAccess>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:Identifier id='id108' parent='id109' isCompilerGenerated='false' isToolGenerated='false' name='makearraycopy'>
+																	<Position path='programs\makearraycopy\MakeArrayCopyExample.java' line='1' col='36' endLine='1' endCol='50' wideLine='1' wideCol='9' wideEndLine='1' wideEndCol='50'/>
+																	<Expression_Type ref='id1287'/>
+																	<Identifier_RefersTo ref='id103'/>
+																</expr:Identifier>
+															</Binary_HasRightOperand>
+														</expr:FieldAccess>
+													</PackageDeclaration_HasPackageName>
+													<PackageDeclaration_RefersTo ref='id103'/>
+												</struc:PackageDeclaration>
+											</CompilationUnit_HasPackageDeclaration>
+											<CompilationUnit_TypeDeclarations ref='id115'/>
+										</struc:CompilationUnit>
+									</Package_HasCompilationUnits>
+								</struc:Package>
+							</Scope_HasMembers>
+						</struc:Package>
+					</Scope_HasMembers>
+				</struc:Package>
+			</Scope_HasMembers>
+		</struc:Package>
+	</Scope_HasMembers>
+</struc:Package>
+<type:VoidType id='id10' parent='id0'/>
+<type:IntType id='id15' parent='id0'/>
+<type:PackageType id='id1287' parent='id0'>
+	<PackageType_RefersTo ref='id103'/>
+</type:PackageType>
+<type:PackageType id='id1288' parent='id0'>
+	<PackageType_RefersTo ref='id104'/>
+</type:PackageType>
+<type:PackageType id='id1289' parent='id0'>
+	<PackageType_RefersTo ref='id105'/>
+</type:PackageType>
+<type:PackageType id='id1290' parent='id0'>
+	<PackageType_RefersTo ref='id106'/>
+</type:PackageType>
+<type:MethodType id='id1291' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+</type:MethodType>
+<type:ClassType id='id1293' parent='id0'>
+	<ScopedType_Owner ref='id1292'/>
+</type:ClassType>
+<type:ArrayType id='id1294' parent='id0' size='1'>
+	<ArrayType_ComponentType ref='id1293'/>
+</type:ArrayType>
+<type:ArrayType id='id1295' parent='id0' size='1'>
+	<ArrayType_ComponentType ref='id15'/>
+</type:ArrayType>
+<type:ClassType id='id1296' parent='id0'>
+	<ScopedType_Owner ref='id1287'/>
+	<ClassType_RefersTo ref='id115'/>
+</type:ClassType>
+<type:ClassType id='id1297' parent='id0'>
+	<ScopedType_Owner ref='id1292'/>
+</type:ClassType>
+<type:ClassType id='id1298' parent='id0'>
+	<ScopedType_Owner ref='id1292'/>
+</type:ClassType>
+<type:ClassType id='id1300' parent='id0'>
+	<ScopedType_Owner ref='id1299'/>
+</type:ClassType>
+<type:MethodType id='id1301' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+	<MethodType_ParameterTypes ref='id1297'/>
+</type:MethodType>
+<type:MethodType id='id1412' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+	<MethodType_ParameterTypes ref='id1294'/>
+</type:MethodType>
+<type:MethodType id='id1413' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+	<MethodType_ParameterTypes ref='id1295'/>
+</type:MethodType>
+<type:PackageType id='id1292' parent='id0'>
+</type:PackageType>
+<type:PackageType id='id1299' parent='id0'>
+</type:PackageType>
+<Filtered id='id1'/>
+</Project>

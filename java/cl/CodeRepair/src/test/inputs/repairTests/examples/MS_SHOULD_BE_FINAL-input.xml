@@ -1,0 +1,31 @@
+<linked-hash-map>
+  <entry>
+    <string>coderepair.algs.problemType</string>
+    <string>MS_SHOULD_BE_FINAL</string>
+  </entry>
+  <entry>
+    <string>coderepair.algs.problemLocations</string>
+    <list>
+      <coderepair.communication.base.ProblemToRepair>
+        <positions>
+	  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/changemodifiertest/ChangeModifierTest.java</path>
+            <startLine>2</startLine>
+            <startCol>18</startCol>
+            <endLine>2</endLine>
+            <endCol>24</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+    </list>
+  </entry>
+  <entry>
+    <string>coderepair.base.sourceCodeLocation</string>
+    <string>src/test/inputs/repairTests/examples/</string>
+  </entry>
+  <entry>
+    <string>coderepair.base.schemaLocation</string>
+    <string>src/test/inputs/repairTests/examples/programs/changemodifiertest/.columbus_java/changemodifiertest.ljsi</string>
+  </entry>
+</linked-hash-map>

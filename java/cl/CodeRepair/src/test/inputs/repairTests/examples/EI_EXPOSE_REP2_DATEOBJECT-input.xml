@@ -1,0 +1,38 @@
+<linked-hash-map>
+  <entry>
+    <string>coderepair.algs.problemType</string>
+    <string>EI_EXPOSE_REP2_DATEOBJECT</string>
+  </entry>
+  <entry>
+    <string>coderepair.algs.problemLocations</string>
+    <list>
+      <coderepair.communication.base.ProblemToRepair>
+        <positions>
+          <coderepair.communication.base.ProblemPosition>
+            <path>programs/cloneinvocationtest/CloneInvocationTest.java</path>
+            <startLine>5</startLine>
+            <startCol>16</startCol>
+            <endLine>5</endLine>
+            <endCol>20</endCol>
+          </coderepair.communication.base.ProblemPosition>
+		  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/cloneinvocationtest/CloneInvocationTest.java</path>
+            <startLine>9</startLine>
+            <startCol>21</startCol>
+            <endLine>9</endLine>
+            <endCol>25</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+    </list>
+  </entry>
+  <entry>
+    <string>coderepair.base.sourceCodeLocation</string>
+    <string>src/test/inputs/repairTests/examples/</string>
+  </entry>
+  <entry>
+    <string>coderepair.base.schemaLocation</string>
+    <string>src/test/inputs/repairTests/examples/programs/cloneinvocationtest/.columbus_java/cloneinvocationtest.ljsi</string>
+  </entry>
+</linked-hash-map>

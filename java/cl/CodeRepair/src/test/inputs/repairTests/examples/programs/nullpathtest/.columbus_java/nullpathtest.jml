@@ -1,0 +1,525 @@
+<?xml version='1.0' encoding="utf-8"?>
+<Project name='' xmlns:base='columbus_java_schema/base' xmlns:expr='columbus_java_schema/expr' xmlns:module='columbus_java_schema/module' xmlns:statm='columbus_java_schema/statm' xmlns:struc='columbus_java_schema/struc' xmlns:type='columbus_java_schema/type'>
+<struc:Package id='id100' parent='id0' name='&lt;root_package&gt;' qualifiedName='&lt;root_package&gt;'>
+	<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+	<Scope_HasMembers>
+		<struc:Package id='id103' parent='id100' name='unnamed package' qualifiedName='unnamed package'>
+			<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+			<Scope_HasMembers>
+				<struc:Class id='id104' parent='id103' isCompilerGenerated='false' isToolGenerated='false' name='NullPathTest' accessibility='ackNone' isStatic='false' isFinal='false' lloc='14' isAbstract='false' isStrictfp='false' binaryName='NullPathTest'>
+					<Position path='programs\nullpathtest\NullPathTest.java' line='1' col='1' endLine='16' endCol='2' wideLine='1' wideCol='1' wideEndLine='16' wideEndCol='2'/>
+					<NamePosition path='programs\nullpathtest\NullPathTest.java' line='1' col='7' endLine='1' endCol='19' wideLine='1' wideCol='7' wideEndLine='1' wideEndCol='19'/>
+					<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<TypeNamePosition path='programs\nullpathtest\NullPathTest.java' line='1' col='1' endLine='1' endCol='6' wideLine='1' wideCol='1' wideEndLine='1' wideEndCol='6'/>
+					<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ExtendsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ImplementsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<BodyStartPosition path='programs\nullpathtest\NullPathTest.java' line='1' col='20' endLine='1' endCol='21' wideLine='1' wideCol='20' wideEndLine='1' wideEndCol='21'/>
+					<Scope_HasMembers>
+						<struc:Method id='id105' parent='id104' isCompilerGenerated='true' isToolGenerated='false' name='NullPathTest' accessibility='ackNone' isStatic='false' isFinal='false' lloc='0' isAbstract='false' isStrictfp='false' methodKind='mekGeneratedDefaultConstructor' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersEndPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_MethodType ref='id2060'/>
+							<NormalMethod_HasBody>
+								<statm:Block id='id106' parent='id105' isCompilerGenerated='true' isToolGenerated='false'>
+									<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id107' parent='id106' isCompilerGenerated='true' isToolGenerated='false'>
+											<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<ExpressionStatement_HasExpression>
+												<expr:MethodInvocation id='id108' parent='id107' isCompilerGenerated='true' isToolGenerated='false'>
+													<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<Expression_Type ref='id10'/>
+													<Unary_HasOperand>
+														<expr:Super id='id109' parent='id108' isCompilerGenerated='true' isToolGenerated='false'>
+															<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<Expression_Type ref='id2060'/>
+														</expr:Super>
+													</Unary_HasOperand>
+												</expr:MethodInvocation>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id110' parent='id104' isCompilerGenerated='false' isToolGenerated='false' name='foo' accessibility='ackPublic' isStatic='true' isFinal='false' lloc='7' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\nullpathtest\NullPathTest.java' line='2' col='23' endLine='9' endCol='6' wideLine='2' wideCol='5' wideEndLine='9' wideEndCol='6'/>
+							<NamePosition path='programs\nullpathtest\NullPathTest.java' line='2' col='23' endLine='2' endCol='26' wideLine='2' wideCol='23' wideEndLine='2' wideEndCol='26'/>
+							<AccessibilityPosition path='programs\nullpathtest\NullPathTest.java' line='2' col='5' endLine='2' endCol='11' wideLine='2' wideCol='5' wideEndLine='2' wideEndCol='11'/>
+							<StaticPosition path='programs\nullpathtest\NullPathTest.java' line='2' col='12' endLine='2' endCol='18' wideLine='2' wideCol='12' wideEndLine='2' wideEndCol='18'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\nullpathtest\NullPathTest.java' line='2' col='26' endLine='2' endCol='27' wideLine='2' wideCol='26' wideEndLine='2' wideEndCol='27'/>
+							<ParametersEndPosition path='programs\nullpathtest\NullPathTest.java' line='2' col='37' endLine='2' endCol='38' wideLine='2' wideCol='37' wideEndLine='2' wideEndCol='38'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_HasReturnType>
+								<expr:PrimitiveTypeExpression id='id147' parent='id110' isCompilerGenerated='false' isToolGenerated='false' kind='ptkInt'>
+									<Position path='programs\nullpathtest\NullPathTest.java' line='2' col='19' endLine='2' endCol='22' wideLine='2' wideCol='19' wideEndLine='2' wideEndCol='22'/>
+									<Expression_Type ref='id15'/>
+								</expr:PrimitiveTypeExpression>
+							</MethodDeclaration_HasReturnType>
+							<MethodDeclaration_MethodType ref='id2070'/>
+							<NormalMethod_HasParameters>
+								<struc:Parameter id='id145' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='str' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+									<Position path='programs\nullpathtest\NullPathTest.java' line='2' col='34' endLine='2' endCol='37' wideLine='2' wideCol='27' wideEndLine='2' wideEndCol='37'/>
+									<NamePosition path='programs\nullpathtest\NullPathTest.java' line='2' col='34' endLine='2' endCol='37' wideLine='2' wideCol='34' wideEndLine='2' wideEndCol='37'/>
+									<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VariableDeclaration_HasType>
+										<expr:SimpleTypeExpression id='id146' parent='id145' isCompilerGenerated='false' isToolGenerated='false' name='String'>
+											<Position path='programs\nullpathtest\NullPathTest.java' line='2' col='27' endLine='2' endCol='33' wideLine='2' wideCol='27' wideEndLine='2' wideEndCol='33'/>
+											<Expression_Type ref='id2062'/>
+										</expr:SimpleTypeExpression>
+									</VariableDeclaration_HasType>
+								</struc:Parameter>
+							</NormalMethod_HasParameters>
+							<NormalMethod_HasBody>
+								<statm:Block id='id111' parent='id110' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\nullpathtest\NullPathTest.java' line='2' col='39' endLine='9' endCol='6' wideLine='2' wideCol='39' wideEndLine='9' wideEndCol='6'/>
+									<Block_HasStatements>
+										<struc:Variable id='id112' parent='id111' isCompilerGenerated='false' isToolGenerated='false' name='s' accessibility='ackNone' isStatic='false' isFinal='false' isTransient='false' isVolatile='false'>
+											<Position path='programs\nullpathtest\NullPathTest.java' line='3' col='16' endLine='3' endCol='33' wideLine='3' wideCol='9' wideEndLine='3' wideEndCol='33'/>
+											<NamePosition path='programs\nullpathtest\NullPathTest.java' line='3' col='16' endLine='3' endCol='17' wideLine='3' wideCol='16' wideEndLine='3' wideEndCol='17'/>
+											<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<EqualSignPosition path='programs\nullpathtest\NullPathTest.java' line='3' col='18' endLine='3' endCol='19' wideLine='3' wideCol='18' wideEndLine='3' wideEndCol='19'/>
+											<VariableDeclaration_HasType>
+												<expr:SimpleTypeExpression id='id117' parent='id112' isCompilerGenerated='false' isToolGenerated='false' name='String'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='3' col='9' endLine='3' endCol='15' wideLine='3' wideCol='9' wideEndLine='3' wideEndCol='15'/>
+													<Expression_Type ref='id2062'/>
+												</expr:SimpleTypeExpression>
+											</VariableDeclaration_HasType>
+											<Variable_HasInitialValue>
+												<expr:MethodInvocation id='id113' parent='id112' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='3' col='30' endLine='3' endCol='32' wideLine='3' wideCol='20' wideEndLine='3' wideEndCol='32'/>
+													<Expression_Type ref='id2062'/>
+													<Unary_HasOperand>
+														<expr:FieldAccess id='id114' parent='id113' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='3' col='23' endLine='3' endCol='30' wideLine='3' wideCol='20' wideEndLine='3' wideEndCol='30'/>
+															<Expression_Type ref='id2063'/>
+															<Binary_HasLeftOperand>
+																<expr:Identifier id='id115' parent='id114' isCompilerGenerated='false' isToolGenerated='false' name='str'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='3' col='20' endLine='3' endCol='23' wideLine='3' wideCol='20' wideEndLine='3' wideEndCol='23'/>
+																	<Expression_Type ref='id2062'/>
+																	<Identifier_RefersTo ref='id145'/>
+																</expr:Identifier>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:Identifier id='id116' parent='id114' isCompilerGenerated='false' isToolGenerated='false' name='intern'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='3' col='24' endLine='3' endCol='30' wideLine='3' wideCol='24' wideEndLine='3' wideEndCol='30'/>
+																	<Expression_Type ref='id2063'/>
+																</expr:Identifier>
+															</Binary_HasRightOperand>
+														</expr:FieldAccess>
+													</Unary_HasOperand>
+												</expr:MethodInvocation>
+											</Variable_HasInitialValue>
+										</struc:Variable>
+									</Block_HasStatements>
+									<Block_HasStatements>
+										<statm:BasicFor id='id118' parent='id111' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='9' endLine='6' endCol='10' wideLine='4' wideCol='9' wideEndLine='6' wideEndCol='10'/>
+											<LeftParenPosition path='programs\nullpathtest\NullPathTest.java' line='4' col='13' endLine='4' endCol='14' wideLine='4' wideCol='13' wideEndLine='4' wideEndCol='14'/>
+											<RightParenPosition path='programs\nullpathtest\NullPathTest.java' line='4' col='44' endLine='4' endCol='45' wideLine='4' wideCol='44' wideEndLine='4' wideEndCol='45'/>
+											<FirstSemiPosition path='programs\nullpathtest\NullPathTest.java' line='4' col='21' endLine='4' endCol='22' wideLine='4' wideCol='21' wideEndLine='4' wideEndCol='22'/>
+											<SecondSemiPosition path='programs\nullpathtest\NullPathTest.java' line='4' col='39' endLine='4' endCol='40' wideLine='4' wideCol='39' wideEndLine='4' wideEndCol='40'/>
+											<Iteration_HasSubstatement>
+												<statm:Block id='id131' parent='id118' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='46' endLine='6' endCol='10' wideLine='4' wideCol='46' wideEndLine='6' wideEndCol='10'/>
+													<Block_HasStatements>
+														<statm:ExpressionStatement id='id132' parent='id131' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='5' endLine='5' endCol='27' wideLine='5' wideCol='5' wideEndLine='5' wideEndCol='27'/>
+															<ExpressionStatement_HasExpression>
+																<expr:MethodInvocation id='id133' parent='id132' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='23' endLine='5' endCol='26' wideLine='5' wideCol='5' wideEndLine='5' wideEndCol='26'/>
+																	<Expression_Type ref='id10'/>
+																	<Unary_HasOperand>
+																		<expr:FieldAccess id='id135' parent='id133' isCompilerGenerated='false' isToolGenerated='false'>
+																			<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='15' endLine='5' endCol='23' wideLine='5' wideCol='5' wideEndLine='5' wideEndCol='23'/>
+																			<Expression_Type ref='id2068'/>
+																			<Binary_HasLeftOperand>
+																				<expr:FieldAccess id='id136' parent='id135' isCompilerGenerated='false' isToolGenerated='false'>
+																					<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='11' endLine='5' endCol='15' wideLine='5' wideCol='5' wideEndLine='5' wideEndCol='15'/>
+																					<Expression_Type ref='id2067'/>
+																					<Binary_HasLeftOperand>
+																						<expr:Identifier id='id137' parent='id136' isCompilerGenerated='false' isToolGenerated='false' name='System'>
+																							<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='5' endLine='5' endCol='11' wideLine='5' wideCol='5' wideEndLine='5' wideEndCol='11'/>
+																							<Expression_Type ref='id2065'/>
+																						</expr:Identifier>
+																					</Binary_HasLeftOperand>
+																					<Binary_HasRightOperand>
+																						<expr:Identifier id='id138' parent='id136' isCompilerGenerated='false' isToolGenerated='false' name='out'>
+																							<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='12' endLine='5' endCol='15' wideLine='5' wideCol='12' wideEndLine='5' wideEndCol='15'/>
+																							<Expression_Type ref='id2067'/>
+																						</expr:Identifier>
+																					</Binary_HasRightOperand>
+																				</expr:FieldAccess>
+																			</Binary_HasLeftOperand>
+																			<Binary_HasRightOperand>
+																				<expr:Identifier id='id139' parent='id135' isCompilerGenerated='false' isToolGenerated='false' name='println'>
+																					<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='16' endLine='5' endCol='23' wideLine='5' wideCol='16' wideEndLine='5' wideEndCol='23'/>
+																					<Expression_Type ref='id2068'/>
+																				</expr:Identifier>
+																			</Binary_HasRightOperand>
+																		</expr:FieldAccess>
+																	</Unary_HasOperand>
+																	<MethodInvocation_HasArguments>
+																		<expr:Identifier id='id134' parent='id133' isCompilerGenerated='false' isToolGenerated='false' name='s'>
+																			<Position path='programs\nullpathtest\NullPathTest.java' line='5' col='24' endLine='5' endCol='25' wideLine='5' wideCol='24' wideEndLine='5' wideEndCol='25'/>
+																			<Expression_Type ref='id2062'/>
+																			<Identifier_RefersTo ref='id112'/>
+																		</expr:Identifier>
+																	</MethodInvocation_HasArguments>
+																</expr:MethodInvocation>
+															</ExpressionStatement_HasExpression>
+														</statm:ExpressionStatement>
+													</Block_HasStatements>
+												</statm:Block>
+											</Iteration_HasSubstatement>
+											<BasicFor_HasInitializers>
+												<struc:Variable id='id119' parent='id118' isCompilerGenerated='false' isToolGenerated='false' name='i' accessibility='ackNone' isStatic='false' isFinal='false' isTransient='false' isVolatile='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='18' endLine='4' endCol='21' wideLine='4' wideCol='14' wideEndLine='4' wideEndCol='21'/>
+													<NamePosition path='programs\nullpathtest\NullPathTest.java' line='4' col='18' endLine='4' endCol='19' wideLine='4' wideCol='18' wideEndLine='4' wideEndCol='19'/>
+													<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<EqualSignPosition path='programs\nullpathtest\NullPathTest.java' line='4' col='19' endLine='4' endCol='20' wideLine='4' wideCol='19' wideEndLine='4' wideEndCol='20'/>
+													<VariableDeclaration_HasType>
+														<expr:PrimitiveTypeExpression id='id121' parent='id119' isCompilerGenerated='false' isToolGenerated='false' kind='ptkInt'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='14' endLine='4' endCol='17' wideLine='4' wideCol='14' wideEndLine='4' wideEndCol='17'/>
+															<Expression_Type ref='id15'/>
+														</expr:PrimitiveTypeExpression>
+													</VariableDeclaration_HasType>
+													<Variable_HasInitialValue>
+														<expr:IntegerLiteral id='id120' parent='id119' isCompilerGenerated='false' isToolGenerated='false' value='0' intValue='0'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='20' endLine='4' endCol='21' wideLine='4' wideCol='20' wideEndLine='4' wideEndCol='21'/>
+															<Expression_Type ref='id15'/>
+														</expr:IntegerLiteral>
+													</Variable_HasInitialValue>
+												</struc:Variable>
+											</BasicFor_HasInitializers>
+											<BasicFor_HasCondition>
+												<expr:InfixExpression id='id122' parent='id118' isCompilerGenerated='false' isToolGenerated='false' operator='iokLessThan'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='25' endLine='4' endCol='39' wideLine='4' wideCol='23' wideEndLine='4' wideEndCol='39'/>
+													<Expression_Type ref='id11'/>
+													<Binary_HasLeftOperand>
+														<expr:Identifier id='id123' parent='id122' isCompilerGenerated='false' isToolGenerated='false' name='i'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='23' endLine='4' endCol='24' wideLine='4' wideCol='23' wideEndLine='4' wideEndCol='24'/>
+															<Expression_Type ref='id15'/>
+															<Identifier_RefersTo ref='id119'/>
+														</expr:Identifier>
+													</Binary_HasLeftOperand>
+													<Binary_HasRightOperand>
+														<expr:MethodInvocation id='id124' parent='id122' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='37' endLine='4' endCol='39' wideLine='4' wideCol='27' wideEndLine='4' wideEndCol='39'/>
+															<Expression_Type ref='id15'/>
+															<Unary_HasOperand>
+																<expr:FieldAccess id='id125' parent='id124' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='30' endLine='4' endCol='37' wideLine='4' wideCol='27' wideEndLine='4' wideEndCol='37'/>
+																	<Expression_Type ref='id2064'/>
+																	<Binary_HasLeftOperand>
+																		<expr:Identifier id='id126' parent='id125' isCompilerGenerated='false' isToolGenerated='false' name='str'>
+																			<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='27' endLine='4' endCol='30' wideLine='4' wideCol='27' wideEndLine='4' wideEndCol='30'/>
+																			<Expression_Type ref='id2062'/>
+																			<Identifier_RefersTo ref='id145'/>
+																		</expr:Identifier>
+																	</Binary_HasLeftOperand>
+																	<Binary_HasRightOperand>
+																		<expr:Identifier id='id127' parent='id125' isCompilerGenerated='false' isToolGenerated='false' name='length'>
+																			<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='31' endLine='4' endCol='37' wideLine='4' wideCol='31' wideEndLine='4' wideEndCol='37'/>
+																			<Expression_Type ref='id2064'/>
+																		</expr:Identifier>
+																	</Binary_HasRightOperand>
+																</expr:FieldAccess>
+															</Unary_HasOperand>
+														</expr:MethodInvocation>
+													</Binary_HasRightOperand>
+												</expr:InfixExpression>
+											</BasicFor_HasCondition>
+											<BasicFor_HasUpdates>
+												<statm:ExpressionStatement id='id128' parent='id118' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='41' endLine='4' endCol='44' wideLine='4' wideCol='41' wideEndLine='4' wideEndCol='44'/>
+													<ExpressionStatement_HasExpression>
+														<expr:PostfixExpression id='id129' parent='id128' isCompilerGenerated='false' isToolGenerated='false' operator='pookIncrement'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='42' endLine='4' endCol='44' wideLine='4' wideCol='41' wideEndLine='4' wideEndCol='44'/>
+															<Expression_Type ref='id15'/>
+															<Unary_HasOperand>
+																<expr:Identifier id='id130' parent='id129' isCompilerGenerated='false' isToolGenerated='false' name='i'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='4' col='41' endLine='4' endCol='42' wideLine='4' wideCol='41' wideEndLine='4' wideEndCol='42'/>
+																	<Expression_Type ref='id15'/>
+																	<Identifier_RefersTo ref='id119'/>
+																</expr:Identifier>
+															</Unary_HasOperand>
+														</expr:PostfixExpression>
+													</ExpressionStatement_HasExpression>
+												</statm:ExpressionStatement>
+											</BasicFor_HasUpdates>
+										</statm:BasicFor>
+									</Block_HasStatements>
+									<Block_HasStatements>
+										<statm:Return id='id140' parent='id111' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\nullpathtest\NullPathTest.java' line='8' col='2' endLine='8' endCol='22' wideLine='8' wideCol='2' wideEndLine='8' wideEndCol='22'/>
+											<Return_HasExpression>
+												<expr:MethodInvocation id='id141' parent='id140' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='8' col='19' endLine='8' endCol='21' wideLine='8' wideCol='9' wideEndLine='8' wideEndCol='21'/>
+													<Expression_Type ref='id15'/>
+													<Unary_HasOperand>
+														<expr:FieldAccess id='id142' parent='id141' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='8' col='12' endLine='8' endCol='19' wideLine='8' wideCol='9' wideEndLine='8' wideEndCol='19'/>
+															<Expression_Type ref='id2064'/>
+															<Binary_HasLeftOperand>
+																<expr:Identifier id='id143' parent='id142' isCompilerGenerated='false' isToolGenerated='false' name='str'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='8' col='9' endLine='8' endCol='12' wideLine='8' wideCol='9' wideEndLine='8' wideEndCol='12'/>
+																	<Expression_Type ref='id2062'/>
+																	<Identifier_RefersTo ref='id145'/>
+																</expr:Identifier>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:Identifier id='id144' parent='id142' isCompilerGenerated='false' isToolGenerated='false' name='length'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='8' col='13' endLine='8' endCol='19' wideLine='8' wideCol='13' wideEndLine='8' wideEndCol='19'/>
+																	<Expression_Type ref='id2064'/>
+																</expr:Identifier>
+															</Binary_HasRightOperand>
+														</expr:FieldAccess>
+													</Unary_HasOperand>
+												</expr:MethodInvocation>
+											</Return_HasExpression>
+										</statm:Return>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id148' parent='id104' isCompilerGenerated='false' isToolGenerated='false' name='main' accessibility='ackPublic' isStatic='true' isFinal='false' lloc='5' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\nullpathtest\NullPathTest.java' line='11' col='24' endLine='15' endCol='6' wideLine='11' wideCol='5' wideEndLine='15' wideEndCol='6'/>
+							<NamePosition path='programs\nullpathtest\NullPathTest.java' line='11' col='24' endLine='11' endCol='28' wideLine='11' wideCol='24' wideEndLine='11' wideEndCol='28'/>
+							<AccessibilityPosition path='programs\nullpathtest\NullPathTest.java' line='11' col='5' endLine='11' endCol='11' wideLine='11' wideCol='5' wideEndLine='11' wideEndCol='11'/>
+							<StaticPosition path='programs\nullpathtest\NullPathTest.java' line='11' col='12' endLine='11' endCol='18' wideLine='11' wideCol='12' wideEndLine='11' wideEndCol='18'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\nullpathtest\NullPathTest.java' line='11' col='28' endLine='11' endCol='29' wideLine='11' wideCol='28' wideEndLine='11' wideEndCol='29'/>
+							<ParametersEndPosition path='programs\nullpathtest\NullPathTest.java' line='11' col='42' endLine='11' endCol='43' wideLine='11' wideCol='42' wideEndLine='11' wideEndCol='43'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_HasReturnType>
+								<expr:PrimitiveTypeExpression id='id168' parent='id148' isCompilerGenerated='false' isToolGenerated='false' kind='ptkVoid'>
+									<Position path='programs\nullpathtest\NullPathTest.java' line='11' col='19' endLine='11' endCol='23' wideLine='11' wideCol='19' wideEndLine='11' wideEndCol='23'/>
+									<Expression_Type ref='id10'/>
+								</expr:PrimitiveTypeExpression>
+							</MethodDeclaration_HasReturnType>
+							<MethodDeclaration_MethodType ref='id2279'/>
+							<NormalMethod_HasParameters>
+								<struc:Parameter id='id165' parent='id148' isCompilerGenerated='false' isToolGenerated='false' name='args' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+									<Position path='programs\nullpathtest\NullPathTest.java' line='11' col='36' endLine='11' endCol='42' wideLine='11' wideCol='29' wideEndLine='11' wideEndCol='42'/>
+									<NamePosition path='programs\nullpathtest\NullPathTest.java' line='11' col='36' endLine='11' endCol='40' wideLine='11' wideCol='36' wideEndLine='11' wideEndCol='40'/>
+									<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VariableDeclaration_HasType>
+										<expr:ArrayTypeExpression id='id166' parent='id165' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\nullpathtest\NullPathTest.java' line='11' col='40' endLine='11' endCol='42' wideLine='11' wideCol='29' wideEndLine='11' wideEndCol='42'/>
+											<Expression_Type ref='id2069'/>
+											<ArrayTypeExpression_HasComponentType>
+												<expr:SimpleTypeExpression id='id167' parent='id166' isCompilerGenerated='false' isToolGenerated='false' name='String'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='11' col='29' endLine='11' endCol='35' wideLine='11' wideCol='29' wideEndLine='11' wideEndCol='35'/>
+													<Expression_Type ref='id2062'/>
+												</expr:SimpleTypeExpression>
+											</ArrayTypeExpression_HasComponentType>
+										</expr:ArrayTypeExpression>
+									</VariableDeclaration_HasType>
+								</struc:Parameter>
+							</NormalMethod_HasParameters>
+							<NormalMethod_HasBody>
+								<statm:Block id='id149' parent='id148' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\nullpathtest\NullPathTest.java' line='11' col='44' endLine='15' endCol='6' wideLine='11' wideCol='44' wideEndLine='15' wideEndCol='6'/>
+									<Block_HasStatements>
+										<statm:If id='id150' parent='id149' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\nullpathtest\NullPathTest.java' line='12' col='8' endLine='14' endCol='29' wideLine='12' wideCol='8' wideEndLine='14' wideEndCol='29'/>
+											<ElsePosition path='programs\nullpathtest\NullPathTest.java' line='14' col='8' endLine='14' endCol='12' wideLine='14' wideCol='8' wideEndLine='14' wideEndCol='12'/>
+											<Selection_HasCondition>
+												<expr:ParenthesizedExpression id='id151' parent='id150' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='12' col='11' endLine='12' endCol='29' wideLine='12' wideCol='11' wideEndLine='12' wideEndCol='29'/>
+													<Expression_Type ref='id11'/>
+													<Unary_HasOperand>
+														<expr:InfixExpression id='id152' parent='id151' isCompilerGenerated='false' isToolGenerated='false' operator='iokEqualTo'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='12' col='24' endLine='12' endCol='28' wideLine='12' wideCol='12' wideEndLine='12' wideEndCol='28'/>
+															<Expression_Type ref='id11'/>
+															<Binary_HasLeftOperand>
+																<expr:FieldAccess id='id153' parent='id152' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='12' col='16' endLine='12' endCol='23' wideLine='12' wideCol='12' wideEndLine='12' wideEndCol='23'/>
+																	<Expression_Type ref='id15'/>
+																	<Binary_HasLeftOperand>
+																		<expr:Identifier id='id154' parent='id153' isCompilerGenerated='false' isToolGenerated='false' name='args'>
+																			<Position path='programs\nullpathtest\NullPathTest.java' line='12' col='12' endLine='12' endCol='16' wideLine='12' wideCol='12' wideEndLine='12' wideEndCol='16'/>
+																			<Expression_Type ref='id2069'/>
+																			<Identifier_RefersTo ref='id165'/>
+																		</expr:Identifier>
+																	</Binary_HasLeftOperand>
+																	<Binary_HasRightOperand>
+																		<expr:Identifier id='id155' parent='id153' isCompilerGenerated='false' isToolGenerated='false' name='length'>
+																			<Position path='programs\nullpathtest\NullPathTest.java' line='12' col='17' endLine='12' endCol='23' wideLine='12' wideCol='17' wideEndLine='12' wideEndCol='23'/>
+																			<Expression_Type ref='id15'/>
+																		</expr:Identifier>
+																	</Binary_HasRightOperand>
+																</expr:FieldAccess>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:IntegerLiteral id='id156' parent='id152' isCompilerGenerated='false' isToolGenerated='false' value='1' intValue='1'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='12' col='27' endLine='12' endCol='28' wideLine='12' wideCol='27' wideEndLine='12' wideEndCol='28'/>
+																	<Expression_Type ref='id15'/>
+																</expr:IntegerLiteral>
+															</Binary_HasRightOperand>
+														</expr:InfixExpression>
+													</Unary_HasOperand>
+												</expr:ParenthesizedExpression>
+											</Selection_HasCondition>
+											<If_HasSubstatement>
+												<statm:ExpressionStatement id='id157' parent='id150' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='13' col='9' endLine='13' endCol='19' wideLine='13' wideCol='9' wideEndLine='13' wideEndCol='19'/>
+													<ExpressionStatement_HasExpression>
+														<expr:MethodInvocation id='id158' parent='id157' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='13' col='12' endLine='13' endCol='18' wideLine='13' wideCol='9' wideEndLine='13' wideEndCol='18'/>
+															<Expression_Type ref='id15'/>
+															<Unary_HasOperand>
+																<expr:Identifier id='id160' parent='id158' isCompilerGenerated='false' isToolGenerated='false' name='foo'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='13' col='9' endLine='13' endCol='12' wideLine='13' wideCol='9' wideEndLine='13' wideEndCol='12'/>
+																	<Expression_Type ref='id2070'/>
+																	<Identifier_RefersTo ref='id110'/>
+																</expr:Identifier>
+															</Unary_HasOperand>
+															<MethodInvocation_HasArguments>
+																<expr:NullLiteral id='id159' parent='id158' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='13' col='13' endLine='13' endCol='17' wideLine='13' wideCol='13' wideEndLine='13' wideEndCol='17'/>
+																	<Expression_Type ref='id19'/>
+																</expr:NullLiteral>
+															</MethodInvocation_HasArguments>
+															<MethodInvocation_Invokes ref='id110'/>
+														</expr:MethodInvocation>
+													</ExpressionStatement_HasExpression>
+												</statm:ExpressionStatement>
+											</If_HasSubstatement>
+											<If_HasFalseSubstatement>
+												<statm:ExpressionStatement id='id161' parent='id150' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\nullpathtest\NullPathTest.java' line='14' col='13' endLine='14' endCol='29' wideLine='14' wideCol='13' wideEndLine='14' wideEndCol='29'/>
+													<ExpressionStatement_HasExpression>
+														<expr:MethodInvocation id='id162' parent='id161' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\nullpathtest\NullPathTest.java' line='14' col='16' endLine='14' endCol='28' wideLine='14' wideCol='13' wideEndLine='14' wideEndCol='28'/>
+															<Expression_Type ref='id15'/>
+															<Unary_HasOperand>
+																<expr:Identifier id='id164' parent='id162' isCompilerGenerated='false' isToolGenerated='false' name='foo'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='14' col='13' endLine='14' endCol='16' wideLine='14' wideCol='13' wideEndLine='14' wideEndCol='16'/>
+																	<Expression_Type ref='id2070'/>
+																	<Identifier_RefersTo ref='id110'/>
+																</expr:Identifier>
+															</Unary_HasOperand>
+															<MethodInvocation_HasArguments>
+																<expr:StringLiteral id='id163' parent='id162' isCompilerGenerated='false' isToolGenerated='false' value='&quot;Not null&quot;' formatString='&quot;Not null&quot;'>
+																	<Position path='programs\nullpathtest\NullPathTest.java' line='14' col='17' endLine='14' endCol='27' wideLine='14' wideCol='17' wideEndLine='14' wideEndCol='27'/>
+																	<Expression_Type ref='id2062'/>
+																</expr:StringLiteral>
+															</MethodInvocation_HasArguments>
+															<MethodInvocation_Invokes ref='id110'/>
+														</expr:MethodInvocation>
+													</ExpressionStatement_HasExpression>
+												</statm:ExpressionStatement>
+											</If_HasFalseSubstatement>
+										</statm:If>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<TypeDeclaration_HasSuperClass>
+						<expr:SimpleTypeExpression id='id169' parent='id104' isCompilerGenerated='true' isToolGenerated='false' name='Object'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Expression_Type ref='id2071'/>
+						</expr:SimpleTypeExpression>
+					</TypeDeclaration_HasSuperClass>
+					<TypeDeclaration_IsInCompilationUnit ref='id101'/>
+				</struc:Class>
+			</Scope_HasMembers>
+			<Package_HasCompilationUnits>
+				<struc:CompilationUnit id='id101' parent='id103' fileEncoding=''>
+					<Position path='programs\nullpathtest\NullPathTest.java' line='1' col='1' endLine='16' endCol='2' wideLine='1' wideCol='1' wideEndLine='16' wideEndCol='2'/>
+					<CompilationUnit_TypeDeclarations ref='id104'/>
+				</struc:CompilationUnit>
+			</Package_HasCompilationUnits>
+		</struc:Package>
+	</Scope_HasMembers>
+</struc:Package>
+<type:VoidType id='id10' parent='id0'/>
+<type:BooleanType id='id11' parent='id0'/>
+<type:IntType id='id15' parent='id0'/>
+<type:NullType id='id19' parent='id0'/>
+<type:MethodType id='id2060' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+</type:MethodType>
+<type:ClassType id='id2062' parent='id0'>
+	<ScopedType_Owner ref='id2061'/>
+</type:ClassType>
+<type:MethodType id='id2063' parent='id0'>
+	<MethodType_ReturnType ref='id2062'/>
+</type:MethodType>
+<type:MethodType id='id2064' parent='id0'>
+	<MethodType_ReturnType ref='id15'/>
+</type:MethodType>
+<type:ClassType id='id2065' parent='id0'>
+	<ScopedType_Owner ref='id2061'/>
+</type:ClassType>
+<type:ClassType id='id2067' parent='id0'>
+	<ScopedType_Owner ref='id2066'/>
+</type:ClassType>
+<type:MethodType id='id2068' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+	<MethodType_ParameterTypes ref='id2062'/>
+</type:MethodType>
+<type:ArrayType id='id2069' parent='id0' size='1'>
+	<ArrayType_ComponentType ref='id2062'/>
+</type:ArrayType>
+<type:MethodType id='id2070' parent='id0'>
+	<MethodType_ReturnType ref='id15'/>
+	<MethodType_ParameterTypes ref='id2062'/>
+</type:MethodType>
+<type:ClassType id='id2071' parent='id0'>
+	<ScopedType_Owner ref='id2061'/>
+</type:ClassType>
+<type:MethodType id='id2279' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+	<MethodType_ParameterTypes ref='id2069'/>
+</type:MethodType>
+<type:PackageType id='id2061' parent='id0'>
+</type:PackageType>
+<type:PackageType id='id2066' parent='id0'>
+</type:PackageType>
+<Filtered id='id1'/>
+</Project>

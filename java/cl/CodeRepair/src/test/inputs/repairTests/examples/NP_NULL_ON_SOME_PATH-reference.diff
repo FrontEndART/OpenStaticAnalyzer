@@ -1,0 +1,19 @@
+Index: programs/nullpathtest/NullPathTest.java
+===================================================================
+--- programs/nullpathtest/NullPathTest.java	(original)
++++ programs/nullpathtest/NullPathTest.java	(refactored)
+@@ -1,11 +1,11 @@
+ class NullPathTest {
+     public static int foo(String str) {
+-        String s = str.intern();
+-        for (int i=0; i < str.length(); i++) {
++        String s = str != null?str.intern():null;
++        for (int i=0; str != null && i < str.length(); i++) {
+ 	   System.out.println(s);
+         }
+         
+-	return str.length();        
++	return str != null?str.length():0;        
+     }
+ 
+     public static void main(String args[]) {

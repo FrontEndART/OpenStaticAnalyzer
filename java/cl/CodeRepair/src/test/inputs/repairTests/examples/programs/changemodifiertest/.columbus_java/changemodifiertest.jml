@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding="utf-8"?>
+<Project name='' xmlns:base='columbus_java_schema/base' xmlns:expr='columbus_java_schema/expr' xmlns:module='columbus_java_schema/module' xmlns:statm='columbus_java_schema/statm' xmlns:struc='columbus_java_schema/struc' xmlns:type='columbus_java_schema/type'>
+<struc:Package id='id100' parent='id0' name='&lt;root_package&gt;' qualifiedName='&lt;root_package&gt;'>
+	<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+	<Scope_HasMembers>
+		<struc:Package id='id103' parent='id100' name='unnamed package' qualifiedName='unnamed package'>
+			<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+			<Scope_HasMembers>
+				<struc:Class id='id104' parent='id103' isCompilerGenerated='false' isToolGenerated='false' name='ChangeModifierTest' accessibility='ackNone' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' binaryName='ChangeModifierTest'>
+					<Position path='programs\changemodifiertest\ChangeModifierTest.java' line='1' col='1' endLine='3' endCol='2' wideLine='1' wideCol='1' wideEndLine='3' wideEndCol='2'/>
+					<NamePosition path='programs\changemodifiertest\ChangeModifierTest.java' line='1' col='7' endLine='1' endCol='25' wideLine='1' wideCol='7' wideEndLine='1' wideEndCol='25'/>
+					<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<TypeNamePosition path='programs\changemodifiertest\ChangeModifierTest.java' line='1' col='1' endLine='1' endCol='6' wideLine='1' wideCol='1' wideEndLine='1' wideEndCol='6'/>
+					<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ExtendsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ImplementsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<BodyStartPosition path='programs\changemodifiertest\ChangeModifierTest.java' line='1' col='26' endLine='1' endCol='27' wideLine='1' wideCol='26' wideEndLine='1' wideEndCol='27'/>
+					<Scope_HasMembers>
+						<struc:Method id='id105' parent='id104' isCompilerGenerated='true' isToolGenerated='false' name='ChangeModifierTest' accessibility='ackNone' isStatic='false' isFinal='false' lloc='0' isAbstract='false' isStrictfp='false' methodKind='mekGeneratedDefaultConstructor' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersEndPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_MethodType ref='id1241'/>
+							<NormalMethod_HasBody>
+								<statm:Block id='id106' parent='id105' isCompilerGenerated='true' isToolGenerated='false'>
+									<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id107' parent='id106' isCompilerGenerated='true' isToolGenerated='false'>
+											<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<ExpressionStatement_HasExpression>
+												<expr:MethodInvocation id='id108' parent='id107' isCompilerGenerated='true' isToolGenerated='false'>
+													<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<Expression_Type ref='id10'/>
+													<Unary_HasOperand>
+														<expr:Super id='id109' parent='id108' isCompilerGenerated='true' isToolGenerated='false'>
+															<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<Expression_Type ref='id1241'/>
+														</expr:Super>
+													</Unary_HasOperand>
+												</expr:MethodInvocation>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Variable id='id110' parent='id104' isCompilerGenerated='false' isToolGenerated='false' name='DITHER_MODE_SPEED' accessibility='ackPublic' isStatic='true' isFinal='false' isTransient='false' isVolatile='false'>
+							<Position path='programs\changemodifiertest\ChangeModifierTest.java' line='2' col='25' endLine='2' endCol='61' wideLine='2' wideCol='4' wideEndLine='2' wideEndCol='61'/>
+							<NamePosition path='programs\changemodifiertest\ChangeModifierTest.java' line='2' col='25' endLine='2' endCol='42' wideLine='2' wideCol='25' wideEndLine='2' wideEndCol='42'/>
+							<AccessibilityPosition path='programs\changemodifiertest\ChangeModifierTest.java' line='2' col='4' endLine='2' endCol='10' wideLine='2' wideCol='4' wideEndLine='2' wideEndCol='10'/>
+							<StaticPosition path='programs\changemodifiertest\ChangeModifierTest.java' line='2' col='11' endLine='2' endCol='17' wideLine='2' wideCol='11' wideEndLine='2' wideEndCol='17'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<EqualSignPosition path='programs\changemodifiertest\ChangeModifierTest.java' line='2' col='43' endLine='2' endCol='44' wideLine='2' wideCol='43' wideEndLine='2' wideEndCol='44'/>
+							<VariableDeclaration_HasType>
+								<expr:SimpleTypeExpression id='id112' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='String'>
+									<Position path='programs\changemodifiertest\ChangeModifierTest.java' line='2' col='18' endLine='2' endCol='24' wideLine='2' wideCol='18' wideEndLine='2' wideEndCol='24'/>
+									<Expression_Type ref='id1243'/>
+								</expr:SimpleTypeExpression>
+							</VariableDeclaration_HasType>
+							<Variable_HasInitialValue>
+								<expr:StringLiteral id='id111' parent='id110' isCompilerGenerated='false' isToolGenerated='false' value='&quot;ordereddither&quot;' formatString='&quot;ordereddither&quot;'>
+									<Position path='programs\changemodifiertest\ChangeModifierTest.java' line='2' col='45' endLine='2' endCol='60' wideLine='2' wideCol='45' wideEndLine='2' wideEndCol='60'/>
+									<Expression_Type ref='id1243'/>
+								</expr:StringLiteral>
+							</Variable_HasInitialValue>
+						</struc:Variable>
+					</Scope_HasMembers>
+					<TypeDeclaration_HasSuperClass>
+						<expr:SimpleTypeExpression id='id113' parent='id104' isCompilerGenerated='true' isToolGenerated='false' name='Object'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Expression_Type ref='id1244'/>
+						</expr:SimpleTypeExpression>
+					</TypeDeclaration_HasSuperClass>
+					<TypeDeclaration_IsInCompilationUnit ref='id101'/>
+				</struc:Class>
+			</Scope_HasMembers>
+			<Package_HasCompilationUnits>
+				<struc:CompilationUnit id='id101' parent='id103' fileEncoding=''>
+					<Position path='programs\changemodifiertest\ChangeModifierTest.java' line='1' col='1' endLine='4' endCol='1' wideLine='1' wideCol='1' wideEndLine='4' wideEndCol='1'/>
+					<CompilationUnit_TypeDeclarations ref='id104'/>
+				</struc:CompilationUnit>
+			</Package_HasCompilationUnits>
+		</struc:Package>
+	</Scope_HasMembers>
+</struc:Package>
+<type:VoidType id='id10' parent='id0'/>
+<type:MethodType id='id1241' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+</type:MethodType>
+<type:ClassType id='id1243' parent='id0'>
+	<ScopedType_Owner ref='id1242'/>
+</type:ClassType>
+<type:ClassType id='id1244' parent='id0'>
+	<ScopedType_Owner ref='id1242'/>
+</type:ClassType>
+<type:PackageType id='id1242' parent='id0'>
+</type:PackageType>
+<Filtered id='id1'/>
+</Project>

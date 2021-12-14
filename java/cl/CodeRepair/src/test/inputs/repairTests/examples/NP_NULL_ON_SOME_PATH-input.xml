@@ -1,0 +1,58 @@
+<linked-hash-map>
+  <entry>
+    <string>coderepair.algs.problemType</string>
+    <string>NP_NULL_ON_SOME_PATH</string>
+  </entry>
+  <entry>
+    <string>coderepair.algs.problemLocations</string>
+    <list>
+      <coderepair.communication.base.ProblemToRepair>
+        <positions>
+	  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/nullpathtest/NullPathTest.java</path>
+            <startLine>3</startLine>
+            <startCol>20</startCol>
+            <endLine>3</endLine>
+            <endCol>23</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+	  
+	  <coderepair.communication.base.ProblemToRepair>
+        <positions>
+	  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/nullpathtest/NullPathTest.java</path>
+            <startLine>4</startLine>
+            <startCol>27</startCol>
+            <endLine>4</endLine>
+            <endCol>30</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+	  
+	  <coderepair.communication.base.ProblemToRepair>
+        <positions>
+	  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/nullpathtest/NullPathTest.java</path>
+            <startLine>8</startLine>
+            <startCol>9</startCol>
+            <endLine>8</endLine>
+            <endCol>12</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+	  
+    </list>
+  </entry>
+  <entry>
+    <string>coderepair.base.sourceCodeLocation</string>
+    <string>src/test/inputs/repairTests/examples/</string>
+  </entry>
+  <entry>
+    <string>coderepair.base.schemaLocation</string>
+    <string>src/test/inputs/repairTests/examples/programs/nullpathtest/.columbus_java/nullpathtest.ljsi</string>
+  </entry>
+</linked-hash-map>

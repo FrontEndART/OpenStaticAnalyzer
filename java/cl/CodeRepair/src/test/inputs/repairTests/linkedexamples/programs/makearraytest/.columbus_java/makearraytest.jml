@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding="utf-8"?>
+<Project name='' xmlns:base='columbus_java_schema/base' xmlns:expr='columbus_java_schema/expr' xmlns:module='columbus_java_schema/module' xmlns:statm='columbus_java_schema/statm' xmlns:struc='columbus_java_schema/struc' xmlns:type='columbus_java_schema/type'>
+<struc:Package id='id100' parent='id0' name='&lt;root_package&gt;' qualifiedName='&lt;root_package&gt;'>
+	<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+	<Scope_HasMembers>
+		<struc:Package id='id103' parent='id100' name='unnamed package' qualifiedName='unnamed package'>
+			<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+			<Scope_HasMembers>
+				<struc:Class id='id110' parent='id103' isCompilerGenerated='false' isToolGenerated='false' name='TestWithArrayImport' accessibility='ackNone' isStatic='false' isFinal='false' lloc='6' isAbstract='false' isStrictfp='false' binaryName='TestWithArrayImport'>
+					<Position path='programs\makearraytest\TestWithArrayImport.java' line='2' col='1' endLine='7' endCol='2' wideLine='2' wideCol='1' wideEndLine='7' wideEndCol='2'/>
+					<NamePosition path='programs\makearraytest\TestWithArrayImport.java' line='2' col='7' endLine='2' endCol='26' wideLine='2' wideCol='7' wideEndLine='2' wideEndCol='26'/>
+					<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<TypeNamePosition path='programs\makearraytest\TestWithArrayImport.java' line='2' col='1' endLine='2' endCol='6' wideLine='2' wideCol='1' wideEndLine='2' wideEndCol='6'/>
+					<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ExtendsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ImplementsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<BodyStartPosition path='programs\makearraytest\TestWithArrayImport.java' line='2' col='27' endLine='2' endCol='28' wideLine='2' wideCol='27' wideEndLine='2' wideEndCol='28'/>
+					<Scope_HasMembers>
+						<struc:Variable id='id111' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='array' accessibility='ackNone' isStatic='false' isFinal='false' isTransient='false' isVolatile='false'>
+							<Position path='programs\makearraytest\TestWithArrayImport.java' line='3' col='16' endLine='3' endCol='22' wideLine='3' wideCol='6' wideEndLine='3' wideEndCol='22'/>
+							<NamePosition path='programs\makearraytest\TestWithArrayImport.java' line='3' col='16' endLine='3' endCol='21' wideLine='3' wideCol='16' wideEndLine='3' wideEndCol='21'/>
+							<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<EqualSignPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<VariableDeclaration_HasType>
+								<expr:ArrayTypeExpression id='id112' parent='id111' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\makearraytest\TestWithArrayImport.java' line='3' col='13' endLine='3' endCol='15' wideLine='3' wideCol='6' wideEndLine='3' wideEndCol='15'/>
+									<Expression_Type ref='id3701'/>
+									<ArrayTypeExpression_HasComponentType>
+										<expr:SimpleTypeExpression id='id113' parent='id112' isCompilerGenerated='false' isToolGenerated='false' name='Integer'>
+											<Position path='programs\makearraytest\TestWithArrayImport.java' line='3' col='6' endLine='3' endCol='13' wideLine='3' wideCol='6' wideEndLine='3' wideEndCol='13'/>
+											<Expression_Type ref='id3700'/>
+										</expr:SimpleTypeExpression>
+									</ArrayTypeExpression_HasComponentType>
+								</expr:ArrayTypeExpression>
+							</VariableDeclaration_HasType>
+						</struc:Variable>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id114' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='TestWithArrayImport' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekConstructor' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\makearraytest\TestWithArrayImport.java' line='4' col='13' endLine='6' endCol='7' wideLine='4' wideCol='6' wideEndLine='6' wideEndCol='7'/>
+							<NamePosition path='programs\makearraytest\TestWithArrayImport.java' line='4' col='13' endLine='4' endCol='19' wideLine='4' wideCol='13' wideEndLine='4' wideEndCol='19'/>
+							<AccessibilityPosition path='programs\makearraytest\TestWithArrayImport.java' line='4' col='6' endLine='4' endCol='12' wideLine='4' wideCol='6' wideEndLine='4' wideEndCol='12'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\makearraytest\TestWithArrayImport.java' line='4' col='33' endLine='4' endCol='34' wideLine='4' wideCol='33' wideEndLine='4' wideEndCol='34'/>
+							<ParametersEndPosition path='programs\makearraytest\TestWithArrayImport.java' line='4' col='49' endLine='4' endCol='50' wideLine='4' wideCol='49' wideEndLine='4' wideEndCol='50'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_MethodType ref='id4146'/>
+							<NormalMethod_HasParameters>
+								<struc:Parameter id='id125' parent='id114' isCompilerGenerated='false' isToolGenerated='false' name='array' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+									<Position path='programs\makearraytest\TestWithArrayImport.java' line='4' col='44' endLine='4' endCol='49' wideLine='4' wideCol='34' wideEndLine='4' wideEndCol='49'/>
+									<NamePosition path='programs\makearraytest\TestWithArrayImport.java' line='4' col='44' endLine='4' endCol='49' wideLine='4' wideCol='44' wideEndLine='4' wideEndCol='49'/>
+									<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VariableDeclaration_HasType>
+										<expr:ArrayTypeExpression id='id126' parent='id125' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\makearraytest\TestWithArrayImport.java' line='4' col='41' endLine='4' endCol='43' wideLine='4' wideCol='34' wideEndLine='4' wideEndCol='43'/>
+											<Expression_Type ref='id3701'/>
+											<ArrayTypeExpression_HasComponentType>
+												<expr:SimpleTypeExpression id='id127' parent='id126' isCompilerGenerated='false' isToolGenerated='false' name='Integer'>
+													<Position path='programs\makearraytest\TestWithArrayImport.java' line='4' col='34' endLine='4' endCol='41' wideLine='4' wideCol='34' wideEndLine='4' wideEndCol='41'/>
+													<Expression_Type ref='id3700'/>
+												</expr:SimpleTypeExpression>
+											</ArrayTypeExpression_HasComponentType>
+										</expr:ArrayTypeExpression>
+									</VariableDeclaration_HasType>
+								</struc:Parameter>
+							</NormalMethod_HasParameters>
+							<NormalMethod_HasBody>
+								<statm:Block id='id115' parent='id114' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\makearraytest\TestWithArrayImport.java' line='4' col='51' endLine='6' endCol='7' wideLine='4' wideCol='51' wideEndLine='6' wideEndCol='7'/>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id116' parent='id115' isCompilerGenerated='true' isToolGenerated='false'>
+											<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<ExpressionStatement_HasExpression>
+												<expr:MethodInvocation id='id117' parent='id116' isCompilerGenerated='true' isToolGenerated='false'>
+													<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<Expression_Type ref='id10'/>
+													<Unary_HasOperand>
+														<expr:Super id='id118' parent='id117' isCompilerGenerated='true' isToolGenerated='false'>
+															<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<Expression_Type ref='id3702'/>
+														</expr:Super>
+													</Unary_HasOperand>
+												</expr:MethodInvocation>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id119' parent='id115' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\makearraytest\TestWithArrayImport.java' line='5' col='8' endLine='5' endCol='27' wideLine='5' wideCol='8' wideEndLine='5' wideEndCol='27'/>
+											<ExpressionStatement_HasExpression>
+												<expr:Assignment id='id120' parent='id119' isCompilerGenerated='false' isToolGenerated='false' operator='askAssign'>
+													<Position path='programs\makearraytest\TestWithArrayImport.java' line='5' col='19' endLine='5' endCol='26' wideLine='5' wideCol='8' wideEndLine='5' wideEndCol='26'/>
+													<Expression_Type ref='id3701'/>
+													<Binary_HasLeftOperand>
+														<expr:FieldAccess id='id121' parent='id120' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\makearraytest\TestWithArrayImport.java' line='5' col='12' endLine='5' endCol='18' wideLine='5' wideCol='8' wideEndLine='5' wideEndCol='18'/>
+															<Expression_Type ref='id3701'/>
+															<Binary_HasLeftOperand>
+																<expr:This id='id122' parent='id121' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraytest\TestWithArrayImport.java' line='5' col='8' endLine='5' endCol='12' wideLine='5' wideCol='8' wideEndLine='5' wideEndCol='12'/>
+																	<Expression_Type ref='id3704'/>
+																</expr:This>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:Identifier id='id123' parent='id121' isCompilerGenerated='false' isToolGenerated='false' name='array'>
+																	<Position path='programs\makearraytest\TestWithArrayImport.java' line='5' col='13' endLine='5' endCol='18' wideLine='5' wideCol='13' wideEndLine='5' wideEndCol='18'/>
+																	<Expression_Type ref='id3701'/>
+																	<Identifier_RefersTo ref='id111'/>
+																</expr:Identifier>
+															</Binary_HasRightOperand>
+														</expr:FieldAccess>
+													</Binary_HasLeftOperand>
+													<Binary_HasRightOperand>
+														<expr:Identifier id='id124' parent='id120' isCompilerGenerated='false' isToolGenerated='false' name='array'>
+															<Position path='programs\makearraytest\TestWithArrayImport.java' line='5' col='21' endLine='5' endCol='26' wideLine='5' wideCol='21' wideEndLine='5' wideEndCol='26'/>
+															<Expression_Type ref='id3701'/>
+															<Identifier_RefersTo ref='id125'/>
+														</expr:Identifier>
+													</Binary_HasRightOperand>
+												</expr:Assignment>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<TypeDeclaration_HasSuperClass>
+						<expr:SimpleTypeExpression id='id128' parent='id110' isCompilerGenerated='true' isToolGenerated='false' name='Object'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Expression_Type ref='id3705'/>
+						</expr:SimpleTypeExpression>
+					</TypeDeclaration_HasSuperClass>
+					<TypeDeclaration_IsInCompilationUnit ref='id101'/>
+				</struc:Class>
+			</Scope_HasMembers>
+			<Scope_HasMembers>
+				<struc:Class id='id130' parent='id103' isCompilerGenerated='false' isToolGenerated='false' name='TestWithoutArrayImport' accessibility='ackNone' isStatic='false' isFinal='false' lloc='8' isAbstract='false' isStrictfp='false' binaryName='TestWithoutArrayImport'>
+					<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='2' col='1' endLine='9' endCol='2' wideLine='2' wideCol='1' wideEndLine='9' wideEndCol='2'/>
+					<NamePosition path='programs\makearraytest\TestWithoutArrayImport.java' line='2' col='7' endLine='2' endCol='29' wideLine='2' wideCol='7' wideEndLine='2' wideEndCol='29'/>
+					<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<TypeNamePosition path='programs\makearraytest\TestWithoutArrayImport.java' line='2' col='1' endLine='2' endCol='6' wideLine='2' wideCol='1' wideEndLine='2' wideEndCol='6'/>
+					<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ExtendsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ImplementsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<BodyStartPosition path='programs\makearraytest\TestWithoutArrayImport.java' line='2' col='30' endLine='2' endCol='31' wideLine='2' wideCol='30' wideEndLine='2' wideEndCol='31'/>
+					<Commentable_Comments ref='id160'/>
+					<Scope_HasMembers>
+						<struc:Variable id='id131' parent='id130' isCompilerGenerated='false' isToolGenerated='false' name='array' accessibility='ackNone' isStatic='false' isFinal='false' isTransient='false' isVolatile='false'>
+							<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='3' col='15' endLine='3' endCol='21' wideLine='3' wideCol='5' wideEndLine='3' wideEndCol='21'/>
+							<NamePosition path='programs\makearraytest\TestWithoutArrayImport.java' line='3' col='15' endLine='3' endCol='20' wideLine='3' wideCol='15' wideEndLine='3' wideEndCol='20'/>
+							<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<EqualSignPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<VariableDeclaration_HasType>
+								<expr:ArrayTypeExpression id='id132' parent='id131' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='3' col='12' endLine='3' endCol='14' wideLine='3' wideCol='5' wideEndLine='3' wideEndCol='14'/>
+									<Expression_Type ref='id3701'/>
+									<ArrayTypeExpression_HasComponentType>
+										<expr:SimpleTypeExpression id='id133' parent='id132' isCompilerGenerated='false' isToolGenerated='false' name='Integer'>
+											<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='3' col='5' endLine='3' endCol='12' wideLine='3' wideCol='5' wideEndLine='3' wideEndCol='12'/>
+											<Expression_Type ref='id3700'/>
+										</expr:SimpleTypeExpression>
+									</ArrayTypeExpression_HasComponentType>
+								</expr:ArrayTypeExpression>
+							</VariableDeclaration_HasType>
+						</struc:Variable>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id134' parent='id130' isCompilerGenerated='false' isToolGenerated='false' name='TestWithoutArrayImport' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='5' isAbstract='false' isStrictfp='false' methodKind='mekConstructor' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='12' endLine='8' endCol='6' wideLine='4' wideCol='5' wideEndLine='8' wideEndCol='6'/>
+							<NamePosition path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='12' endLine='4' endCol='18' wideLine='4' wideCol='12' wideEndLine='4' wideEndCol='18'/>
+							<AccessibilityPosition path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='5' endLine='4' endCol='11' wideLine='4' wideCol='5' wideEndLine='4' wideEndCol='11'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='35' endLine='4' endCol='36' wideLine='4' wideCol='35' wideEndLine='4' wideEndCol='36'/>
+							<ParametersEndPosition path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='51' endLine='4' endCol='52' wideLine='4' wideCol='51' wideEndLine='4' wideEndCol='52'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_MethodType ref='id4146'/>
+							<NormalMethod_HasParameters>
+								<struc:Parameter id='id156' parent='id134' isCompilerGenerated='false' isToolGenerated='false' name='array' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+									<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='46' endLine='4' endCol='51' wideLine='4' wideCol='36' wideEndLine='4' wideEndCol='51'/>
+									<NamePosition path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='46' endLine='4' endCol='51' wideLine='4' wideCol='46' wideEndLine='4' wideEndCol='51'/>
+									<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VariableDeclaration_HasType>
+										<expr:ArrayTypeExpression id='id157' parent='id156' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='43' endLine='4' endCol='45' wideLine='4' wideCol='36' wideEndLine='4' wideEndCol='45'/>
+											<Expression_Type ref='id3701'/>
+											<ArrayTypeExpression_HasComponentType>
+												<expr:SimpleTypeExpression id='id158' parent='id157' isCompilerGenerated='false' isToolGenerated='false' name='Integer'>
+													<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='36' endLine='4' endCol='43' wideLine='4' wideCol='36' wideEndLine='4' wideEndCol='43'/>
+													<Expression_Type ref='id3700'/>
+												</expr:SimpleTypeExpression>
+											</ArrayTypeExpression_HasComponentType>
+										</expr:ArrayTypeExpression>
+									</VariableDeclaration_HasType>
+								</struc:Parameter>
+							</NormalMethod_HasParameters>
+							<NormalMethod_HasBody>
+								<statm:Block id='id135' parent='id134' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='4' col='53' endLine='8' endCol='6' wideLine='4' wideCol='53' wideEndLine='8' wideEndCol='6'/>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id136' parent='id135' isCompilerGenerated='true' isToolGenerated='false'>
+											<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<ExpressionStatement_HasExpression>
+												<expr:MethodInvocation id='id137' parent='id136' isCompilerGenerated='true' isToolGenerated='false'>
+													<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<Expression_Type ref='id10'/>
+													<Unary_HasOperand>
+														<expr:Super id='id138' parent='id137' isCompilerGenerated='true' isToolGenerated='false'>
+															<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<Expression_Type ref='id3702'/>
+														</expr:Super>
+													</Unary_HasOperand>
+												</expr:MethodInvocation>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+									<Block_HasStatements>
+										<statm:If id='id139' parent='id135' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='5' col='5' endLine='7' endCol='29' wideLine='5' wideCol='5' wideEndLine='7' wideEndCol='29'/>
+											<ElsePosition path='programs\makearraytest\TestWithoutArrayImport.java' line='7' col='6' endLine='7' endCol='10' wideLine='7' wideCol='6' wideEndLine='7' wideEndCol='10'/>
+											<Selection_HasCondition>
+												<expr:ParenthesizedExpression id='id140' parent='id139' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='5' col='8' endLine='5' endCol='15' wideLine='5' wideCol='8' wideEndLine='5' wideEndCol='15'/>
+													<Expression_Type ref='id11'/>
+													<Unary_HasOperand>
+														<expr:InfixExpression id='id141' parent='id140' isCompilerGenerated='false' isToolGenerated='false' operator='iokEqualTo'>
+															<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='5' col='11' endLine='5' endCol='14' wideLine='5' wideCol='9' wideEndLine='5' wideEndCol='14'/>
+															<Expression_Type ref='id11'/>
+															<Binary_HasLeftOperand>
+																<expr:IntegerLiteral id='id142' parent='id141' isCompilerGenerated='false' isToolGenerated='false' value='1' intValue='1'>
+																	<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='5' col='9' endLine='5' endCol='10' wideLine='5' wideCol='9' wideEndLine='5' wideEndCol='10'/>
+																	<Expression_Type ref='id15'/>
+																</expr:IntegerLiteral>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:IntegerLiteral id='id143' parent='id141' isCompilerGenerated='false' isToolGenerated='false' value='1' intValue='1'>
+																	<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='5' col='13' endLine='5' endCol='14' wideLine='5' wideCol='13' wideEndLine='5' wideEndCol='14'/>
+																	<Expression_Type ref='id15'/>
+																</expr:IntegerLiteral>
+															</Binary_HasRightOperand>
+														</expr:InfixExpression>
+													</Unary_HasOperand>
+												</expr:ParenthesizedExpression>
+											</Selection_HasCondition>
+											<If_HasSubstatement>
+												<statm:ExpressionStatement id='id144' parent='id139' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='6' col='4' endLine='6' endCol='23' wideLine='6' wideCol='4' wideEndLine='6' wideEndCol='23'/>
+													<ExpressionStatement_HasExpression>
+														<expr:Assignment id='id145' parent='id144' isCompilerGenerated='false' isToolGenerated='false' operator='askAssign'>
+															<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='6' col='15' endLine='6' endCol='22' wideLine='6' wideCol='4' wideEndLine='6' wideEndCol='22'/>
+															<Expression_Type ref='id3701'/>
+															<Binary_HasLeftOperand>
+																<expr:FieldAccess id='id146' parent='id145' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='6' col='8' endLine='6' endCol='14' wideLine='6' wideCol='4' wideEndLine='6' wideEndCol='14'/>
+																	<Expression_Type ref='id3701'/>
+																	<Binary_HasLeftOperand>
+																		<expr:This id='id147' parent='id146' isCompilerGenerated='false' isToolGenerated='false'>
+																			<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='6' col='4' endLine='6' endCol='8' wideLine='6' wideCol='4' wideEndLine='6' wideEndCol='8'/>
+																			<Expression_Type ref='id3706'/>
+																		</expr:This>
+																	</Binary_HasLeftOperand>
+																	<Binary_HasRightOperand>
+																		<expr:Identifier id='id148' parent='id146' isCompilerGenerated='false' isToolGenerated='false' name='array'>
+																			<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='6' col='9' endLine='6' endCol='14' wideLine='6' wideCol='9' wideEndLine='6' wideEndCol='14'/>
+																			<Expression_Type ref='id3701'/>
+																			<Identifier_RefersTo ref='id131'/>
+																		</expr:Identifier>
+																	</Binary_HasRightOperand>
+																</expr:FieldAccess>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:Identifier id='id149' parent='id145' isCompilerGenerated='false' isToolGenerated='false' name='array'>
+																	<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='6' col='17' endLine='6' endCol='22' wideLine='6' wideCol='17' wideEndLine='6' wideEndCol='22'/>
+																	<Expression_Type ref='id3701'/>
+																	<Identifier_RefersTo ref='id156'/>
+																</expr:Identifier>
+															</Binary_HasRightOperand>
+														</expr:Assignment>
+													</ExpressionStatement_HasExpression>
+												</statm:ExpressionStatement>
+											</If_HasSubstatement>
+											<If_HasFalseSubstatement>
+												<statm:ExpressionStatement id='id150' parent='id139' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='7' col='11' endLine='7' endCol='29' wideLine='7' wideCol='11' wideEndLine='7' wideEndCol='29'/>
+													<ExpressionStatement_HasExpression>
+														<expr:Assignment id='id151' parent='id150' isCompilerGenerated='false' isToolGenerated='false' operator='askAssign'>
+															<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='7' col='22' endLine='7' endCol='28' wideLine='7' wideCol='11' wideEndLine='7' wideEndCol='28'/>
+															<Expression_Type ref='id3701'/>
+															<Binary_HasLeftOperand>
+																<expr:FieldAccess id='id152' parent='id151' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='7' col='15' endLine='7' endCol='21' wideLine='7' wideCol='11' wideEndLine='7' wideEndCol='21'/>
+																	<Expression_Type ref='id3701'/>
+																	<Binary_HasLeftOperand>
+																		<expr:This id='id153' parent='id152' isCompilerGenerated='false' isToolGenerated='false'>
+																			<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='7' col='11' endLine='7' endCol='15' wideLine='7' wideCol='11' wideEndLine='7' wideEndCol='15'/>
+																			<Expression_Type ref='id3706'/>
+																		</expr:This>
+																	</Binary_HasLeftOperand>
+																	<Binary_HasRightOperand>
+																		<expr:Identifier id='id154' parent='id152' isCompilerGenerated='false' isToolGenerated='false' name='array'>
+																			<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='7' col='16' endLine='7' endCol='21' wideLine='7' wideCol='16' wideEndLine='7' wideEndCol='21'/>
+																			<Expression_Type ref='id3701'/>
+																			<Identifier_RefersTo ref='id131'/>
+																		</expr:Identifier>
+																	</Binary_HasRightOperand>
+																</expr:FieldAccess>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:NullLiteral id='id155' parent='id151' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='7' col='24' endLine='7' endCol='28' wideLine='7' wideCol='24' wideEndLine='7' wideEndCol='28'/>
+																	<Expression_Type ref='id19'/>
+																</expr:NullLiteral>
+															</Binary_HasRightOperand>
+														</expr:Assignment>
+													</ExpressionStatement_HasExpression>
+												</statm:ExpressionStatement>
+											</If_HasFalseSubstatement>
+										</statm:If>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<TypeDeclaration_HasSuperClass>
+						<expr:SimpleTypeExpression id='id159' parent='id130' isCompilerGenerated='true' isToolGenerated='false' name='Object'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Expression_Type ref='id3705'/>
+						</expr:SimpleTypeExpression>
+					</TypeDeclaration_HasSuperClass>
+					<TypeDeclaration_IsInCompilationUnit ref='id129'/>
+				</struc:Class>
+			</Scope_HasMembers>
+			<Package_HasCompilationUnits>
+				<struc:CompilationUnit id='id101' parent='id103' fileEncoding=''>
+					<Position path='programs\makearraytest\TestWithArrayImport.java' line='1' col='1' endLine='7' endCol='2' wideLine='1' wideCol='1' wideEndLine='7' wideEndCol='2'/>
+					<CompilationUnit_HasImports>
+						<struc:Import id='id104' parent='id101' isCompilerGenerated='false' isToolGenerated='false' isStatic='false'>
+							<Position path='programs\makearraytest\TestWithArrayImport.java' line='1' col='1' endLine='1' endCol='25' wideLine='1' wideCol='1' wideEndLine='1' wideEndCol='25'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Import_HasTarget>
+								<expr:FieldAccess id='id105' parent='id104' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\makearraytest\TestWithArrayImport.java' line='1' col='17' endLine='1' endCol='24' wideLine='1' wideCol='8' wideEndLine='1' wideEndCol='24'/>
+									<Expression_Type ref='id3698'/>
+									<Binary_HasLeftOperand>
+										<expr:FieldAccess id='id106' parent='id105' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\makearraytest\TestWithArrayImport.java' line='1' col='12' endLine='1' endCol='17' wideLine='1' wideCol='8' wideEndLine='1' wideEndCol='17'/>
+											<Expression_Type ref='id3697'/>
+											<Binary_HasLeftOperand>
+												<expr:Identifier id='id107' parent='id106' isCompilerGenerated='false' isToolGenerated='false' name='java'>
+													<Position path='programs\makearraytest\TestWithArrayImport.java' line='1' col='8' endLine='1' endCol='12' wideLine='1' wideCol='8' wideEndLine='1' wideEndCol='12'/>
+													<Expression_Type ref='id3696'/>
+												</expr:Identifier>
+											</Binary_HasLeftOperand>
+											<Binary_HasRightOperand>
+												<expr:Identifier id='id108' parent='id106' isCompilerGenerated='false' isToolGenerated='false' name='util'>
+													<Position path='programs\makearraytest\TestWithArrayImport.java' line='1' col='13' endLine='1' endCol='17' wideLine='1' wideCol='13' wideEndLine='1' wideEndCol='17'/>
+													<Expression_Type ref='id3697'/>
+												</expr:Identifier>
+											</Binary_HasRightOperand>
+										</expr:FieldAccess>
+									</Binary_HasLeftOperand>
+									<Binary_HasRightOperand>
+										<expr:Identifier id='id109' parent='id105' isCompilerGenerated='false' isToolGenerated='false' name='Arrays'>
+											<Position path='programs\makearraytest\TestWithArrayImport.java' line='1' col='18' endLine='1' endCol='24' wideLine='1' wideCol='18' wideEndLine='1' wideEndCol='24'/>
+											<Expression_Type ref='id3698'/>
+										</expr:Identifier>
+									</Binary_HasRightOperand>
+								</expr:FieldAccess>
+							</Import_HasTarget>
+						</struc:Import>
+					</CompilationUnit_HasImports>
+					<CompilationUnit_TypeDeclarations ref='id110'/>
+				</struc:CompilationUnit>
+			</Package_HasCompilationUnits>
+			<Package_HasCompilationUnits>
+				<struc:CompilationUnit id='id129' parent='id103' fileEncoding=''>
+					<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='1' col='1' endLine='9' endCol='2' wideLine='1' wideCol='1' wideEndLine='9' wideEndCol='2'/>
+					<CompilationUnit_TypeDeclarations ref='id130'/>
+				</struc:CompilationUnit>
+			</Package_HasCompilationUnits>
+		</struc:Package>
+	</Scope_HasMembers>
+</struc:Package>
+<type:VoidType id='id10' parent='id0'/>
+<type:BooleanType id='id11' parent='id0'/>
+<type:IntType id='id15' parent='id0'/>
+<type:NullType id='id19' parent='id0'/>
+<base:BlockComment id='id160' parent='id0' text='/*comment*/'>
+	<Position path='programs\makearraytest\TestWithoutArrayImport.java' line='1' col='1' endLine='1' endCol='12' wideLine='1' wideCol='1' wideEndLine='1' wideEndCol='12'/>
+</base:BlockComment>
+<type:PackageType id='id3696' parent='id0'>
+</type:PackageType>
+<type:PackageType id='id3697' parent='id0'>
+</type:PackageType>
+<type:ClassType id='id3698' parent='id0'>
+	<ScopedType_Owner ref='id3697'/>
+</type:ClassType>
+<type:ClassType id='id3700' parent='id0'>
+	<ScopedType_Owner ref='id3699'/>
+</type:ClassType>
+<type:ArrayType id='id3701' parent='id0' size='1'>
+	<ArrayType_ComponentType ref='id3700'/>
+</type:ArrayType>
+<type:MethodType id='id3702' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+</type:MethodType>
+<type:ClassType id='id3704' parent='id0'>
+	<ScopedType_Owner ref='id3703'/>
+	<ClassType_RefersTo ref='id110'/>
+</type:ClassType>
+<type:ClassType id='id3705' parent='id0'>
+	<ScopedType_Owner ref='id3699'/>
+</type:ClassType>
+<type:ClassType id='id3706' parent='id0'>
+	<ScopedType_Owner ref='id3703'/>
+	<ClassType_RefersTo ref='id130'/>
+</type:ClassType>
+<type:MethodType id='id4146' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+	<MethodType_ParameterTypes ref='id3701'/>
+</type:MethodType>
+<type:PackageType id='id3699' parent='id0'>
+</type:PackageType>
+<type:PackageType id='id3703' parent='id0'>
+	<PackageType_RefersTo ref='id103'/>
+</type:PackageType>
+<Filtered id='id1'/>
+</Project>

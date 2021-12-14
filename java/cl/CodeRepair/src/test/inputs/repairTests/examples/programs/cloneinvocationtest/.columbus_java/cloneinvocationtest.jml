@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding="utf-8"?>
+<Project name='' xmlns:base='columbus_java_schema/base' xmlns:expr='columbus_java_schema/expr' xmlns:module='columbus_java_schema/module' xmlns:statm='columbus_java_schema/statm' xmlns:struc='columbus_java_schema/struc' xmlns:type='columbus_java_schema/type'>
+<struc:Package id='id100' parent='id0' name='&lt;root_package&gt;' qualifiedName='&lt;root_package&gt;'>
+	<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+	<Scope_HasMembers>
+		<struc:Package id='id103' parent='id100' name='unnamed package' qualifiedName='unnamed package'>
+			<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+			<Scope_HasMembers>
+				<struc:Class id='id110' parent='id103' isCompilerGenerated='false' isToolGenerated='false' name='CloneInvocationTest' accessibility='ackNone' isStatic='false' isFinal='false' lloc='18' isAbstract='false' isStrictfp='false' binaryName='CloneInvocationTest'>
+					<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='2' col='1' endLine='22' endCol='2' wideLine='2' wideCol='1' wideEndLine='22' wideEndCol='2'/>
+					<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='2' col='7' endLine='2' endCol='26' wideLine='2' wideCol='7' wideEndLine='2' wideEndCol='26'/>
+					<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<TypeNamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='2' col='1' endLine='2' endCol='6' wideLine='2' wideCol='1' wideEndLine='2' wideEndCol='6'/>
+					<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ExtendsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<ImplementsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+					<BodyStartPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='2' col='27' endLine='2' endCol='28' wideLine='2' wideCol='27' wideEndLine='2' wideEndCol='28'/>
+					<Scope_HasMembers>
+						<struc:Method id='id111' parent='id110' isCompilerGenerated='true' isToolGenerated='false' name='CloneInvocationTest' accessibility='ackNone' isStatic='false' isFinal='false' lloc='0' isAbstract='false' isStrictfp='false' methodKind='mekGeneratedDefaultConstructor' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NamePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersEndPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_MethodType ref='id804'/>
+							<NormalMethod_HasBody>
+								<statm:Block id='id112' parent='id111' isCompilerGenerated='true' isToolGenerated='false'>
+									<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id113' parent='id112' isCompilerGenerated='true' isToolGenerated='false'>
+											<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+											<ExpressionStatement_HasExpression>
+												<expr:MethodInvocation id='id114' parent='id113' isCompilerGenerated='true' isToolGenerated='false'>
+													<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+													<Expression_Type ref='id10'/>
+													<Unary_HasOperand>
+														<expr:Super id='id115' parent='id114' isCompilerGenerated='true' isToolGenerated='false'>
+															<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+															<Expression_Type ref='id804'/>
+														</expr:Super>
+													</Unary_HasOperand>
+												</expr:MethodInvocation>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Variable id='id116' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='date' accessibility='ackPrivate' isStatic='false' isFinal='false' isTransient='false' isVolatile='false'>
+							<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='3' col='18' endLine='3' endCol='23' wideLine='3' wideCol='5' wideEndLine='3' wideEndCol='23'/>
+							<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='3' col='18' endLine='3' endCol='22' wideLine='3' wideCol='18' wideEndLine='3' wideEndCol='22'/>
+							<AccessibilityPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='3' col='5' endLine='3' endCol='12' wideLine='3' wideCol='5' wideEndLine='3' wideEndCol='12'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<TransientPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<VolatilePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<EqualSignPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<VariableDeclaration_HasType>
+								<expr:SimpleTypeExpression id='id117' parent='id116' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='3' col='13' endLine='3' endCol='17' wideLine='3' wideCol='13' wideEndLine='3' wideEndCol='17'/>
+									<Expression_Type ref='id803'/>
+								</expr:SimpleTypeExpression>
+							</VariableDeclaration_HasType>
+						</struc:Variable>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id118' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='getDate' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='4' col='17' endLine='6' endCol='6' wideLine='4' wideCol='5' wideEndLine='6' wideEndCol='6'/>
+							<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='4' col='17' endLine='4' endCol='24' wideLine='4' wideCol='17' wideEndLine='4' wideEndCol='24'/>
+							<AccessibilityPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='4' col='5' endLine='4' endCol='11' wideLine='4' wideCol='5' wideEndLine='4' wideEndCol='11'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='4' col='24' endLine='4' endCol='25' wideLine='4' wideCol='24' wideEndLine='4' wideEndCol='25'/>
+							<ParametersEndPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='4' col='25' endLine='4' endCol='26' wideLine='4' wideCol='25' wideEndLine='4' wideEndCol='26'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_HasReturnType>
+								<expr:SimpleTypeExpression id='id122' parent='id118' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='4' col='12' endLine='4' endCol='16' wideLine='4' wideCol='12' wideEndLine='4' wideEndCol='16'/>
+									<Expression_Type ref='id803'/>
+								</expr:SimpleTypeExpression>
+							</MethodDeclaration_HasReturnType>
+							<MethodDeclaration_MethodType ref='id894'/>
+							<NormalMethod_HasBody>
+								<statm:Block id='id119' parent='id118' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='4' col='27' endLine='6' endCol='6' wideLine='4' wideCol='27' wideEndLine='6' wideEndCol='6'/>
+									<Block_HasStatements>
+										<statm:Return id='id120' parent='id119' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='5' col='9' endLine='5' endCol='21' wideLine='5' wideCol='9' wideEndLine='5' wideEndCol='21'/>
+											<Return_HasExpression>
+												<expr:Identifier id='id121' parent='id120' isCompilerGenerated='false' isToolGenerated='false' name='date'>
+													<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='5' col='16' endLine='5' endCol='20' wideLine='5' wideCol='16' wideEndLine='5' wideEndCol='20'/>
+													<Expression_Type ref='id803'/>
+													<Identifier_RefersTo ref='id116'/>
+												</expr:Identifier>
+											</Return_HasExpression>
+										</statm:Return>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id123' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='setDate' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='17' endLine='10' endCol='6' wideLine='8' wideCol='5' wideEndLine='10' wideEndCol='6'/>
+							<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='17' endLine='8' endCol='24' wideLine='8' wideCol='17' wideEndLine='8' wideEndCol='24'/>
+							<AccessibilityPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='5' endLine='8' endCol='11' wideLine='8' wideCol='5' wideEndLine='8' wideEndCol='11'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='24' endLine='8' endCol='25' wideLine='8' wideCol='24' wideEndLine='8' wideEndCol='25'/>
+							<ParametersEndPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='34' endLine='8' endCol='35' wideLine='8' wideCol='34' wideEndLine='8' wideEndCol='35'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_HasReturnType>
+								<expr:PrimitiveTypeExpression id='id133' parent='id123' isCompilerGenerated='false' isToolGenerated='false' kind='ptkVoid'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='12' endLine='8' endCol='16' wideLine='8' wideCol='12' wideEndLine='8' wideEndCol='16'/>
+									<Expression_Type ref='id10'/>
+								</expr:PrimitiveTypeExpression>
+							</MethodDeclaration_HasReturnType>
+							<MethodDeclaration_MethodType ref='id895'/>
+							<NormalMethod_HasParameters>
+								<struc:Parameter id='id131' parent='id123' isCompilerGenerated='false' isToolGenerated='false' name='date' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='30' endLine='8' endCol='34' wideLine='8' wideCol='25' wideEndLine='8' wideEndCol='34'/>
+									<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='30' endLine='8' endCol='34' wideLine='8' wideCol='30' wideEndLine='8' wideEndCol='34'/>
+									<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VariableDeclaration_HasType>
+										<expr:SimpleTypeExpression id='id132' parent='id131' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='25' endLine='8' endCol='29' wideLine='8' wideCol='25' wideEndLine='8' wideEndCol='29'/>
+											<Expression_Type ref='id803'/>
+										</expr:SimpleTypeExpression>
+									</VariableDeclaration_HasType>
+								</struc:Parameter>
+							</NormalMethod_HasParameters>
+							<NormalMethod_HasBody>
+								<statm:Block id='id124' parent='id123' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='8' col='36' endLine='10' endCol='6' wideLine='8' wideCol='36' wideEndLine='10' wideEndCol='6'/>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id125' parent='id124' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='9' col='9' endLine='9' endCol='26' wideLine='9' wideCol='9' wideEndLine='9' wideEndCol='26'/>
+											<ExpressionStatement_HasExpression>
+												<expr:Assignment id='id126' parent='id125' isCompilerGenerated='false' isToolGenerated='false' operator='askAssign'>
+													<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='9' col='19' endLine='9' endCol='25' wideLine='9' wideCol='9' wideEndLine='9' wideEndCol='25'/>
+													<Expression_Type ref='id803'/>
+													<Binary_HasLeftOperand>
+														<expr:FieldAccess id='id127' parent='id126' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='9' col='13' endLine='9' endCol='18' wideLine='9' wideCol='9' wideEndLine='9' wideEndCol='18'/>
+															<Expression_Type ref='id803'/>
+															<Binary_HasLeftOperand>
+																<expr:This id='id128' parent='id127' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='9' col='9' endLine='9' endCol='13' wideLine='9' wideCol='9' wideEndLine='9' wideEndCol='13'/>
+																	<Expression_Type ref='id806'/>
+																</expr:This>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:Identifier id='id129' parent='id127' isCompilerGenerated='false' isToolGenerated='false' name='date'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='9' col='14' endLine='9' endCol='18' wideLine='9' wideCol='14' wideEndLine='9' wideEndCol='18'/>
+																	<Expression_Type ref='id803'/>
+																	<Identifier_RefersTo ref='id116'/>
+																</expr:Identifier>
+															</Binary_HasRightOperand>
+														</expr:FieldAccess>
+													</Binary_HasLeftOperand>
+													<Binary_HasRightOperand>
+														<expr:Identifier id='id130' parent='id126' isCompilerGenerated='false' isToolGenerated='false' name='date'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='9' col='21' endLine='9' endCol='25' wideLine='9' wideCol='21' wideEndLine='9' wideEndCol='25'/>
+															<Expression_Type ref='id803'/>
+															<Identifier_RefersTo ref='id131'/>
+														</expr:Identifier>
+													</Binary_HasRightOperand>
+												</expr:Assignment>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id134' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='getDateE' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='11' col='17' endLine='13' endCol='6' wideLine='11' wideCol='5' wideEndLine='13' wideEndCol='6'/>
+							<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='11' col='17' endLine='11' endCol='25' wideLine='11' wideCol='17' wideEndLine='11' wideEndCol='25'/>
+							<AccessibilityPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='11' col='5' endLine='11' endCol='11' wideLine='11' wideCol='5' wideEndLine='11' wideEndCol='11'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='11' col='25' endLine='11' endCol='26' wideLine='11' wideCol='25' wideEndLine='11' wideEndCol='26'/>
+							<ParametersEndPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='11' col='26' endLine='11' endCol='27' wideLine='11' wideCol='26' wideEndLine='11' wideEndCol='27'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_HasReturnType>
+								<expr:SimpleTypeExpression id='id143' parent='id134' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='11' col='12' endLine='11' endCol='16' wideLine='11' wideCol='12' wideEndLine='11' wideEndCol='16'/>
+									<Expression_Type ref='id803'/>
+								</expr:SimpleTypeExpression>
+							</MethodDeclaration_HasReturnType>
+							<MethodDeclaration_MethodType ref='id894'/>
+							<NormalMethod_HasBody>
+								<statm:Block id='id135' parent='id134' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='11' col='28' endLine='13' endCol='6' wideLine='11' wideCol='28' wideEndLine='13' wideEndCol='6'/>
+									<Block_HasStatements>
+										<statm:Return id='id136' parent='id135' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='12' col='9' endLine='12' endCol='36' wideLine='12' wideCol='9' wideEndLine='12' wideEndCol='36'/>
+											<Return_HasExpression>
+												<expr:TypeCast id='id137' parent='id136' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='12' col='16' endLine='12' endCol='35' wideLine='12' wideCol='16' wideEndLine='12' wideEndCol='35'/>
+													<Expression_Type ref='id803'/>
+													<Unary_HasOperand>
+														<expr:MethodInvocation id='id138' parent='id137' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='12' col='33' endLine='12' endCol='35' wideLine='12' wideCol='23' wideEndLine='12' wideEndCol='35'/>
+															<Expression_Type ref='id808'/>
+															<Unary_HasOperand>
+																<expr:FieldAccess id='id139' parent='id138' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='12' col='27' endLine='12' endCol='33' wideLine='12' wideCol='23' wideEndLine='12' wideEndCol='33'/>
+																	<Expression_Type ref='id809'/>
+																	<Binary_HasLeftOperand>
+																		<expr:Identifier id='id140' parent='id139' isCompilerGenerated='false' isToolGenerated='false' name='date'>
+																			<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='12' col='23' endLine='12' endCol='27' wideLine='12' wideCol='23' wideEndLine='12' wideEndCol='27'/>
+																			<Expression_Type ref='id803'/>
+																			<Identifier_RefersTo ref='id116'/>
+																		</expr:Identifier>
+																	</Binary_HasLeftOperand>
+																	<Binary_HasRightOperand>
+																		<expr:Identifier id='id141' parent='id139' isCompilerGenerated='false' isToolGenerated='false' name='clone'>
+																			<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='12' col='28' endLine='12' endCol='33' wideLine='12' wideCol='28' wideEndLine='12' wideEndCol='33'/>
+																			<Expression_Type ref='id809'/>
+																		</expr:Identifier>
+																	</Binary_HasRightOperand>
+																</expr:FieldAccess>
+															</Unary_HasOperand>
+														</expr:MethodInvocation>
+													</Unary_HasOperand>
+													<TypeCast_HasTypeOperand>
+														<expr:SimpleTypeExpression id='id142' parent='id137' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='12' col='17' endLine='12' endCol='21' wideLine='12' wideCol='17' wideEndLine='12' wideEndCol='21'/>
+															<Expression_Type ref='id803'/>
+														</expr:SimpleTypeExpression>
+													</TypeCast_HasTypeOperand>
+												</expr:TypeCast>
+											</Return_HasExpression>
+										</statm:Return>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id144' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='setDateE' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='17' endLine='17' endCol='6' wideLine='15' wideCol='5' wideEndLine='17' wideEndCol='6'/>
+							<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='17' endLine='15' endCol='25' wideLine='15' wideCol='17' wideEndLine='15' wideEndCol='25'/>
+							<AccessibilityPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='5' endLine='15' endCol='11' wideLine='15' wideCol='5' wideEndLine='15' wideEndCol='11'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='25' endLine='15' endCol='26' wideLine='15' wideCol='25' wideEndLine='15' wideEndCol='26'/>
+							<ParametersEndPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='35' endLine='15' endCol='36' wideLine='15' wideCol='35' wideEndLine='15' wideEndCol='36'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_HasReturnType>
+								<expr:PrimitiveTypeExpression id='id159' parent='id144' isCompilerGenerated='false' isToolGenerated='false' kind='ptkVoid'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='12' endLine='15' endCol='16' wideLine='15' wideCol='12' wideEndLine='15' wideEndCol='16'/>
+									<Expression_Type ref='id10'/>
+								</expr:PrimitiveTypeExpression>
+							</MethodDeclaration_HasReturnType>
+							<MethodDeclaration_MethodType ref='id895'/>
+							<NormalMethod_HasParameters>
+								<struc:Parameter id='id157' parent='id144' isCompilerGenerated='false' isToolGenerated='false' name='date' accessibility='ackNone' isStatic='false' isFinal='false' isVarargs='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='31' endLine='15' endCol='35' wideLine='15' wideCol='26' wideEndLine='15' wideEndCol='35'/>
+									<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='31' endLine='15' endCol='35' wideLine='15' wideCol='31' wideEndLine='15' wideEndCol='35'/>
+									<AccessibilityPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VarargsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+									<VariableDeclaration_HasType>
+										<expr:SimpleTypeExpression id='id158' parent='id157' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='26' endLine='15' endCol='30' wideLine='15' wideCol='26' wideEndLine='15' wideEndCol='30'/>
+											<Expression_Type ref='id803'/>
+										</expr:SimpleTypeExpression>
+									</VariableDeclaration_HasType>
+								</struc:Parameter>
+							</NormalMethod_HasParameters>
+							<NormalMethod_HasBody>
+								<statm:Block id='id145' parent='id144' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='15' col='37' endLine='17' endCol='6' wideLine='15' wideCol='37' wideEndLine='17' wideEndCol='6'/>
+									<Block_HasStatements>
+										<statm:ExpressionStatement id='id146' parent='id145' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='9' endLine='16' endCol='41' wideLine='16' wideCol='9' wideEndLine='16' wideEndCol='41'/>
+											<ExpressionStatement_HasExpression>
+												<expr:Assignment id='id147' parent='id146' isCompilerGenerated='false' isToolGenerated='false' operator='askAssign'>
+													<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='19' endLine='16' endCol='40' wideLine='16' wideCol='9' wideEndLine='16' wideEndCol='40'/>
+													<Expression_Type ref='id803'/>
+													<Binary_HasLeftOperand>
+														<expr:FieldAccess id='id148' parent='id147' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='13' endLine='16' endCol='18' wideLine='16' wideCol='9' wideEndLine='16' wideEndCol='18'/>
+															<Expression_Type ref='id803'/>
+															<Binary_HasLeftOperand>
+																<expr:This id='id149' parent='id148' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='9' endLine='16' endCol='13' wideLine='16' wideCol='9' wideEndLine='16' wideEndCol='13'/>
+																	<Expression_Type ref='id806'/>
+																</expr:This>
+															</Binary_HasLeftOperand>
+															<Binary_HasRightOperand>
+																<expr:Identifier id='id150' parent='id148' isCompilerGenerated='false' isToolGenerated='false' name='date'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='14' endLine='16' endCol='18' wideLine='16' wideCol='14' wideEndLine='16' wideEndCol='18'/>
+																	<Expression_Type ref='id803'/>
+																	<Identifier_RefersTo ref='id116'/>
+																</expr:Identifier>
+															</Binary_HasRightOperand>
+														</expr:FieldAccess>
+													</Binary_HasLeftOperand>
+													<Binary_HasRightOperand>
+														<expr:TypeCast id='id151' parent='id147' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='21' endLine='16' endCol='40' wideLine='16' wideCol='21' wideEndLine='16' wideEndCol='40'/>
+															<Expression_Type ref='id803'/>
+															<Unary_HasOperand>
+																<expr:MethodInvocation id='id152' parent='id151' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='38' endLine='16' endCol='40' wideLine='16' wideCol='28' wideEndLine='16' wideEndCol='40'/>
+																	<Expression_Type ref='id808'/>
+																	<Unary_HasOperand>
+																		<expr:FieldAccess id='id153' parent='id152' isCompilerGenerated='false' isToolGenerated='false'>
+																			<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='32' endLine='16' endCol='38' wideLine='16' wideCol='28' wideEndLine='16' wideEndCol='38'/>
+																			<Expression_Type ref='id809'/>
+																			<Binary_HasLeftOperand>
+																				<expr:Identifier id='id154' parent='id153' isCompilerGenerated='false' isToolGenerated='false' name='date'>
+																					<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='28' endLine='16' endCol='32' wideLine='16' wideCol='28' wideEndLine='16' wideEndCol='32'/>
+																					<Expression_Type ref='id803'/>
+																					<Identifier_RefersTo ref='id157'/>
+																				</expr:Identifier>
+																			</Binary_HasLeftOperand>
+																			<Binary_HasRightOperand>
+																				<expr:Identifier id='id155' parent='id153' isCompilerGenerated='false' isToolGenerated='false' name='clone'>
+																					<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='33' endLine='16' endCol='38' wideLine='16' wideCol='33' wideEndLine='16' wideEndCol='38'/>
+																					<Expression_Type ref='id809'/>
+																				</expr:Identifier>
+																			</Binary_HasRightOperand>
+																		</expr:FieldAccess>
+																	</Unary_HasOperand>
+																</expr:MethodInvocation>
+															</Unary_HasOperand>
+															<TypeCast_HasTypeOperand>
+																<expr:SimpleTypeExpression id='id156' parent='id151' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='16' col='22' endLine='16' endCol='26' wideLine='16' wideCol='22' wideEndLine='16' wideEndCol='26'/>
+																	<Expression_Type ref='id803'/>
+																</expr:SimpleTypeExpression>
+															</TypeCast_HasTypeOperand>
+														</expr:TypeCast>
+													</Binary_HasRightOperand>
+												</expr:Assignment>
+											</ExpressionStatement_HasExpression>
+										</statm:ExpressionStatement>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<Scope_HasMembers>
+						<struc:Method id='id160' parent='id110' isCompilerGenerated='false' isToolGenerated='false' name='foo' accessibility='ackPublic' isStatic='false' isFinal='false' lloc='3' isAbstract='false' isStrictfp='false' methodKind='mekNormal' isSynchronized='false' isNative='false' isDefault='false'>
+							<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='19' col='14' endLine='21' endCol='3' wideLine='19' wideCol='2' wideEndLine='21' wideEndCol='3'/>
+							<NamePosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='19' col='14' endLine='19' endCol='17' wideLine='19' wideCol='14' wideEndLine='19' wideEndCol='17'/>
+							<AccessibilityPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='19' col='2' endLine='19' endCol='8' wideLine='19' wideCol='2' wideEndLine='19' wideEndCol='8'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<FinalPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<AbstractPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<StrictfpPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ParametersStartPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='19' col='17' endLine='19' endCol='18' wideLine='19' wideCol='17' wideEndLine='19' wideEndCol='18'/>
+							<ParametersEndPosition path='programs\cloneinvocationtest\CloneInvocationTest.java' line='19' col='18' endLine='19' endCol='19' wideLine='19' wideCol='18' wideEndLine='19' wideEndCol='19'/>
+							<SynchronizedPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<NativePosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<ThrowsPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<MethodDeclaration_HasReturnType>
+								<expr:SimpleTypeExpression id='id169' parent='id160' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='19' col='9' endLine='19' endCol='13' wideLine='19' wideCol='9' wideEndLine='19' wideEndCol='13'/>
+									<Expression_Type ref='id803'/>
+								</expr:SimpleTypeExpression>
+							</MethodDeclaration_HasReturnType>
+							<MethodDeclaration_MethodType ref='id894'/>
+							<NormalMethod_HasBody>
+								<statm:Block id='id161' parent='id160' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='19' col='20' endLine='21' endCol='3' wideLine='19' wideCol='20' wideEndLine='21' wideEndCol='3'/>
+									<Block_HasStatements>
+										<statm:Return id='id162' parent='id161' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='20' col='3' endLine='20' endCol='35' wideLine='20' wideCol='3' wideEndLine='20' wideEndCol='35'/>
+											<Return_HasExpression>
+												<expr:NewClass id='id163' parent='id162' isCompilerGenerated='false' isToolGenerated='false'>
+													<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='20' col='10' endLine='20' endCol='34' wideLine='20' wideCol='10' wideEndLine='20' wideEndCol='34'/>
+													<Expression_Type ref='id803'/>
+													<NewClass_HasTypeName>
+														<expr:SimpleTypeExpression id='id164' parent='id163' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='20' col='14' endLine='20' endCol='18' wideLine='20' wideCol='14' wideEndLine='20' wideEndCol='18'/>
+															<Expression_Type ref='id803'/>
+														</expr:SimpleTypeExpression>
+													</NewClass_HasTypeName>
+													<NewClass_HasArguments>
+														<expr:MethodInvocation id='id165' parent='id163' isCompilerGenerated='false' isToolGenerated='false'>
+															<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='20' col='31' endLine='20' endCol='33' wideLine='20' wideCol='19' wideEndLine='20' wideEndCol='33'/>
+															<Expression_Type ref='id16'/>
+															<Unary_HasOperand>
+																<expr:FieldAccess id='id166' parent='id165' isCompilerGenerated='false' isToolGenerated='false'>
+																	<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='20' col='23' endLine='20' endCol='31' wideLine='20' wideCol='19' wideEndLine='20' wideEndCol='31'/>
+																	<Expression_Type ref='id810'/>
+																	<Binary_HasLeftOperand>
+																		<expr:Identifier id='id167' parent='id166' isCompilerGenerated='false' isToolGenerated='false' name='date'>
+																			<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='20' col='19' endLine='20' endCol='23' wideLine='20' wideCol='19' wideEndLine='20' wideEndCol='23'/>
+																			<Expression_Type ref='id803'/>
+																			<Identifier_RefersTo ref='id116'/>
+																		</expr:Identifier>
+																	</Binary_HasLeftOperand>
+																	<Binary_HasRightOperand>
+																		<expr:Identifier id='id168' parent='id166' isCompilerGenerated='false' isToolGenerated='false' name='getTime'>
+																			<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='20' col='24' endLine='20' endCol='31' wideLine='20' wideCol='24' wideEndLine='20' wideEndCol='31'/>
+																			<Expression_Type ref='id810'/>
+																		</expr:Identifier>
+																	</Binary_HasRightOperand>
+																</expr:FieldAccess>
+															</Unary_HasOperand>
+														</expr:MethodInvocation>
+													</NewClass_HasArguments>
+												</expr:NewClass>
+											</Return_HasExpression>
+										</statm:Return>
+									</Block_HasStatements>
+								</statm:Block>
+							</NormalMethod_HasBody>
+						</struc:Method>
+					</Scope_HasMembers>
+					<TypeDeclaration_HasSuperClass>
+						<expr:SimpleTypeExpression id='id170' parent='id110' isCompilerGenerated='true' isToolGenerated='false' name='Object'>
+							<Position path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Expression_Type ref='id808'/>
+						</expr:SimpleTypeExpression>
+					</TypeDeclaration_HasSuperClass>
+					<TypeDeclaration_IsInCompilationUnit ref='id101'/>
+				</struc:Class>
+			</Scope_HasMembers>
+			<Package_HasCompilationUnits>
+				<struc:CompilationUnit id='id101' parent='id103' fileEncoding=''>
+					<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='1' col='1' endLine='22' endCol='2' wideLine='1' wideCol='1' wideEndLine='22' wideEndCol='2'/>
+					<CompilationUnit_HasImports>
+						<struc:Import id='id104' parent='id101' isCompilerGenerated='false' isToolGenerated='false' isStatic='false'>
+							<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='1' col='1' endLine='1' endCol='23' wideLine='1' wideCol='1' wideEndLine='1' wideEndCol='23'/>
+							<StaticPosition path='' line='0' col='0' endLine='0' endCol='0' wideLine='0' wideCol='0' wideEndLine='0' wideEndCol='0'/>
+							<Import_HasTarget>
+								<expr:FieldAccess id='id105' parent='id104' isCompilerGenerated='false' isToolGenerated='false'>
+									<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='1' col='17' endLine='1' endCol='22' wideLine='1' wideCol='8' wideEndLine='1' wideEndCol='22'/>
+									<Expression_Type ref='id803'/>
+									<Binary_HasLeftOperand>
+										<expr:FieldAccess id='id106' parent='id105' isCompilerGenerated='false' isToolGenerated='false'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='1' col='12' endLine='1' endCol='17' wideLine='1' wideCol='8' wideEndLine='1' wideEndCol='17'/>
+											<Expression_Type ref='id802'/>
+											<Binary_HasLeftOperand>
+												<expr:Identifier id='id107' parent='id106' isCompilerGenerated='false' isToolGenerated='false' name='java'>
+													<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='1' col='8' endLine='1' endCol='12' wideLine='1' wideCol='8' wideEndLine='1' wideEndCol='12'/>
+													<Expression_Type ref='id801'/>
+												</expr:Identifier>
+											</Binary_HasLeftOperand>
+											<Binary_HasRightOperand>
+												<expr:Identifier id='id108' parent='id106' isCompilerGenerated='false' isToolGenerated='false' name='util'>
+													<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='1' col='13' endLine='1' endCol='17' wideLine='1' wideCol='13' wideEndLine='1' wideEndCol='17'/>
+													<Expression_Type ref='id802'/>
+												</expr:Identifier>
+											</Binary_HasRightOperand>
+										</expr:FieldAccess>
+									</Binary_HasLeftOperand>
+									<Binary_HasRightOperand>
+										<expr:Identifier id='id109' parent='id105' isCompilerGenerated='false' isToolGenerated='false' name='Date'>
+											<Position path='programs\cloneinvocationtest\CloneInvocationTest.java' line='1' col='18' endLine='1' endCol='22' wideLine='1' wideCol='18' wideEndLine='1' wideEndCol='22'/>
+											<Expression_Type ref='id803'/>
+										</expr:Identifier>
+									</Binary_HasRightOperand>
+								</expr:FieldAccess>
+							</Import_HasTarget>
+						</struc:Import>
+					</CompilationUnit_HasImports>
+					<CompilationUnit_TypeDeclarations ref='id110'/>
+				</struc:CompilationUnit>
+			</Package_HasCompilationUnits>
+		</struc:Package>
+	</Scope_HasMembers>
+</struc:Package>
+<type:VoidType id='id10' parent='id0'/>
+<type:LongType id='id16' parent='id0'/>
+<type:PackageType id='id801' parent='id0'>
+</type:PackageType>
+<type:PackageType id='id802' parent='id0'>
+</type:PackageType>
+<type:ClassType id='id803' parent='id0'>
+	<ScopedType_Owner ref='id802'/>
+</type:ClassType>
+<type:MethodType id='id804' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+</type:MethodType>
+<type:ClassType id='id806' parent='id0'>
+	<ScopedType_Owner ref='id805'/>
+	<ClassType_RefersTo ref='id110'/>
+</type:ClassType>
+<type:ClassType id='id808' parent='id0'>
+	<ScopedType_Owner ref='id807'/>
+</type:ClassType>
+<type:MethodType id='id809' parent='id0'>
+	<MethodType_ReturnType ref='id808'/>
+</type:MethodType>
+<type:MethodType id='id810' parent='id0'>
+	<MethodType_ReturnType ref='id16'/>
+</type:MethodType>
+<type:MethodType id='id894' parent='id0'>
+	<MethodType_ReturnType ref='id803'/>
+</type:MethodType>
+<type:MethodType id='id895' parent='id0'>
+	<MethodType_ReturnType ref='id10'/>
+	<MethodType_ParameterTypes ref='id803'/>
+</type:MethodType>
+<type:PackageType id='id805' parent='id0'>
+	<PackageType_RefersTo ref='id103'/>
+</type:PackageType>
+<type:PackageType id='id807' parent='id0'>
+</type:PackageType>
+<Filtered id='id1'/>
+</Project>
