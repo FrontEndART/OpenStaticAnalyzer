@@ -6,7 +6,7 @@
 
     <groupId>CodeRepair</groupId>
     <artifactId>CodeRepair</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -75,14 +75,28 @@
                             <goal>single</goal>
                         </goals>
                     </execution>
+
                 </executions>
 
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
     <repositories>
         <repository>
-            <id>for_jsi</id>
+            <id>jsi</id>
             <name>clojars</name>
             <url>https://clojars.org/repo/</url>
         </repository>

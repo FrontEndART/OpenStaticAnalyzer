@@ -7,6 +7,7 @@ import coderepair.generator.transformation.ModifiedNodes;
 import coderepair.generator.transformation.TransformationAPI;
 
 import coderepair.communication.exceptions.RepairAlgorithmException;
+import coderepair.repair.utils.ImportChecker;
 import columbus.java.asg.Common;
 import columbus.java.asg.Factory;
 import columbus.java.asg.base.Base;
@@ -38,6 +39,7 @@ public class ArraysCopyOf implements ModelRepairing {
     private void makeArrayCopyForAnAssignmentRightOperand(Expression expr, ModifiedNodes modifiedNodes)  {
         FieldAccess fieldA = (FieldAccess) this.factory.createNode(NodeKind.ndkFieldAccess);
         DeepCopyAlgorithm dca = new DeepCopyAlgorithm(this.factory);
+        ImportChecker.checkImport(this.factory, expr, "java.util.Arrays", modifiedNodes);
         Map<Integer, Integer> idMap;
         idMap = dca.runDeepCopy(expr.getId());
         Expression left = (Expression) this.factory.getRef(idMap.get(expr.getId()));
@@ -54,6 +56,7 @@ public class ArraysCopyOf implements ModelRepairing {
         arrayCopyOf.setName("copyOf");
         Identifier arraysClass = (Identifier) this.factory.createNode(NodeKind.ndkIdentifier);
         arraysClass.setName("Arrays");
+
 
         FieldAccess fieldM = (FieldAccess) this.factory.createNode(NodeKind.ndkFieldAccess);
         fieldM.setLeftOperand(arraysClass);
