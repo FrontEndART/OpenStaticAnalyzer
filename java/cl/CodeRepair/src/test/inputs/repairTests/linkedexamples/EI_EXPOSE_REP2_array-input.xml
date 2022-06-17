@@ -28,6 +28,17 @@
           </coderepair.communication.base.ProblemPosition>
         </positions>
       </coderepair.communication.base.ProblemToRepair>
+	  <coderepair.communication.base.ProblemToRepair>
+        <positions>
+          <coderepair.communication.base.ProblemPosition>
+            <path>programs/makearraytest/testpackage/TestWithoutArrayImport.java</path>
+            <startLine>7</startLine>
+            <startCol>17</startCol>
+            <endLine>7</endLine>
+            <endCol>22</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
     </list>
   </entry>
   <entry>

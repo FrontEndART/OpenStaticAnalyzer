@@ -200,7 +200,7 @@ public class ModifiedNodesPrinter {
                     continue;
                 }
 
-                int addToLast = Common.getIsPackageDeclaration(positioned) ? 1 : 0;
+                int addToLast = Common.getIsPackageDeclaration(positioned) ? 0 : 0;
 
                 FilePart aktPos = null;
                 if (kind == NewPositionKind.AFTER) {

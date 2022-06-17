@@ -5,7 +5,9 @@ import columbus.java.asg.Common;
 import columbus.java.asg.EdgeIterator;
 import columbus.java.asg.Factory;
 import columbus.java.asg.base.Base;
+import columbus.java.asg.base.Comment;
 import columbus.java.asg.enums.NodeKind;
+import columbus.java.asg.expr.Annotation;
 import columbus.java.asg.expr.Expression;
 import columbus.java.asg.expr.FieldAccess;
 import columbus.java.asg.expr.Identifier;
@@ -82,15 +84,24 @@ public class ImportChecker {
             } else {
                 lastFA.setLeftOperand(newIdentifier);
             }
-            cu.addImports(newImport);
+            cu.addImports(newImport, 0);
             //modifiedNodes.markNodeAsModified(cu.getId());
-            PackageDeclaration pd = cu.getPackageDeclaration();
+           PackageDeclaration pd = cu.getPackageDeclaration();
             if (pd != null) {
                 modifiedNodes.markNodeAsNew(newImport.getId(), ModifiedNodes.NewPositionKind.AFTER, pd);
             } else
+
             if (!cu.getTypeDeclarationsIsEmpty()) {
                 TypeDeclaration typeDeclaration = cu.getTypeDeclarationsIterator().next();
-                modifiedNodes.markNodeAsNew(newImport.getId(), ModifiedNodes.NewPositionKind.BEFORE, typeDeclaration);
+
+                if (!typeDeclaration.getAnnotationsIsEmpty()) {
+                    Annotation firstAnnotation = typeDeclaration.getAnnotationsIterator().next();
+                    if (typeDeclaration.getPosition().getLine()<firstAnnotation.getPosition().getLine()) {
+                        modifiedNodes.markNodeAsNew(newImport.getId(), ModifiedNodes.NewPositionKind.BEFORE, typeDeclaration);
+                    }else modifiedNodes.markNodeAsNew(newImport.getId(), ModifiedNodes.NewPositionKind.BEFORE, firstAnnotation);
+                }
+                else modifiedNodes.markNodeAsNew(newImport.getId(), ModifiedNodes.NewPositionKind.BEFORE, typeDeclaration);
+
             }
         }
 

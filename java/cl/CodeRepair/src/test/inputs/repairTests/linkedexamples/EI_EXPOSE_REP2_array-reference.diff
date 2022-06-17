@@ -26,3 +26,20 @@ Index: programs/makearraytest/TestWithArrayImport.java
 +       this.array = Arrays.copyOf(array, array.length);
       }
  }
+Index: programs/makearraytest/testpackage/TestWithoutArrayImport.java
+===================================================================
+--- programs/makearraytest/testpackage/TestWithoutArrayImport.java	(original)
++++ programs/makearraytest/testpackage/TestWithoutArrayImport.java	(refactored)
+@@ -1,10 +1,11 @@
+ package testpackage;
++import java.util.Arrays;
+ /*comment*/
+ class TestWithoutArrayImport {
+     Integer[] array;
+     public TestWithoutArrayImport (Integer[] array) {
+ 	   if (1 ==1) 
+-			this.array = array;
++			this.array = Arrays.copyOf(array, array.length);
+ 	    else this.array = null;
+     }
+ }
