@@ -1,0 +1,44 @@
+<linked-hash-map>
+  <entry>
+    <string>coderepair.algs.problemType</string>
+    <string>MS_PKGPROTECT</string>
+  </entry>
+  <entry>
+    <string>coderepair.algs.problemLocations</string>
+    <list>
+      <coderepair.communication.base.ProblemToRepair>
+        <positions>
+	  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/mutablecollectiontest/a/Mutable.java</path>
+            <startLine>8</startLine>
+            <startCol>43</startCol>
+            <endLine>8</endLine>
+            <endCol>49</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+	  
+	  <coderepair.communication.base.ProblemToRepair>
+        <positions>
+	  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/mutablecollectiontest/a/Mutable.java</path>
+            <startLine>10</startLine>
+            <startCol>38</startCol>
+            <endLine>10</endLine>
+            <endCol>44</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+    </list>
+  </entry>
+  <entry>
+    <string>coderepair.base.sourceCodeLocation</string>
+    <string>src/test/inputs/repairTests/linkedexamples/</string>
+  </entry>
+  <entry>
+    <string>coderepair.base.schemaLocation</string>
+    <string>src/test/inputs/repairTests/linkedexamples/programs/mutablecollectiontest/.columbus_java/mutablecollectiontest.ljsi</string>
+  </entry>
+</linked-hash-map>

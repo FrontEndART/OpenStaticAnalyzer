@@ -1,17 +1,16 @@
 package coderepair.repair.rules;
 
-import coderepair.repair.base.ModelRepairing;
-import coderepair.repair.base.ProblemRepairOverASG;
-import coderepair.repair.model.ChangeInstanceModifier;
+import coderepair.communication.base.ProblemPosition;
+import coderepair.communication.exceptions.RepairAlgorithmException;
 import coderepair.generator.transformation.DiffBuilder;
 import coderepair.generator.transformation.ModifiedNodes;
 import coderepair.generator.transformation.scpr.SCPHeuristics;
 import coderepair.generator.transformation.scpr.SourceCodePositionReverter;
 import coderepair.generator.transformation.scpr.SourceCodePositionReverterExcepiton;
-import coderepair.communication.base.ProblemPosition;
-import coderepair.communication.exceptions.RepairAlgorithmException;
+import coderepair.repair.base.ModelRepairing;
+import coderepair.repair.base.ProblemRepairOverASG;
+import coderepair.repair.model.ChangeInstanceModifier;
 import columbus.java.asg.Factory;
-
 import columbus.java.asg.struc.Variable;
 
 import java.io.IOException;
@@ -19,7 +18,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
-public class RepairRule_MS_SHOULD_BE_FINAL extends ProblemRepairOverASG {
+public class RepairRule_MS_PKGPROTECT extends ProblemRepairOverASG {
     @Override
     public String getToolName() {
         return "Repair of Findbugs MS_SHOULD_BE_FINAL";
@@ -36,7 +35,7 @@ public class RepairRule_MS_SHOULD_BE_FINAL extends ProblemRepairOverASG {
             }
             Variable id = SCPHeuristics.findBestMatch(problemPos, srcDirURI, tabSize, nodes);
             ChangeInstanceModifier ci = new ChangeInstanceModifier(id);
-            ci.setShouldBeFinal(true);
+            ci.setShouldBePackagePrivate(true);
             ci.repair(modifiedNodes);
         } catch (SourceCodePositionReverterExcepiton e) {
             throw new RepairAlgorithmException(e);

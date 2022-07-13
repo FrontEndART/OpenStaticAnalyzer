@@ -19,4 +19,5 @@ public class CommonSecurityRuleKeys {
     public static final String  MS_SHOULD_BE_FINAL_PROBLEM_TYPE = "MS_SHOULD_BE_FINAL";
     public static final String  NP_NULL_ON_SOME_PATH = "NP_NULL_ON_SOME_PATH";
     public static final String  NP_NULL_ON_SOME_PATH_EXCEPTION = "NP_NULL_ON_SOME_PATH_EXCEPTION";
+    public static final String  MS_PKGPROTECT_PROBLEM_TYPE = "MS_PKGPROTECT";
 }

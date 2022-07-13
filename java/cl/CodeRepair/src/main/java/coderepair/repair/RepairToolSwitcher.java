@@ -8,11 +8,7 @@ import java.net.URL;
 import java.util.Map;
 
 import coderepair.generator.SourceCodeGenerator;
-import coderepair.repair.rules.RepairRule_EI_EXPOSE_REP2;
-import coderepair.repair.rules.RepairRule_EI_EXPOSE_REP2_Date_object;
-import coderepair.repair.rules.RepairRule_EI_EXPOSE_REP2_array;
-import coderepair.repair.rules.RepairRule_MS_SHOULD_BE_FINAL;
-import coderepair.repair.rules.RepairRule_NP_NULL;
+import coderepair.repair.rules.*;
 import coderepair.generator.transformation.DiffBuilder;
 import coderepair.generator.transformation.ModifiedNodes;
 import coderepair.communication.base.RepairAlgorithm;
@@ -88,6 +84,9 @@ public class RepairToolSwitcher extends RepairAlgorithm {
             case CommonSecurityRuleKeys.NP_NULL_ON_SOME_PATH:
             case CommonSecurityRuleKeys.NP_NULL_ON_SOME_PATH_EXCEPTION:
                 repair = new RepairRule_NP_NULL();
+                break;
+            case CommonSecurityRuleKeys.MS_PKGPROTECT_PROBLEM_TYPE:
+                repair = new RepairRule_MS_PKGPROTECT();
                 break;
             default:
                 throw new RepairAlgorithmException("No repair algorithm found for the problemType: " + problemType);
