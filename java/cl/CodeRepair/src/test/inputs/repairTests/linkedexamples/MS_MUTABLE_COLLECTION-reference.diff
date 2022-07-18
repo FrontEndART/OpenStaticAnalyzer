@@ -1,0 +1,20 @@
+Index: programs/mutablecollectiontest/a/MutableInInit.java
+===================================================================
+--- programs/mutablecollectiontest/a/MutableInInit.java	(original)
++++ programs/mutablecollectiontest/a/MutableInInit.java	(refactored)
+@@ -1,12 +1,13 @@
+ package a;
++import java.util.Collections;
+ import java.util.Set;
+ import java.util.List;
+ import java.util.TreeSet;
+ import java.util.Arrays;
+ 
+ public class Mutable {
+-	public static final Set<String> mySet = new TreeSet<>(Arrays.asList("ez", "az"));
+-	List<String> list = List.of("foo", "bar", "baz");
++	public static final Set<String> mySet = Collections.unmodifiableSet(new TreeSet<>(Arrays.asList("ez", "az")));
++	List<String> list = Collections.unmodifiableList(List.of("foo", "bar", "baz"));
+ 	
+ 	public static void main(String args[]) {
+ 		

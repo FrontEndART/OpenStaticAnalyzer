@@ -88,6 +88,9 @@ public class RepairToolSwitcher extends RepairAlgorithm {
             case CommonSecurityRuleKeys.MS_PKGPROTECT_PROBLEM_TYPE:
                 repair = new RepairRule_MS_PKGPROTECT();
                 break;
+            case CommonSecurityRuleKeys.MS_MUTABLE_COLLECTION_TYPE:
+                repair = new RepairRule_MS_MUTABLE_COLLECTION();
+                break;
             default:
                 throw new RepairAlgorithmException("No repair algorithm found for the problemType: " + problemType);
         }

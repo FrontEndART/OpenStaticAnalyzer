@@ -20,4 +20,5 @@ public class CommonSecurityRuleKeys {
     public static final String  NP_NULL_ON_SOME_PATH = "NP_NULL_ON_SOME_PATH";
     public static final String  NP_NULL_ON_SOME_PATH_EXCEPTION = "NP_NULL_ON_SOME_PATH_EXCEPTION";
     public static final String  MS_PKGPROTECT_PROBLEM_TYPE = "MS_PKGPROTECT";
+    public static final String  MS_MUTABLE_COLLECTION_TYPE = "MS_MUTABLE_COLLECTION";
 }

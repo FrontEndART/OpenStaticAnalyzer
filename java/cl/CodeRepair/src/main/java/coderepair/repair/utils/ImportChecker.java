@@ -16,7 +16,12 @@ import columbus.java.asg.struc.Import;
 import columbus.java.asg.struc.PackageDeclaration;
 import columbus.java.asg.struc.TypeDeclaration;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 public class ImportChecker {
+    static Map<CompilationUnit, Set<String>> newImports = new HashMap<>();
     public static void checkImport(Factory factory, Base node, String path, ModifiedNodes modifiedNodes) {
         TypeDeclaration td = null;
         Base parent = node;
@@ -30,6 +35,10 @@ public class ImportChecker {
         if (td == null) return;
         CompilationUnit cu = td.getIsInCompilationUnit();
         if (cu==null) return;
+        if (newImports.containsKey(cu)) {
+            if (newImports.get(cu).contains(path))
+                return;
+        }
 
         String str[] = path.split("\\.");
         EdgeIterator<Import> iterator = cu.getImportsIterator();
@@ -85,6 +94,11 @@ public class ImportChecker {
                 lastFA.setLeftOperand(newIdentifier);
             }
             cu.addImports(newImport, 0);
+            if (newImports.containsKey(cu)) {
+                newImports.get(cu).add(path);
+            } else {
+                newImports.put(cu, Set.of(path));
+            }
             //modifiedNodes.markNodeAsModified(cu.getId());
            PackageDeclaration pd = cu.getPackageDeclaration();
             if (pd != null) {

@@ -59,6 +59,16 @@ public class IntegrationTest {
     }
 
     @Test
+    public void MS_PKGPROTECT_Test() throws Exception {
+        runTool("MS_PKGPROTECT", SRC_TEST_LINKEDEXAMPLES, TEMPDIR);
+    }
+
+    @Test
+    public void MS_MUTABLE_COLLECTION_Test() throws Exception {
+        runTool("MS_MUTABLE_COLLECTION", SRC_TEST_LINKEDEXAMPLES, TEMPDIR);
+    }
+
+    @Test
     public void NP_NULL_ON_SOME_PATH_Test() throws Exception {
         runTool("NP_NULL_ON_SOME_PATH", SRC_TEST_EXAMPLES, TEMPDIR);
     }

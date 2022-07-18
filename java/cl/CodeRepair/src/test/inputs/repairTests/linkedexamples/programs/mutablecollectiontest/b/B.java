@@ -9,5 +9,7 @@ class B {
 		mySet.add("Hihi");
 		String array[] = Mutable.array;
 		array[0]="Hiszti";
+		
+		System.out.println(MutableInInit.mySet.length);
 	}
 } 
