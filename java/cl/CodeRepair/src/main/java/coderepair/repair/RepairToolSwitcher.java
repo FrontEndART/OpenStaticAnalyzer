@@ -91,6 +91,9 @@ public class RepairToolSwitcher extends RepairAlgorithm {
             case CommonSecurityRuleKeys.MS_MUTABLE_COLLECTION_TYPE:
                 repair = new RepairRule_MS_MUTABLE_COLLECTION();
                 break;
+            case CommonSecurityRuleKeys.FI_PUBLIC_SHOULD_BE_PROTECTED_TYPE:
+                repair = new RepairRule_FI_PUBLIC_SHOULD_BE_PROTECTED();
+                break;
             default:
                 throw new RepairAlgorithmException("No repair algorithm found for the problemType: " + problemType);
         }

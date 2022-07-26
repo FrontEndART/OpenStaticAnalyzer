@@ -1,0 +1,31 @@
+<linked-hash-map>
+  <entry>
+    <string>coderepair.algs.problemType</string>
+    <string>FI_PUBLIC_SHOULD_BE_PROTECTED</string>
+  </entry>
+  <entry>
+    <string>coderepair.algs.problemLocations</string>
+    <list>
+      <coderepair.communication.base.ProblemToRepair>
+        <positions>
+	  
+		  <coderepair.communication.base.ProblemPosition>
+            <path>programs/finalizetest/FinalizeExample.java</path>
+            <startLine>13</startLine>
+            <startCol>5</startCol>
+            <endLine>16</endLine>
+            <endCol>6</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+    </list>
+  </entry>
+  <entry>
+    <string>coderepair.base.sourceCodeLocation</string>
+    <string>src/test/inputs/repairTests/examples/</string>
+  </entry>
+  <entry>
+    <string>coderepair.base.schemaLocation</string>
+    <string>src/test/inputs/repairTests/examples/programs/finalizetest/.columbus_java/finalizetest.ljsi</string>
+  </entry>
+</linked-hash-map>

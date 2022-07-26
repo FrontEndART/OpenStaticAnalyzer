@@ -1,0 +1,14 @@
+Index: programs/finalizetest/FinalizeExample.java
+===================================================================
+--- programs/finalizetest/FinalizeExample.java	(original)
++++ programs/finalizetest/FinalizeExample.java	(refactored)
+@@ -10,8 +10,7 @@
+   
+     }   
+  
+-    public void finalize()   
+-    {   
++    protected void finalize(){   
+         System.out.println("finalize method called");   
+     }   
+ } 

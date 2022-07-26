@@ -5,12 +5,13 @@ import coderepair.generator.transformation.ModifiedNodes;
 import coderepair.communication.exceptions.RepairAlgorithmException;
 import columbus.java.asg.enums.AccessibilityKind;
 import columbus.java.asg.enums.NodeKind;
-import columbus.java.asg.struc.Variable;
+import columbus.java.asg.struc.NamedDeclaration;
 
 public class ChangeInstanceModifier implements ModelRepairing {
-    final private Variable variable;
+    final private NamedDeclaration declaration;
     private boolean shouldBeFinal = false;
     private boolean shouldBePackagePrivate = false;
+    private boolean shouldBeProtected = false;
 
     /**
      * The Constructor.
@@ -18,12 +19,12 @@ public class ChangeInstanceModifier implements ModelRepairing {
      * @param variable The actual Variable.
      * @throws RepairAlgorithmException If the Variable is not correct.
      */
-    public ChangeInstanceModifier(Variable variable) throws RepairAlgorithmException {
+    public ChangeInstanceModifier(NamedDeclaration variable) throws RepairAlgorithmException {
         if (variable == null) {
-            throw new RepairAlgorithmException("The variable should not be null!");
+            throw new RepairAlgorithmException("The declaration should not be null!");
         }
 
-        this.variable = variable;
+        this.declaration = variable;
     }
 
     public void setShouldBeFinal(boolean flag) {
@@ -34,13 +35,19 @@ public class ChangeInstanceModifier implements ModelRepairing {
         shouldBePackagePrivate = flag;
     }
 
+    public void setShouldBeProtected(boolean flag) {
+        shouldBeProtected = flag;
+    }
+
     @Override
     public void repair(ModifiedNodes modifiedNodes) {
         if (shouldBeFinal)
-            variable.setIsFinal(shouldBeFinal);
+            declaration.setIsFinal(shouldBeFinal);
         if (shouldBePackagePrivate)
-            variable.setAccessibility(AccessibilityKind.ackNone);
-        modifiedNodes.markAttributeAsModified(variable.getId(), NodeKind.ndkVariable);
+            declaration.setAccessibility(AccessibilityKind.ackNone);
+        if (shouldBeProtected)
+            declaration.setAccessibility(AccessibilityKind.ackProtected);
+        modifiedNodes.markAttributeAsModified(declaration.getId(), NodeKind.ndkVariable);
     }
 
     @Override

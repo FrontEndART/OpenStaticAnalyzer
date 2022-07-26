@@ -64,6 +64,11 @@ public class IntegrationTest {
     }
 
     @Test
+    public void FI_PUBLIC_SHOULD_BE_PROTECTED_Test() throws Exception {
+        runTool("FI_PUBLIC_SHOULD_BE_PROTECTED", SRC_TEST_EXAMPLES, TEMPDIR);
+    }
+
+    @Test
     public void MS_MUTABLE_COLLECTION_Test() throws Exception {
         runTool("MS_MUTABLE_COLLECTION", SRC_TEST_LINKEDEXAMPLES, TEMPDIR);
     }
