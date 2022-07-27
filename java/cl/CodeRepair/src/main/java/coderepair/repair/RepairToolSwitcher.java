@@ -73,6 +73,7 @@ public class RepairToolSwitcher extends RepairAlgorithm {
                 repair = new RepairRule_EI_EXPOSE_REP2();
                 break;
             case CommonSecurityRuleKeys.EI_EXPOSE_REP2_ARRAY_PROBLEM_TYPE:
+            case CommonSecurityRuleKeys.MS_EXPOSE_REP_PROBLEM_TYPE:
                 repair = new RepairRule_EI_EXPOSE_REP2_array();
                 break;
             case CommonSecurityRuleKeys.EI_EXPOSE_REP2_DATEOBJECT_PROBLEM_TYPE:
@@ -88,10 +89,10 @@ public class RepairToolSwitcher extends RepairAlgorithm {
             case CommonSecurityRuleKeys.MS_PKGPROTECT_PROBLEM_TYPE:
                 repair = new RepairRule_MS_PKGPROTECT();
                 break;
-            case CommonSecurityRuleKeys.MS_MUTABLE_COLLECTION_TYPE:
+            case CommonSecurityRuleKeys.MS_MUTABLE_COLLECTION_PROBLEM_TYPE:
                 repair = new RepairRule_MS_MUTABLE_COLLECTION();
                 break;
-            case CommonSecurityRuleKeys.FI_PUBLIC_SHOULD_BE_PROTECTED_TYPE:
+            case CommonSecurityRuleKeys.FI_PUBLIC_SHOULD_BE_PROTECTED_PROBLEM_TYPE:
                 repair = new RepairRule_FI_PUBLIC_SHOULD_BE_PROTECTED();
                 break;
             default:

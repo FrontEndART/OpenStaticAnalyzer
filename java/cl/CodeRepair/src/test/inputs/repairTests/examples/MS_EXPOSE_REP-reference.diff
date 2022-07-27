@@ -1,0 +1,14 @@
+Index: programs/makearraycopy/ReturningArray.java
+===================================================================
+--- programs/makearraycopy/ReturningArray.java	(original)
++++ programs/makearraycopy/ReturningArray.java	(refactored)
+@@ -1,7 +1,8 @@
++import java.util.Arrays;
+ public class ReturningArray {
+ 	private static int array[] = {1, 2, 3, 5, 8, 13};
+ 	public static int[] get() {
+-		return array;
++		return Arrays.copyOf(array, array.length);
+ 	}
+ 	
+ 	public static void main(String args[]) {}

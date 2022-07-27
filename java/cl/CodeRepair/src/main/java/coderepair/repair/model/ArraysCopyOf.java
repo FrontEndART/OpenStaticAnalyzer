@@ -31,7 +31,7 @@ public class ArraysCopyOf implements ModelRepairing {
     @Override
     public void repair(ModifiedNodes modifiedNodes) throws RepairAlgorithmException {
             Base parentNode = expression.getParent();
-            if (Common.getIsAssignment(parentNode)) {
+            if (Common.getIsAssignment(parentNode) || Common.getIsReturn(parentNode)) {
                 makeArrayCopyForAnAssignmentRightOperand(expression, modifiedNodes);
             }
     }

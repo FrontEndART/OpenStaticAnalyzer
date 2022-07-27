@@ -1,0 +1,30 @@
+<linked-hash-map>
+  <entry>
+    <string>coderepair.algs.problemType</string>
+    <string>MS_EXPOSE_REP</string>
+  </entry>
+  <entry>
+    <string>coderepair.algs.problemLocations</string>
+    <list>
+      <coderepair.communication.base.ProblemToRepair>
+        <positions>
+          <coderepair.communication.base.ProblemPosition>
+            <path>programs/makearraycopy/ReturningArray.java</path>
+            <startLine>4</startLine>
+            <startCol>10</startCol>
+            <endLine>4</endLine>
+            <endCol>15</endCol>
+          </coderepair.communication.base.ProblemPosition>
+        </positions>
+      </coderepair.communication.base.ProblemToRepair>
+    </list>
+  </entry>
+  <entry>
+    <string>coderepair.base.sourceCodeLocation</string>
+    <string>src/test/inputs/repairTests/examples/</string>
+  </entry>
+  <entry>
+    <string>coderepair.base.schemaLocation</string>
+    <string>src/test/inputs/repairTests/examples/programs/makearraycopy/.columbus_java/makearraycopy.ljsi</string>
+  </entry>
+</linked-hash-map>

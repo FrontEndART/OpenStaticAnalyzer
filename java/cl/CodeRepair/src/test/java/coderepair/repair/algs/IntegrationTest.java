@@ -49,6 +49,11 @@ public class IntegrationTest {
     }
 
     @Test
+    public void MS_EXPOSE_REP_Test() throws Exception {
+        runTool("MS_EXPOSE_REP", SRC_TEST_EXAMPLES, TEMPDIR);
+    }
+
+    @Test
     public void EI_EXPOSE_REP2_ARRAY_Test() throws Exception {
         runTool("EI_EXPOSE_REP2_array", SRC_TEST_LINKEDEXAMPLES, TEMPDIR);
     }
